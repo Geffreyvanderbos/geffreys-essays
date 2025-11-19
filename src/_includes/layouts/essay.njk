@@ -1,0 +1,11 @@
+---
+layout: layouts/base.njk
+---
+<article>
+    <h1 class="mb-4 mt-0">{{ title }}</h1>
+    <span class="block mb-64 muted-text small">
+    <time datetime="{{ date | formatDate('iso') }}">{{ date | formatDate }}</time>
+    · I reply to every <a class="muted-text" href="https://signal.me/#eu/ctlD__2i3DbpPnd4CRwgxIbCMTPOCwvD7chjLP77QNsQsUEeDLBPz7-3iq0tz7UC" alt="Signal user @geffrey.66">message on Signal</a>
+    </span>
+    {{ content | safe }}
+</article>

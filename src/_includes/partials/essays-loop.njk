@@ -1,0 +1,12 @@
+{% set currentYear = "" %}
+{% for essay in collections.essays | reverse -%}
+  {% set essayYear = essay.data.date | getYear %}
+  {% if essayYear != currentYear %}
+    {% if currentYear != "" %}</ul>{% endif %}
+    <h2>{{ essayYear }}</h2>
+    <ul class="no-list-style">
+    {% set currentYear = essayYear %}
+  {% endif %}
+  <li><a href="{{ essay.url }}">{{ essay.data.title }}</a></li>
+{% endfor -%}
+</ul>

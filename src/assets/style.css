@@ -2,19 +2,34 @@
     box-sizing: border-box;
 }
 
+::selection {
+    background-color: #fffbff99;
+    color: #151e15;
+}
+
+::-moz-selection {
+    background-color: #fffbff99;
+    color: #151e15;
+}
+
 body {
     background-color: #151e15;
-    font-size: clamp(0.875rem, 0.742rem + 0.4255vw, 1.125rem);
+    font-size: clamp(1.0625rem, 0.9628rem + 0.3191vw, 1.25rem);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     max-width: 740px;
     max-width: 66ch;
-    line-height: 1.8;
-    font-family:
-        "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
     margin: 0 auto;
     padding: 1em;
+    line-height: 1.8;
+    font-family:
+        "Palatino Linotype", "Book Antiqua", Palatino, "TeX Gyre Pagella", "URW Palladio L", P052, serif;
+    font-feature-settings: "liga" 1, "clig" 1, "kern" 1;
+    font-kerning: normal;
+    font-weight: 450;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -26,17 +41,24 @@ img {
 
 body,
 a {
-    color: #fffbff;
+    --color: 8, 10%, 95%;
+    color: hsla(var(--color));
 }
 
 a {
-    text-decoration-color: rgba(255, 251, 255, 0.2);
+    text-underline-offset: .4em;
     text-decoration-thickness: 1px;
-    text-underline-offset: 8px;
+    text-decoration-thickness: .5px;
+    text-decoration-skip-ink: none;
+    text-decoration-color: hsla(var(--color), .4);
 }
 
 a:hover {
-    text-decoration-color: rgba(255, 251, 255, 0.5);
+    text-decoration-color: hsla(var(--color), 1);
+}
+
+a:visited {
+    text-decoration-color: hsla(var(--color), 1);
 }
 
 .muted-text {
@@ -51,11 +73,18 @@ article>p:first-of-type:first-letter {
     float: left;
     font-size: 3.45em;
     line-height: 100%;
-    margin: 0 0.1em 0 1px;
+    margin: 2px 0.1em 0 1px;
 }
 
 footer {
+    font-size: .8em;
+    text-align: center;
+    padding: 0 1em;
     border-top: 1px solid rgba(255, 251, 255, 0.2);
+}
+
+footer div {
+    max-width: 80ch;
 }
 
 h1,

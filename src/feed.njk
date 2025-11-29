@@ -22,7 +22,13 @@
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ essay.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.content | renderTransforms(post.data.page, metadata.base) }}</content>
+    <content type="html">
+      {%- set postContent = essay.content | renderTransforms(essay.data.page, site.url) -%}
+      {%- if postContent | hasInteractive -%}
+        &lt;p&gt;&lt;strong&gt;⚠️ This article includes interactive elements. &lt;a href="{{ absolutePostUrl }}"&gt;View the full experience on the site&lt;/a&gt;.&lt;/strong&gt;&lt;/p&gt;
+      {%- endif -%}
+      {{ postContent | stripHtml }}
+    </content>
   </entry>
   {%- endfor %}
 </feed>

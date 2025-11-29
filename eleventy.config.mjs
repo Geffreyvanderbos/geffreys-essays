@@ -1,5 +1,7 @@
 import fs from "fs";
 import md from "markdown-it";
+import pluginRss from "@11ty/eleventy-plugin-rss";
+// import siteData from './src/_data/site.json' with { type: 'json' };
 
 export default function (eleventyConfig) {
   // Copy static assets
@@ -25,6 +27,8 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("getYear", function (date) {
     return new Date(date).getFullYear();
   });
+
+  eleventyConfig.addPlugin(pluginRss);
 
   return {
     dir: {

@@ -1,6 +1,6 @@
 ---
-title: "Privacy"
-date: 2025-09-27T14:16:46+0100
+title: "Stop signing up for everything"
+date: 2024-11-27
 ---
 
 Hey Geffrey.
@@ -409,7 +409,7 @@ How can you protect your freedom if you don’t protect your privacy?
 
     .tree-item-content {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       cursor: pointer;
     }
 
@@ -417,20 +417,23 @@ How can you protect your freedom if you don’t protect your privacy?
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 1.5rem;
-      height: 1.5rem;
+      padding: 0;
       margin-right: 0.5rem;
       flex-shrink: 0;
-      transition: transform 0.6s ease-in;
+      transition: transform 0.264s ease-in;
+      transform-origin: 12px 12px;
+    transform: translateY(6px);
     }
 
     .tree-item-toggle::before {
-      content: "▶";
-      font-size: 0.75rem;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23E8E4E3' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-chevron-right-icon lucide-square-chevron-right'%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Cpath d='m10 8 4 4-4 4'/%3E%3C/svg%3E");
+      height: 24px;
+      width: 24px;
+      margin-right: 0;
     }
 
     .tree-item-toggle.expanded {
-      transform: rotate(90deg);
+      transform: translateY(6px) rotate(90deg);
     }
 
     .tree-item-toggle.hidden {
@@ -457,7 +460,7 @@ How can you protect your freedom if you don’t protect your privacy?
     .tree-item-children {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.6s ease-in, opacity 0.6s ease-in;
+      transition: max-height 0.264s ease-in, opacity 0.264s ease-in;
       opacity: 0;
       margin-left: .5em;
     }

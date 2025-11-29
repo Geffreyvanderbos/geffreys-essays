@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} @ geff.re</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="generator" content="{{ eleventy.generator }}">
+
+  <meta property="og:title" content="{{ title or site.name }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <link rel="icon" href="/assets/favicon.png">
+
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>

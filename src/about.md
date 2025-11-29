@@ -1,1 +1,1 @@
-Notes to my younger and older self. I'm thinking through things like technology, music, and what it means to live a good life . You're welcome to read along.
+Notes to my younger and older self. I'm thinking through things like technology, music, and what it means to live a good life . You're welcome to read along. My name is Geffrey van der Bos.

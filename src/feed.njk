@@ -1,0 +1,28 @@
+---json
+{
+  "permalink": "feed.xml",
+  "eleventyExcludeFromCollections": true
+}
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ permalink | htmlBaseUrl(site.url) }}" rel="self" />
+  <link href="{{ site.url | addPathPrefixToFullUrl }}" />
+  <updated>{{ collections.essays | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ site.url | addPathPrefixToFullUrl }}</id>
+  <author>
+    <name>{{ site.author }}</name>
+  </author>
+  {%- for essay in collections.essays | reverse %}
+  {%- set absolutePostUrl %}{{ essay.url | htmlBaseUrl(site.url) }}{% endset %}
+  <entry>
+    <title>{{ essay.data.title }}</title>
+    <link href="{{ absolutePostUrl }}" />
+    <updated>{{ essay.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">{{ post.content | renderTransforms(post.data.page, metadata.base) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

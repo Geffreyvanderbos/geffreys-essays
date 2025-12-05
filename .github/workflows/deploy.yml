@@ -1,0 +1,23 @@
+name: Deploy 11ty Blog
+
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 25
+      - run: npm install
+      - run: npm run build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@latest
+        with:
+          github_token: $
+          publish_dir: ./_site

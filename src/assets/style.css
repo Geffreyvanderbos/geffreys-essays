@@ -149,7 +149,7 @@ p:not(:last-child) {
 pre {
     width: 100%;
     overflow: scroll;
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 1em;
     font-family:
         ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,

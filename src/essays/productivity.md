@@ -4,7 +4,7 @@ date: 2025-10-04
 ---
 It's been years since you bought Things 3. You used it a lot. Then a bit less. Now, it's decoration on your Home Screen. You watched YouTubers glorify Notion. _Databases_, _slash commands_, and _workflows_ galore! You were hooked, yet still got nothing done.
 
-Then you read *[the essay](https://stephango.com/file-over-app)*. That was it! The truth! “Software companies are selling you access to your own data!”. Luckily, the essayist had the solution: [plain text](https://en.wikipedia.org/wiki/Plain_text) files in https://obsidian.md.
+Then you read *[the essay](https://stephango.com/file-over-app)*. That was it! The truth! “Software companies are selling you access to your own data!”. Luckily, the essayist had the solution: [plain text](https://en.wikipedia.org/wiki/Plain_text) files in Obsidian.
 
 You spend months finding the perfect plugins and themes. You’re still tinkering today, ashamed of the hours wasted. Regardless, you keep coming back to the same realisation: All you need are three files! 
 

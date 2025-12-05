@@ -2,7 +2,6 @@
 title: Privacy and security
 date: 2025-11-04
 ---
-Hey Geffrey.
 I’m growing more concerned about privacy and security.
 Every conglomerate trains their AI models on your information.
 Each tiny corner on the web is scraped.

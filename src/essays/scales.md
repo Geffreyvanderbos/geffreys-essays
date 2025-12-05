@@ -1,6 +1,6 @@
 ---
 title: Introduction to Music Theory
-date: 2024-09-10
+date: 2025-09-10
 ---
 Music theory isn't as complicated as you thought.
 I'm unsure whether it is snobbery or I've just never been taught 'the right way'. Regardless, here's how I made sense of it.

@@ -1,9 +1,7 @@
 ---
-title: You try to define music
-date: 2025-08-01
+title: Defining music is surprisingly hard
+date: 2024-08-01
 ---
-We’re tackling what seems like a really basic question: *What is music?*
-
 Everyone intuitively knows ‘what music’ is. Well, as it turns out, it is really hard to pin down one definitive answer. Philosophers and scientists have been racking their brains on this for ages.
 
 Some have tried to boil it down to mere physics: organized sound. Other thinkers have been questioning the whole idea of a definition for music itself.

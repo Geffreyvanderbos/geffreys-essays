@@ -1,21 +1,20 @@
 ---
-title: Three plain text files
-date: 2025-11-22
+title: All you need is 3 plain text files
+date: 2025-10-04
 ---
-Hey Geffrey, it's been years since you bought [Things 3](https://culturedcode.com/things/). You used it a lot. Then a bit less. Now, it's decoration on your Home Screen. You watched YouTubers glorify [Notion](https://www.notion.com/). _Databases_, _slash commands_, and _workflows_ galore! You were hooked, yet still got nothing done.
+It's been years since you bought Things 3. You used it a lot. Then a bit less. Now, it's decoration on your Home Screen. You watched YouTubers glorify Notion. _Databases_, _slash commands_, and _workflows_ galore! You were hooked, yet still got nothing done.
 
-Then you read *[the essay](https://stephango.com/file-over-app)*. You were convinced.
-“Software companies are selling you access to your own data!”. Luckily, the essayist had the solution: [plain text](https://en.wikipedia.org/wiki/Plain_text) files in [Obsidian](https://obsidian.md).
+Then you read *[the essay](https://stephango.com/file-over-app)*. That was it! The truth! “Software companies are selling you access to your own data!”. Luckily, the essayist had the solution: [plain text](https://en.wikipedia.org/wiki/Plain_text) files in https://obsidian.md.
 
-You spend months finding the perfect [plugins and themes](https://www.obsidianstats.com/). You’re still tinkering today, ashamed of the hours wasted. Regardless, you keep coming back to the same realisation:
+You spend months finding the perfect plugins and themes. You’re still tinkering today, ashamed of the hours wasted. Regardless, you keep coming back to the same realisation: All you need are three files! 
 
-All you need are three files! 
+The holy trifecta: calendar\.md, todo\.md, and a journal file. 
 
-The holy trifecta: calendar\.md,  todo\.md, and a journal file. Mere text files on your desktop. Or wherever you’re storing them. Plop them in iCloud. Use [Syncthing](https://syncthing.net/) and get [mad at Apple](https://mobiussync.com/). Heck, use Git, you nerd.
+Mere text files on your desktop. Or wherever you’re storing them. Plop them in iCloud. Use [Syncthing](https://syncthing.net/) and get [mad at Apple](https://mobiussync.com/). Heck, use Git, you nerd.
 
 Text files are *[goated](https://www.merriam-webster.com/dictionary/GOATED)*.
 
-Open them in any [text editor](https://en.wikipedia.org/wiki/List_of_text_editors). Use simple scripts to automate, extract, and transform them. As long as machines exist, the files will be readable.
+Open them in any text editor. Use simple scripts to automate, extract, and transform them. As long as machines exist, the files will be readable.
 
 No more lock-in for you, buddy. Enjoy the freedom.
 
@@ -54,9 +53,9 @@ We’ll start with the calendar\.md, based on [calendar.txt](https://archive.ph/
 [..]
 ```
 
-Look at that. Your whole life’s planning in one astonishing list.  Easily tagged and searched. No need to click around in an infuriating UI.
+Look at that. Your whole life’s planning in one astonishing list. Easily tagged and searched. No need to click around in an infuriating UI.
 
-Find today’s date, add two spaces after the day abbreviations and type your event. Is it a whole day thing? Don’t add a timestamp 🤷🏻. A dot denotes the end of the entry. Use plusses (+) for projects, use at symbols (@) for contexts. Adding these will allow you to easily filter lists. 
+Find today’s date, add two spaces after the day abbreviations and type your event. Is it a whole day thing? Don’t add a timestamp. A dot denotes the end of the entry. Use plusses (+) for projects, use at symbols (@) for contexts. Adding these will allow you to easily filter lists. 
 
 That’s all there is to it.
 
@@ -81,7 +80,7 @@ x 2025-11-22 (A) put pork out of freezer in fridge for tomorrow
 ```
 I use Apple Shortcuts to append new tasks easily. No need for fancy apps.
 
-And yes. It looks messy. Luckily there are syntax highlighters ([1](https://nerdur.com/todour-pl/), [2](https://github.com/rioskit/obsidian-todo-txt-mode), [3](https://apps.apple.com/us/app/todotxt/id6443649697)) around.
+And yes. It looks messy after a while. Luckily there are syntax highlighters ([1](https://nerdur.com/todour-pl/), [2](https://github.com/rioskit/obsidian-todo-txt-mode), [3](https://apps.apple.com/us/app/todotxt/id6443649697)) around.
 
 ## Journal
 This one is often called the [One Big Text File](https://ellanew.com/2025/04/14/obtf-start-here) (OBTF). Each year, you create a file that’ll hold all your thoughts. Write anything underneath the day heading.

@@ -34,101 +34,306 @@ Oh.
 
 From these things, you've got nothing you rather kept to yourself?
 
-• Financial & Payment Data
-  – Google Pay, Apple Pay, PayPal, credit/debit cards:  
-    • Transaction timestamp, merchant name and category, exact amount paid  
-    • Geolocation of purchase (store latitude/longitude or IP-derived location)  
-    • Device ID, device fingerprint and operating-system version  
-    • Card number (tokenized), billing/shipping address, email, phone number  
-    • Recurring-payment profiles, subscription status, payment failures  
-  – Bank accounts, loan applications, mortgage statements:  
-    • Full account balances, deposit/withdrawal history, ACH/wire transfers  
-    • Overdraft events, declined transactions, ATM withdrawal locations  
-    • Credit-bureau pulls, credit scores, debt-to-income ratios
-
-• Retail & Loyalty Programs  
-  – Loyalty cards:  
-    • Every scanned item (brand, variant, price), purchase frequency  
-    • In-store visit times, receipt-itemized preferences (organic, gluten-free…)  
-    • Coupons clipped/redeemed, digital-offer click-streams  
-  – E-commerce sites:  
-    • Browsing history, “abandoned carts,” wish lists, product reviews  
-    • Wishlist shares, gift registries, “you might like” AI-driven suggestions  
-    • Return/exchange habits, refund requests, customer-service transcripts  
-
-• Online Behavior & Digital Footprints  
-  – Web search engines:  
-    • Full search queries, clicked results, time-on-page, scroll depth  
-    • IP address, inferred interests, saved “My Activity” archives
-  – Browsers & ad networks:  
-    • Cookie IDs, cross-site tracking pixels, device/browser fingerprint  
-    • Ad views, ad clicks, demographic segments (age, gender, income bracket)  
-    • Frequency caps, retargeting buckets, look-alike audience profiles  
-  – Social media platforms:  
-    • Posts/photos/videos, likes/reactions, comments, shares, saved items  
-    • Friends/followers lists, group memberships, event RSVPs  
-    • Direct messages, metadata (timestamps, IP), facial‐recognition tags  
-    • Location-tagged posts, live-video geofencing, “Nearby Friends” logs  
-
-• Communication & Location Data  
-  – Email providers, messaging apps:  
-    • Full message contents (with some exceptations), attachments, metadata  
-    • Contact lists, group chats, read receipts, call/video-call logs  
-    • Device sync logs, backup archives, AI-driven “priority inbox” labels  
-  – Mobile carriers & apps:  
-    • Call detail records (caller/callee numbers, durations, cell-tower triangulation)  
-    • SMS/MMS content metadata, SIM-card serial, device IMEI/MAC addresses  
-    • Continuous GPS tracking (maps, fitness apps, ride-hail pickups)  
-
-• Health & Biometric Data  
-  – Wearables & fitness apps:  
-    • Heart rate, sleep stages, step counts, calorie burn, workout routes  
-    • Continuous blood-oxygen, ECG snapshots, menstrual-cycle logs  
-    • Third-party data sharing: labs, research, telemedicine providers, corporate wellness programs
-  – Medical records & insurance claims:  
-    • Diagnoses, doctor’s notes, lab-test results, imaging scans  
-    • Prescription history, pharmacy refill schedules, pill-count adherence  
-    • Insurance pre-authorizations, claims approvals/denials, billing codes  
-
-• Home & IoT Devices  
-  – Smart speakers and cameras:  
-    • Voice recordings, activation transcripts, ambient-noise snippets  
-    • Camera footage, person-detection events, face recognition embeddings  
-  – Smart thermostats, lighting, locks:  
-    • Temperature schedules, occupancy-sensor logs, door/unlock timestamps  
-    • Energy-usage patterns, automation rules, geo-fence triggers
-  – Connected appliances (TVs, washing machines, refrigerators):  
-    • Viewing habits, shopping-list entries, grocery-order histories  
-    • Firmware-update failures, error-codes, support-ticket logs  
-
-• Government & Professional Records  
-  – Passport/visa applications:  
-    • Full name, birth date, address history, eye color, height/weight  
-    • Photo ID, fingerprints, signature samples, application notes  
-  – Tax authorities:  
-    • Income statements, deduction details, audits, liens  
-  – Employer & education records:  
-    • HR files: salary history, performance reviews, disciplinary actions  
-    • Academic transcripts, degrees, extracurricular activities, attendance logs  
-
-• Derived & Predictive Profiles 
-  – Data‐broker aggregates:  
-    • Psychographic profiles: personality traits, lifestyle segment, political leanings  
-    • Risk scores: credit, fraud, insurance underwriting, criminal recidivism  
-    • Purchase‐propensity models: auto-intenders, travel planners, luxury shoppers
-  – Advertising & personalization engines:  
-    • Real-time bidding profiles, cookie‐based retargeting IDs, lookalike‐audience seeds  
-    • Email‐deliverability metrics: open rates, bounce/unsubscribe history  
-    • A/B‐test participation, content-preference clusters, churn‐prediction flags  
-
-• Metadata, Logs & Miscellaneous  
-  – App-analytics SDKs (Crashlytics, Mixpanel):  
-    • Crash reports, stack traces, user‐flow funnels, retention cohorts  
-    • Feature-flag exposures, in-app purchase events, session durations  
-  – Any connected service can store:  
-    • Timestamps, UTC offsets, sequence numbers, client/server latency  
-    • Encryption-key fingerprints, API-token usage, rate-limit exceptions  
-    • Consent logs, privacy‐setting versions, consent‐withdrawal events  
+<ul class="tree">
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Financial & Payment Data</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Google Pay, Apple Pay, PayPal, credit/debit cards</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Transaction timestamp, merchant name and category, exact amount paid</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Geolocation of purchase (store latitude/longitude or IP-derived location)</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Device ID, device fingerprint and operating-system version</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Card number (tokenized), billing/shipping address, email, phone number</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Recurring-payment profiles, subscription status, payment failures</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Bank accounts, loan applications, mortgage statements</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full account balances, deposit/withdrawal history, ACH/wire transfers</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Overdraft events, declined transactions, ATM withdrawal locations</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Credit-bureau pulls, credit scores, debt-to-income ratios</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Retail & Loyalty Programs</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Grocery & big-box loyalty cards</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Every UPC-scanned item (brand, variant, price), purchase frequency</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">In-store visit times, receipt-itemized preferences (organic, gluten-free…)</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Coupons clipped/redeemed, digital-offer click-streams</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">E-commerce sites (Amazon, eBay, etc.)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Browsing history, "abandoned carts," wish lists, product reviews</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Wishlist shares, gift registries, "you might like" AI-driven suggestions</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Return/exchange habits, refund requests, customer-service transcripts</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Online Behavior & Digital Footprints</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Web search engines (Google, Bing)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full search queries, clicked results, time-on-page, scroll depth</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">IP address, inferred interests, saved "My Activity" archives</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Browsers & ad networks</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Cookie IDs, cross-site tracking pixels, device/browser fingerprint</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Ad views, ad clicks, demographic segments (age, gender, income bracket)</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Frequency caps, retargeting buckets, look-alike audience profiles</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Social media platforms (Facebook, Instagram, TikTok…)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Posts/photos/videos, likes/reactions, comments, shares, saved items</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Friends/followers lists, group memberships, event RSVPs</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Direct messages, metadata (timestamps, IP), facial-recognition tags</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Location-tagged posts, live-video geofencing, "Nearby Friends" logs</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Communication & Location Data</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Email providers, messaging apps (WhatsApp, Signal, Slack)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full message contents (unless end-to-end encrypted), attachments, metadata</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Contact lists, group chats, read receipts, call/video-call logs</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Device sync logs, backup archives, AI-driven "priority inbox" labels</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Mobile carriers & apps</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Call detail records (caller/callee numbers, durations, cell-tower triangulation)</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">SMS/MMS content metadata, SIM-card serial, device IMEI/MAC addresses</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Continuous GPS tracking (maps, fitness apps, ride-hail pickups)</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Health & Biometric Data</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Wearables & fitness apps (Fitbit, Apple Health, Garmin)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Heart rate, sleep stages, step counts, calorie burn, workout routes</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Continuous blood-oxygen, ECG snapshots, menstrual-cycle logs</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Third-party data sharing: labs, telemedicine providers, corporate wellness programs</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Medical records & insurance claims</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Diagnoses (ICD-10 codes), doctor's notes, lab-test results, imaging scans</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Prescription history, pharmacy refill schedules, pill-count adherence</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Insurance pre-authorizations, claims approvals/denials, billing codes</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Home & IoT Devices</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Smart speakers, cameras (Amazon Echo, Nest)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Voice recordings, activation transcripts, ambient-noise snippets</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Camera footage, person-detection events, face recognition embeddings</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Smart thermostats, lighting, locks</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Temperature schedules, occupancy-sensor logs, door/unlock timestamps</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Energy-usage patterns, automation rules, geo-fence triggers</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Connected appliances (TVs, refrigerators)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Viewing habits, shopping-list entries, grocery-order histories</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Firmware-update failures, error-codes, support-ticket logs</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Government & Professional Records</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">DMV, passport/visa applications</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full name, birth date, address history, eye color, height/weight</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Photo ID, fingerprints, signature samples, application notes</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Tax authorities, voter registrations</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Income statements (W-2s, 1099s), deduction details, audits, liens</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Party affiliation (where recorded), voting history (where public)</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Employer & education records</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">HR files: salary history, performance reviews, disciplinary actions</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Academic transcripts, degrees, extracurricular activities, attendance logs</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Derived & Predictive Profiles</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Data-broker aggregates (Experian, Acxiom, Oracle)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Psychographic profiles: personality traits, lifestyle segment, political leanings</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Risk scores: credit, fraud, insurance underwriting, criminal recidivism</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Purchase-propensity models: auto-intenders, travel planners, luxury shoppers</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Advertising & personalization engines</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Real-time bidding profiles, cookie-based retargeting IDs, lookalike-audience seeds</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Email-deliverability metrics: open rates, bounce/unsubscribe history</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">A/B-test participation, content-preference clusters, churn-prediction flags</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li class="tree-item">
+    <div class="tree-item-content">
+    <span class="tree-item-toggle"></span>
+    <span class="tree-item-label">Metadata, Logs & Miscellaneous</span>
+    </div>
+    <ul class="tree-item-children">
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">App-analytics SDKs (Crashlytics, Mixpanel)</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Crash reports, stack traces, user-flow funnels, retention cohorts</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Feature-flag exposures, in-app purchase events, session durations</span></div></li>
+        </ul>
+    </li>
+    <li class="tree-item">
+        <div class="tree-item-content">
+        <span class="tree-item-toggle"></span>
+        <span class="tree-item-label">Any connected service can store</span>
+        </div>
+        <ul class="tree-item-children">
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Timestamps, UTC offsets, sequence numbers, client/server latency</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Encryption-key fingerprints, API-token usage, rate-limit exceptions</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Consent logs, privacy-setting versions, consent-withdrawal events</span></div></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+</ul>
 
 You still here?
 Yeah. Scary.
@@ -186,3 +391,83 @@ Who you trust.
 Whether it’s the company hired by your doctor to hold your medical records or the new app everybody uses.
 
 How can you protect your freedom if you don’t protect your privacy?
+
+<script defer src="/assets/scripts/expanding-tree.js"></script>
+<style>
+    /* Minimal CSS for interactive tree functionality */
+    .tree {
+      font-family: inherit;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tree-item {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tree-item-content {
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+    }
+
+    .tree-item-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+      transition: transform 0.264s ease-in;
+      transform-origin: 12px 12px;
+    transform: translateY(6px);
+    }
+
+    .tree-item-toggle::before {
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23E8E4E3' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-chevron-right-icon lucide-square-chevron-right'%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Cpath d='m10 8 4 4-4 4'/%3E%3C/svg%3E");
+      height: 24px;
+      width: 24px;
+      margin-right: 0;
+    }
+
+    .tree-item-toggle.expanded {
+      transform: translateY(6px) rotate(90deg);
+    }
+
+    .tree-item-toggle.hidden {
+      visibility: visible;
+    }
+
+    .tree-item-label {
+      flex: 1;
+    }
+    
+    .tree-item-content.leaf-node {
+      cursor: default;
+    }
+
+    .tree-item-content.leaf-node .tree-item-toggle::before {
+      content: "•";
+      transform: none;
+    }
+    
+    .tree-item-content.leaf-node .tree-item-toggle {
+        transform: none;
+    }
+
+    .tree-item-children {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.264s ease-in, opacity 0.264s ease-in;
+      opacity: 0;
+      margin-left: .5em;
+    }
+
+    .tree-item-children.expanded {
+      max-height: 1500px;
+      opacity: 1;
+    }
+  </style>

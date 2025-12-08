@@ -11,7 +11,8 @@ eleventyExcludeFromCollections: true
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technisch Schrijver - Geffrey van der Bos</title>
-    <meta name="description" content="Geffrey is een freelance technische schrijver die expertise biedt in het documenteren van complexe producten, vooral binnen gereguleerde industrieën. Hij combineert technische kennis met sterke communicatieve vaardigheden en een samenwerkende werkwijze.">
+    <meta name="description"
+        content="Geffrey is een freelance technische schrijver die expertise biedt in het documenteren van complexe producten, vooral binnen gereguleerde industrieën. Hij combineert technische kennis met sterke communicatieve vaardigheden en een samenwerkende werkwijze.">
     <style>
         :root {
             /* Colors */
@@ -99,7 +100,7 @@ eleventyExcludeFromCollections: true
             text-decoration: underline;
             text-decoration-thickness: 1px;
             text-underline-offset: 3px;
-            text-decoration-color: rgba(0,0,0,.2);
+            text-decoration-color: rgba(0, 0, 0, .2);
         }
 
         a:hover {
@@ -348,7 +349,36 @@ eleventyExcludeFromCollections: true
             margin-bottom: var(--space-sm);
             color: var(--text-light);
         }
+
+        /* Obfuscated contact info */
+        .obfuscated {
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            text-underline-offset: 3px;
+            color: var(--text-color);
+        }
+
+        .obfuscated:hover {
+            text-decoration-style: solid;
+        }
     </style>
+    <script>
+        // Deobfuscate contact information on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const obfuscatedElements = document.querySelectorAll('.obfuscated');
+            obfuscatedElements.forEach(function (element) {
+                const reversed = element.getAttribute('data-info');
+                if (reversed) {
+                    // Reverse the string to get the original contact info
+                    const original = reversed.split('').reverse().join('');
+                    element.textContent = original;
+                    element.style.cursor = 'default';
+                    element.style.textDecoration = 'none';
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -365,7 +395,7 @@ eleventyExcludeFromCollections: true
 
     <main class="container">
         <section class="layout-split">
-            <h1>Complexe producten met duidelijke documentatie</h1>
+            <h1>Duidelijke documentatie</h1>
             <div class="prose">
                 <p>
                     Als part‑time freelance technisch schrijver lever ik beknopte, gebruikersgerichte documentatie voor
@@ -384,9 +414,10 @@ eleventyExcludeFromCollections: true
         </section>
 
         <section class="layout-split">
-            <h2>Over mij</h2>
+            <h2>Over Geffrey</h2>
             <div class="prose">
-                <p>Bijna een decennium heb ik <a href="https://linkedout.geff.re/" title="Bekijk Geffrey zijn CV">gewerkt als</a>:</p>
+                <p>Bijna een decennium heb ik <a href="https://linkedout.geff.re/"
+                        title="Bekijk Geffrey zijn CV">gewerkt als</a>:</p>
                 <ul>
                     <li>Product Owner voor medische software</li>
                     <li>Product Owner voor AI infrastructuurtools</li>
@@ -439,7 +470,7 @@ eleventyExcludeFromCollections: true
         <section class="layout-split">
             <h2>Werkwijze</h2>
             <div class="prose">
-                <p>Ik houd het proces lichtgewicht zodat jullie je kunt blijven focussen op bouwen:</p>
+                <p>Ik houd het proces lichtgewicht:</p>
                 <ol>
                     <li>Kick‑off
                         <ul>
@@ -509,10 +540,12 @@ eleventyExcludeFromCollections: true
         <section class="layout-split">
             <h2>Contact</h2>
             <div class="prose">
-                <p>Als je een part‑time samenwerking wilt verkennen:</p>
+                <p>Als je een samenwerking wilt verkennen:</p>
                 <ul>
-                    <li>Telefoon: +31 6 12345678</li>
-                    <li>E‑mail: geffrey@tech-writer.com</li>
+                    <li><span class="obfuscated" data-info="44331122 6 13+ :noofeleT">Klik om te tonen</span>
+                    </li>
+                    <li><span class="obfuscated" data-info="er.ffeg@yeh :liame">Klik om te
+                            tonen</span></li>
                     <li>Locatie: Nederland (comfortabel werken met internationale teams)</li>
                     <li>Talen: Engels, Nederlands, Duits (beperkt), Fries</li>
                 </ul>
@@ -520,69 +553,72 @@ eleventyExcludeFromCollections: true
             </div>
         </section>
         <section>
-        <h2 class="text-muted">Voorbeelden van werk (tijdelijk niet beschikbaar)</h2>
-        <div class="text-center mb-lg grid-work">
-            <div class="grid-work__item grid-work__item--disabled">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
-                        <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#bdbdbdff" />
-                        <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
-                        <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
-                            font-size="12" font-weight="bold">.PDF</text>
-                        <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
-                            font-size="12" font-weight="bold">.MD</text>
-                    </svg>
-                    <div class="download-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
-                            <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
-                            <path d="M4 18h16v2H4z" fill="white" />
+            <h2 class="text-muted">Voorbeelden van werk (tijdelijk niet beschikbaar)</h2>
+            <div class="text-center mb-lg grid-work">
+                <div class="grid-work__item grid-work__item--disabled">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
+                            <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"
+                                fill="#bdbdbdff" />
+                            <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
+                            <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                                font-size="12" font-weight="bold">.PDF</text>
+                            <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                                font-size="12" font-weight="bold">.MD</text>
                         </svg>
+                        <div class="download-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
+                                <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
+                                <path d="M4 18h16v2H4z" fill="white" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
 
-                <span class="file-title">Obsidian Beginners Manual.zip</span>
-            </div>
-            <div class="grid-work__item grid-work__item--disabled">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
-                        <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#bdbdbdff" />
-                        <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
-                        <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
-                            font-size="12" font-weight="bold">.PDF</text>
-                        <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
-                            font-size="12" font-weight="bold">.MD</text>
-                    </svg>
-                    <div class="download-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
-                            <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
-                            <path d="M4 18h16v2H4z" fill="white" />
+                    <span class="file-title">Obsidian Beginners Manual.zip</span>
+                </div>
+                <div class="grid-work__item grid-work__item--disabled">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
+                            <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"
+                                fill="#bdbdbdff" />
+                            <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
+                            <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                                font-size="12" font-weight="bold">.PDF</text>
+                            <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                                font-size="12" font-weight="bold">.MD</text>
                         </svg>
+                        <div class="download-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
+                                <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
+                                <path d="M4 18h16v2H4z" fill="white" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
 
-                <span class="file-title">Figma Manual.zip</span>
-            </div>
-            <div class="grid-work__item grid-work__item--disabled">
-                <div class="file-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
-                        <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#bdbdbdff" />
-                        <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
-                        <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
-                            font-size="12" font-weight="bold">.PDF</text>
-                        <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
-                            font-size="12" font-weight="bold">.MD</text>
-                    </svg>
-                    <div class="download-badge">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
-                            <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
-                            <path d="M4 18h16v2H4z" fill="white" />
+                    <span class="file-title">Figma Manual.zip</span>
+                </div>
+                <div class="grid-work__item grid-work__item--disabled">
+                    <div class="file-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
+                            <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"
+                                fill="#bdbdbdff" />
+                            <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
+                            <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                                font-size="12" font-weight="bold">.PDF</text>
+                            <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                                font-size="12" font-weight="bold">.MD</text>
                         </svg>
+                        <div class="download-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
+                                <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
+                                <path d="M4 18h16v2H4z" fill="white" />
+                            </svg>
+                        </div>
                     </div>
-                </div>
 
-                <span class="file-title">SOP.pdf</span>
+                    <span class="file-title">SOP.pdf</span>
+                </div>
             </div>
-        </div>
         </section>
     </main>
 
@@ -593,35 +629,45 @@ eleventyExcludeFromCollections: true
             <div class="prose">
                 <details>
                     <summary>Ben je beschikbaar voor full-time opdrachten?</summary>
-                    <p>Nee, ik focus me op part-time samenwerkingen van 8 tot 12 uur per week, wat me in staat stelt om me grondig te concentreren op elke opdracht.</p>
+                    <p>Nee, ik focus me op part-time samenwerkingen van 8 tot 12 uur per week, wat me in staat stelt om
+                        me grondig te concentreren op elke opdracht.</p>
                 </details>
                 <details>
                     <summary>Werk je op locatie?</summary>
-                    <p>Mijn voorkeur gaat uit naar remote werken. Voor cruciale meetings of workshops kom ik graag naar kantoor, mits dit binnen redelijke reisafstand is.</p>
+                    <p>Mijn voorkeur gaat uit naar remote werken. Voor cruciale meetings of workshops kom ik graag naar
+                        kantoor, mits dit binnen redelijke reisafstand is.</p>
                 </details>
                 <details>
                     <summary>Welke tools gebruik je en ben je bekend met verscheidene documentatiestijlen?</summary>
-                    <p>Ik gebruik Markdown en Pandoc om te schrijven en Git voor versiebeheer. Ik ben tool-agnostisch en werk met wat jullie team gebruikt. Bekend met tools zoals Markdown, Git, Jira, Confluence, Notion, en diverse 'Docs-as-Code' oplossingen, ben ik snel inzetbaar in diverse omgevingen.</p>
+                    <p>Ik gebruik Markdown om te schrijven en Git voor versiebeheer. Ik ben tool-agnostisch en
+                        werk met wat jullie team gebruikt.</p>
                 </details>
                 <details>
                     <summary>Wat is je uurtarief en hoe bepaal je dit?</summary>
-                    <p>Afhankelijk van de opdracht werk ik op uur- of projectbasis. Mijn tarief varieert van €60–€80 per uur, afgestemd op het risiconiveau van het project. Dit biedt flexibiliteit en is aangepast aan de context, zodat het een goede investering is.</p>
+                    <p>Afhankelijk van de opdracht werk ik op uur- of projectbasis. Mijn tarief varieert van €60–€80 per
+                        uur, afgestemd op het risiconiveau van het project.</p>
                 </details>
                 <details>
-                    <summary>Wat is je specialisatie in teksten en hoe past dit binnen verschillende doelgroepen?</summary>
-                    <p>Mijn kracht ligt bij technische documentatie, UX-copy en functionele teksten. Voor pure marketing- of sales-copy verwijs ik je graag door naar specialisten.</p>
+                    <summary>Wat is je specialisatie in teksten en hoe past dit binnen verschillende doelgroepen?
+                    </summary>
+                    <p>Mijn kracht ligt bij technische documentatie, UX-copy en functionele teksten. Voor pure
+                        marketing- of sales-copy verwijs ik je graag door naar specialisten.</p>
                 </details>
                 <details>
                     <summary>Hoe waarborg je de kwaliteit van je werk in samenwerking met verschillende teams?</summary>
-                    <p>Ik heb ervaring in het werken met cross-functionele teams en ondersteun effectieve communicatie door regelmatig contact en feedbacksessies. Dit waarborgt consistentie en afstemming op de behoeften van zowel technische als niet-technische stakeholders.</p>
+                    <p>Ik heb ervaring in het werken met cross-functionele teams en ondersteun effectieve communicatie
+                        door regelmatig contact en feedbacksessies.</p>
                 </details>
                 <details>
                     <summary>Hoe ga je om met strakke deadlines en grote documentatieprojecten?</summary>
-                    <p>Ik heb bewezen ervaring in het beheren van deadlines door effectieve tijdsplanning, prioritering en regelmatige updates met het team. Dit zorgt ervoor dat we samen de doelstellingen halen zonder in te boeten op kwaliteit.</p>
+                    <p>Ik heb bewezen ervaring in het beheren van deadlines door effectieve tijdsplanning, prioritering
+                        en regelmatige updates met het team.</p>
                 </details>
                 <details>
                     <summary>Heb je ervaring met regelgeving en compliance-vereisten?</summary>
-                    <p>Ja, ik ben vertrouwd met regelgeving in verschillende sectoren en zorg ervoor dat de documentatie aan alle vereisten voldoet door nauw samen te werken met experts en grondig onderzoek te doen.</p>
+                    <p>Ja, ik ben vertrouwd met regelgeving in verschillende sectoren en zorg ervoor dat de documentatie
+                        aan alle vereisten voldoet door nauw samen te werken met experts en grondig onderzoek te doen.
+                    </p>
                 </details>
 
             </div>

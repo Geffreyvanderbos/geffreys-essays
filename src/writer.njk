@@ -1,0 +1,635 @@
+---
+title: Technisch Schrijver (NL)
+permalink: /schrijver/
+eleventyExcludeFromCollections: true
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technisch Schrijver - Geffrey van der Bos</title>
+    <meta name="description" content="Geffrey is een freelance technische schrijver die expertise biedt in het documenteren van complexe producten, vooral binnen gereguleerde industrieën. Hij combineert technische kennis met sterke communicatieve vaardigheden en een samenwerkende werkwijze.">
+    <style>
+        :root {
+            /* Colors */
+            --bg-color: #f5f5f5ff;
+            --text-color: #1a1a1a;
+            --text-light: #4e4e4eff;
+
+            /* Typography */
+            --font-sans: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+            /* Fluid Typography Scale */
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.25rem;
+            --text-xl: 1.5rem;
+            --text-2xl: 2rem;
+            --text-3xl: 3rem;
+
+            /* Spacing Scale (8pt grid basis) */
+            --space-xs: 0.5rem;
+            /* 8px */
+            --space-sm: 1rem;
+            /* 16px */
+            --space-md: 2rem;
+            /* 32px */
+            --space-lg: 4rem;
+            /* 64px */
+            --space-xl: 8rem;
+            /* 128px */
+
+            /* Layout */
+            --container-width: 720px;
+            /* Optimal reading width */
+            --radius: 4px;
+        }
+
+        /*
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #111111;
+                --text-color: #eeeeee;
+                --text-light: #aaaaaa;
+                --accent-color: #ffffff;
+                --border-color: #333333;
+            }
+        } */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: var(--space-sm);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: var(--space-sm);
+            color: var(--accent-color);
+            font-size: var(--text-base);
+        }
+
+        p {
+            margin-bottom: var(--space-sm);
+            max-width: 65ch;
+        }
+
+        a {
+            color: var(--text-color);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            text-decoration-color: rgba(0,0,0,.2);
+        }
+
+        a:hover {
+            text-decoration-thickness: 2px;
+            color: var(--text-light);
+        }
+
+        ul,
+        ol {
+            margin-top: var(--space-xs);
+            margin-bottom: var(--space-sm);
+            padding-left: var(--space-sm);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li::before {
+            content: "•";
+            font-size: 0.6em;
+            margin-right: .5rem;
+            vertical-align: middle;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border-color);
+            margin: var(--space-lg) 0;
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-sm);
+            padding-right: var(--space-sm);
+        }
+
+        /* Spacing Utilities */
+        .m-0 {
+            margin: 0 !important;
+        }
+
+        .mt-sm {
+            margin-top: var(--space-sm);
+        }
+
+        .mt-md {
+            margin-top: var(--space-md);
+        }
+
+        .mt-lg {
+            margin-top: var(--space-lg);
+        }
+
+        .mb-sm {
+            margin-bottom: var(--space-sm);
+        }
+
+        .mb-md {
+            margin-bottom: var(--space-md);
+        }
+
+        .mb-lg {
+            margin-bottom: var(--space-lg);
+        }
+
+        .p-sm {
+            padding: var(--space-sm);
+        }
+
+        .p-md {
+            padding: var(--space-md);
+        }
+
+        .p-lg {
+            padding: var(--space-lg);
+        }
+
+        /* Text Utilities */
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-muted {
+            color: var(--text-light);
+        }
+
+        .text-sm {
+            font-size: var(--text-sm);
+        }
+
+        .font-serif {
+            font-family: var(--font-serif);
+        }
+
+        /* Split Layout */
+        .layout-split {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .layout-split h1,
+        .layout-split h2 {
+            margin-bottom: var(--space-sm);
+            font-size: var(--text-base);
+            color: var(--text-light);
+            font-weight: normal;
+            line-height: 1.7;
+        }
+
+        .layout-split .prose {
+            max-width: 65ch;
+        }
+
+        @media (min-width: 768px) {
+            .layout-split {
+                grid-template-columns: 1fr 2fr;
+                gap: var(--space-lg);
+                align-items: baseline;
+            }
+
+            .layout-split h1,
+            .layout-split h2 {
+                text-align: right;
+                position: sticky;
+                top: var(--space-md);
+            }
+        }
+
+        .grid-work {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xs);
+        }
+
+        .grid-work__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-sm);
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .grid-work__item:not(.grid-work__item--disabled):hover {
+            background-color: #fff;
+        }
+
+        .grid-work__item--disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .file-icon {
+            position: relative;
+            width: 64px;
+            height: 80px;
+        }
+
+        .pdf-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .download-badge {
+            position: absolute;
+            bottom: -6px;
+            right: -6px;
+            width: 28px;
+            height: 28px;
+            background: #757575ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .file-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-light);
+            text-align: center;
+            word-break: break-word;
+            line-height: 1.3;
+        }
+
+        details {
+            border-bottom: 1px solid var(--border-color, #e9e9e9ff);
+            margin-bottom: var(--space-xs);
+        }
+
+        details:last-child {
+            border-bottom: none;
+        }
+
+        summary {
+            cursor: pointer;
+            padding: var(--space-sm) 0;
+            list-style: none;
+            position: relative;
+            padding-right: var(--space-md);
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 400;
+            color: var(--text-light);
+        }
+
+        details[open] summary::after {
+            content: "−";
+            /* Minus sign */
+        }
+
+        details[open] summary {
+            margin-bottom: var(--space-xs);
+        }
+
+        details p {
+            margin-bottom: var(--space-sm);
+            color: var(--text-light);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="site-nav">
+                <div class="mb-lg text-center" style="padding-top: var(--space-md);">
+                    <a href="#" style="text-decoration: none; font-weight: 700;">Technisch Schrijver &mdash; Geffrey van
+                        der Bos</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="layout-split">
+            <h1>Complexe producten met duidelijke documentatie</h1>
+            <div class="prose">
+                <p>
+                    Als part‑time freelance technisch schrijver lever ik beknopte, gebruikersgerichte documentatie voor
+                    digitale en technische producten.
+                </p>
+                <ul>
+                    <li>Gebruikers‑ en operatorhandleidingen</li>
+                    <li>Kennisbanken en FAQ’s</li>
+                    <li>Technische specificaties en productdocumentatie</li>
+                    <li>Release‑notes en changelogs</li>
+                    <li>SOP’s en werkinstructies</li>
+                    <li>Regelgevings‑documentatie voor apparaten en software</li>
+                    <li>Microcopy (foutmeldingen, knoppen labels, etc.)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="layout-split">
+            <h2>Over mij</h2>
+            <div class="prose">
+                <p>Bijna een decennium heb ik <a href="https://linkedout.geff.re/" title="Bekijk Geffrey zijn CV">gewerkt als</a>:</p>
+                <ul>
+                    <li>Product Owner voor medische software</li>
+                    <li>Product Owner voor AI infrastructuurtools</li>
+                    <li>Lead Product Designer voor complexe digitale producten</li>
+                </ul>
+
+                <p>Ik kan:</p>
+                <ul>
+                    <li>Comfortabel communiceren met engineers, QA, regulatory en business stakeholders
+                    </li>
+                    <li>Roadmaps, specs en tickets vertalen naar coherente, gebruikersklare documentatie
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="layout-split">
+            <h2>Ervaring</h2>
+            <div class="prose">
+                <p>Ik heb ervaring in omgevingen die voldoen aan:</p>
+                <ul>
+                    <li>ISO/IEC‑normen voor software‑kwaliteit en risicomanagement</li>
+                    <li>EU Medical Device Regulation (MDR)</li>
+                </ul>
+                <p>Ik begrijp:</p>
+                <ul>
+                    <li>Traceerbaarheid van eisen tot tests en documentatie</li>
+                    <li>De noodzaak van duidelijke, controleerbare, versie‑beheer documentatie</li>
+                    <li>Hoe gebruikershandleidingen, etikettering en procedures bijdragen aan naleving,
+                        veiligheid en bruikbaarheid</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="layout-split">
+            <h2>Communicatie</h2>
+            <div class="prose">
+                <p>Een achtergrond in International and Intercultural Communication (BA) zorgt ervoor dat jouw content:
+                </p>
+                <ul>
+                    <li>Duidelijk en gestructureerd is voor niet‑expert lezers</li>
+                    <li>Gevoelig is voor verschillende culturen en taalniveaus</li>
+                    <li>Makkelijk te implementeren is voor designers en developers</li>
+                </ul>
+                <p>Vloeiend in Engels, Nederlands, en Fries, met werkend Duits.
+                </p>
+            </div>
+        </section>
+
+        <section class="layout-split">
+            <h2>Werkwijze</h2>
+            <div class="prose">
+                <p>Ik houd het proces lichtgewicht zodat jullie je kunt blijven focussen op bouwen:</p>
+                <ol>
+                    <li>Kick‑off
+                        <ul>
+                            <li>Doelgroep, scope, beperkingen en deadlines verduidelijken</li>
+                            <li>Schrijfwijze, jargon en technische details bespreken.</li>
+                        </ul>
+                    </li>
+                    <li>Snelle verkenning
+                        <ul>
+                            <li>Bestaande docs, tickets, en designs beoordelen</li>
+                            <li>Kort praten met sleutelpersonen</li>
+                        </ul>
+                    </li>
+                    <li>Concepten in kleine delen
+                        <ul>
+                            <li>Ik werk open en transparant, zodat jullie snel kunt reviewen en bijsturen</li>
+                            <li>Ik beheer versiebeheer en wijzigingstracking (via Git)</li>
+                        </ul>
+                    </li>
+                    <li>Review & iteratie
+                        <ul>
+                            <li>Jullie feedback en correcties verwerken</li>
+                            <li>Toon en diepgang aanpassen voor verschillende doelgroepen</li>
+                        </ul>
+                    </li>
+                    <li>Overdracht & onderhoud
+                        <ul>
+                            <li>Schone, georganiseerde bestanden en structuur zodat jouw team het kan onderhouden</li>
+                            <li>Optioneel doorlopende wekelijkse uren om alles synchroon en up-to-date te houden</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="layout-split">
+            <h2>Ideale Projecten</h2>
+            <div class="prose">
+                <p>Je haalt de meeste waarde uit de samenwerking als:</p>
+                <ul>
+                    <li>Je product complex en technisch is</li>
+                    <li>Je drukbezette subject‑matter experts hebt en iemand nodig hebt die de documentatie “eigent”
+                    </li>
+                    <li>Je werkt in of nabij gereguleerde domeinen (bijv. medische apparaten,
+                        industriële automatisering, infrastructuur, AI‑tools)</li>
+                    <li>Je documentatie wilt die zowel gebruiksvriendelijk als acceptabel is voor QA/compliance</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="layout-split">
+            <h2>Verwachtingen</h2>
+            <div class="prose">
+                <p>Wat je van mij kunt verwachten:</p>
+                <ul>
+                    <li>Consistente 8–12 uur per week, makkelijk te bereiken en heldere vergaderingen
+                    </li>
+                    </li>
+                    <li>Ik werk zelfstandig met minimale begeleiding</li>
+                    <li>Ik combineer UX, product en communicatie vaardigheden</li>
+                    <li>Ik weet waarom standaarden en normen belangrijk
+                        zijn, maar houd de taal menselijk</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="layout-split">
+            <h2>Contact</h2>
+            <div class="prose">
+                <p>Als je een part‑time samenwerking wilt verkennen:</p>
+                <ul>
+                    <li>Telefoon: +31 6 12345678</li>
+                    <li>E‑mail: geffrey@tech-writer.com</li>
+                    <li>Locatie: Nederland (comfortabel werken met internationale teams)</li>
+                    <li>Talen: Engels, Nederlands, Duits (beperkt), Fries</li>
+                </ul>
+                <p>Ik kijk uit naar je uitdagingen!</p>
+            </div>
+        </section>
+        <section>
+        <h2 class="text-muted">Voorbeelden van werk (tijdelijk niet beschikbaar)</h2>
+        <div class="text-center mb-lg grid-work">
+            <div class="grid-work__item grid-work__item--disabled">
+                <div class="file-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
+                        <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#bdbdbdff" />
+                        <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
+                        <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                            font-size="12" font-weight="bold">.PDF</text>
+                        <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                            font-size="12" font-weight="bold">.MD</text>
+                    </svg>
+                    <div class="download-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
+                            <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
+                            <path d="M4 18h16v2H4z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+
+                <span class="file-title">Obsidian Beginners Manual.zip</span>
+            </div>
+            <div class="grid-work__item grid-work__item--disabled">
+                <div class="file-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
+                        <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#bdbdbdff" />
+                        <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
+                        <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                            font-size="12" font-weight="bold">.PDF</text>
+                        <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                            font-size="12" font-weight="bold">.MD</text>
+                    </svg>
+                    <div class="download-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
+                            <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
+                            <path d="M4 18h16v2H4z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+
+                <span class="file-title">Figma Manual.zip</span>
+            </div>
+            <div class="grid-work__item grid-work__item--disabled">
+                <div class="file-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64" class="pdf-svg">
+                        <path d="M4 0h30l14 14v46a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#bdbdbdff" />
+                        <path d="M34 0l14 14H38a4 4 0 0 1-4-4V0z" fill="#969696ff" />
+                        <text x="24" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                            font-size="12" font-weight="bold">.PDF</text>
+                        <text x="24" y="54" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                            font-size="12" font-weight="bold">.MD</text>
+                    </svg>
+                    <div class="download-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="download-svg">
+                            <path d="M12 16l-6-6h4V4h4v6h4l-6 6z" fill="white" />
+                            <path d="M4 18h16v2H4z" fill="white" />
+                        </svg>
+                    </div>
+                </div>
+
+                <span class="file-title">SOP.pdf</span>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container">
+        <section class="layout-split">
+            <h2>Veelgestelde vragen</h2>
+            <div class="prose">
+                <details>
+                    <summary>Ben je beschikbaar voor full-time opdrachten?</summary>
+                    <p>Nee, ik focus me op part-time samenwerkingen van 8 tot 12 uur per week, wat me in staat stelt om me grondig te concentreren op elke opdracht.</p>
+                </details>
+                <details>
+                    <summary>Werk je op locatie?</summary>
+                    <p>Mijn voorkeur gaat uit naar remote werken. Voor cruciale meetings of workshops kom ik graag naar kantoor, mits dit binnen redelijke reisafstand is.</p>
+                </details>
+                <details>
+                    <summary>Welke tools gebruik je en ben je bekend met verscheidene documentatiestijlen?</summary>
+                    <p>Ik gebruik Markdown en Pandoc om te schrijven en Git voor versiebeheer. Ik ben tool-agnostisch en werk met wat jullie team gebruikt. Bekend met tools zoals Markdown, Git, Jira, Confluence, Notion, en diverse 'Docs-as-Code' oplossingen, ben ik snel inzetbaar in diverse omgevingen.</p>
+                </details>
+                <details>
+                    <summary>Wat is je uurtarief en hoe bepaal je dit?</summary>
+                    <p>Afhankelijk van de opdracht werk ik op uur- of projectbasis. Mijn tarief varieert van €60–€80 per uur, afgestemd op het risiconiveau van het project. Dit biedt flexibiliteit en is aangepast aan de context, zodat het een goede investering is.</p>
+                </details>
+                <details>
+                    <summary>Wat is je specialisatie in teksten en hoe past dit binnen verschillende doelgroepen?</summary>
+                    <p>Mijn kracht ligt bij technische documentatie, UX-copy en functionele teksten. Voor pure marketing- of sales-copy verwijs ik je graag door naar specialisten.</p>
+                </details>
+                <details>
+                    <summary>Hoe waarborg je de kwaliteit van je werk in samenwerking met verschillende teams?</summary>
+                    <p>Ik heb ervaring in het werken met cross-functionele teams en ondersteun effectieve communicatie door regelmatig contact en feedbacksessies. Dit waarborgt consistentie en afstemming op de behoeften van zowel technische als niet-technische stakeholders.</p>
+                </details>
+                <details>
+                    <summary>Hoe ga je om met strakke deadlines en grote documentatieprojecten?</summary>
+                    <p>Ik heb bewezen ervaring in het beheren van deadlines door effectieve tijdsplanning, prioritering en regelmatige updates met het team. Dit zorgt ervoor dat we samen de doelstellingen halen zonder in te boeten op kwaliteit.</p>
+                </details>
+                <details>
+                    <summary>Heb je ervaring met regelgeving en compliance-vereisten?</summary>
+                    <p>Ja, ik ben vertrouwd met regelgeving in verschillende sectoren en zorg ervoor dat de documentatie aan alle vereisten voldoet door nauw samen te werken met experts en grondig onderzoek te doen.</p>
+                </details>
+
+            </div>
+        </section>
+        <p class="text-muted text-sm" style="margin: 1rem auto">
+            &copy; 2025 Geffrey van der Bos. <a href="https://geff.re/">Ga naar blog.</a> Alle rechten voorbehouden.
+        </p>
+    </footer>
+</body>
+
+</html>

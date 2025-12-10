@@ -5,7 +5,7 @@ date: 2025-09-10
 Music theory isn't as complicated as you thought.
 I'm unsure whether it is snobbery or I've just never been taught 'the right way'. Regardless, here's how I made sense of it.
 
-The fundamentals to music starts with the distance (interval) between notes. 
+The fundamentals to music starts with the distance between notes (interval).
 
 Find the ♠  note on the piano keys below.
 Now, locate the adjacent key (♥).

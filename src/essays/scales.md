@@ -23,12 +23,11 @@ Two semitones make up a whole *tone* (♠ to ♦).
 | ♠ | ♦ |   |   |   |   |   | 
 |___|___|___|___|___|___|___|
 ```
+*Generate your own ascii piano at the end of this page.
+
 
 ## Notes and their names
 A common way to refer notes is by letters of the alphabet.
-
-Every culture has their own understanding of music.
-What I will cover here is a very Western take.
 
 Find the C note by locating the white key to the left of the two-black-key group; that key is C (♠ on the keyboard above).
 

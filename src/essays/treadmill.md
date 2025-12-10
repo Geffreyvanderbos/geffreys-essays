@@ -1,6 +1,6 @@
 ---
 title: Why we are never satisfied
-date: 2024-08-01
+date: 2025-08-01
 ---
 Humans have a tendency to adapt to positive or negative life changes. Always returning to their baseline happiness.
 

@@ -15,7 +15,7 @@ They'll register who you message.
 And when. 
 And how often.
 They'll track you across the internet from laptop to phone and back. 
-Honestly, you can hide the pack of sigarettes from your wife.
+You can hide that pack of sigarettes from your wife.
 But not from *them*.
 
 They know what channels you're subscribed to.

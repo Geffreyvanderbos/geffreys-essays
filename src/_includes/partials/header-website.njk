@@ -1,5 +1,12 @@
 <header class="mt-64 pb-12 mb-24">
   <nav>
-    <a href="/">{{ site.name }}</a>
+        <ul class="nav">
+            <a href="/">{{ site.name }}</a>
+            {% for item in nav %}
+            <li class="{% if item.url == page.url %}active{% endif %}">
+                <a href="{{ item.url }}" {% if item.target %}target="{{ item.target}}"{% endif %}}>{{ item.text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
   </nav>
 </header>

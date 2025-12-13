@@ -69,6 +69,20 @@ a:visited {
     color: hsla(var(--color-white), .6);
 }
 
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav li:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.nav li:nth-child(2) {
+    margin-left: auto;
+}
+
 main {
     flex-grow: 1;
 }
@@ -335,4 +349,8 @@ blockquote {
 
 .pb-16 {
     padding-bottom: 1rem;
+}
+
+li:has(s) {
+    opacity: .3;
 }

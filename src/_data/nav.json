@@ -1,10 +1,15 @@
 [
   {
-    "url": "/",
-    "text": "Home"
+    "url": "/now/",
+    "text": "Now"
   },
   {
-    "url": "/essays/",
-    "text": "Essays"
+    "url": "https://linkedout.geff.re",
+    "text": "Resume",
+    "target": "_blank"
+  },
+  {
+    "url": "/purge/",
+    "text": "Purge"
   }
 ]

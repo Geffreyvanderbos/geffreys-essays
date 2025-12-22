@@ -1,10 +1,12 @@
 <header class="mt-64 pb-12 mb-24">
-  <nav>
+  <nav aria-label="Main">
         <ul class="nav">
-            <a href="/">{{ site.name }}</a>
-            {% for item in nav %}
-            <li class="{% if item.url == page.url %}active{% endif %}">
-                <a href="{{ item.url }}" {% if item.target %}target="{{ item.target}}"{% endif %}}>{{ item.text }}</a>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            {%- for item in nav %}
+            <li>
+                <a href="{{ item.url }}" {%- if item.url == page.url %}class="no-decoration"{% endif %} {%- if item.target %}target="{{ item.target}}"{% endif %}>{{ item.text }}</a>
             </li>
             {% endfor %}
         </ul>

@@ -4,12 +4,7 @@
     "text": "Now"
   },
   {
-    "url": "https://linkedout.geff.re",
-    "text": "Resume",
-    "target": "_blank"
-  },
-  {
-    "url": "/purge/",
-    "text": "Purge"
+    "url": "/slashes/",
+    "text": "Slash Pages"
   }
 ]

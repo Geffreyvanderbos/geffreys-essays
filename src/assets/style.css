@@ -19,9 +19,12 @@
     color: #151e15;
 }
 
-body {
+html {
     background-color: hsl(var(--color-darkgreen));
-    font-size: clamp(1.0625rem, 0.9628rem + 0.3191vw, 1.25rem);
+}
+
+body {
+    font-size: clamp(0.9375rem, 0.871rem + 0.2128vw, 1.0625rem);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -57,9 +60,35 @@ a {
     text-decoration-color: hsla(var(--color-white), .4);
 }
 
-a:hover {
+a.no-decoration {
+    text-decoration: none;
+}
+
+a:hover,
+a.no-decoration:hover {
     text-decoration-color: hsla(var(--color-white), 1);
 }
+
+a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2em;
+    flex-wrap: nowrap;
+}
+
+a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])::after {
+    content: "";
+    flex-shrink: 0;
+    width: .75em;
+    height: .75em;
+    background-color: currentColor;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.75%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%203h6v6m-11%205L21%203m-3%2010v6a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2V8a2%202%200%200%201%202-2h6%22%2F%3E%3C%2Fsvg%3E");
+    mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.75%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%203h6v6m-11%205L21%203m-3%2010v6a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2V8a2%202%200%200%201%202-2h6%22%2F%3E%3C%2Fsvg%3E");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}
+
+
 
 a:visited {
     text-decoration-color: hsla(var(--color-white), 1);
@@ -191,7 +220,7 @@ pre code {
 blockquote {
     border-left: 1px solid hsla(var(--color-white), .6);
     margin-inline-start: 0;
-    padding-inline-start: 40px;
+    padding-inline-start: 1.5em;
 }
 
 .no-list-style {

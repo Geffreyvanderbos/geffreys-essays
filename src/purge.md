@@ -7,7 +7,6 @@ This is my /purge page.
 A list of services I signed-up for and the ones I deleted.
 Every struck-off account returns control to me.
 Join the purge: audit, delete, repeat.
-I found these searching for 'welcome' in my email inboxes. 
 
 - ~~21habit~~
 - ~~500px~~
@@ -102,6 +101,7 @@ I found these searching for 'welcome' in my email inboxes.
 - melia
 - Memrise
 - Meta for Business
+- ~~Micro.blog~~
 - Mifit (Huami)
 - Mindbloom
 - Mozilla
@@ -115,7 +115,7 @@ I found these searching for 'welcome' in my email inboxes.
 - Otter.ai
 - Paypal.de
 - Piano Marvel
-- Pinterest
+- ~~Pinterest~~
 - Polymail
 - polywork
 - Product Hunt
@@ -170,5 +170,7 @@ I found these searching for 'welcome' in my email inboxes.
 - ~~X~~
 - xda-developers
 - XING
+- ~~Zeplin~~
+- Zettel
 - ~~Zeplin~~
 - Zettel

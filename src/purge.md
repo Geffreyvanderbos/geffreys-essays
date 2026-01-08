@@ -32,18 +32,18 @@ Join the purge: audit, delete, repeat.
 - ~~Badoo~~
 - Bandsintown
 - ~~Behance~~
-- Blinkist
+- ~~Blinkist~~
 - Boords
-- Buffer
+- ~~Buffer~~
 - Bunny.net
 - Buy Me a Coffee
-- Cactomain
+- ~~Cactomain~~
 - Cal.com
-- Camarilla
-- car2go
+- ~~Camarilla~~
+- ~~car2go~~
 - Chatfuel
 - cir.ca
-- Craft Docs
+- ~~Craft Docs~~
 - crazybaby
 - Creative Market
 - Deep Breath
@@ -52,7 +52,6 @@ Join the purge: audit, delete, repeat.
 - Digg
 - Disqus
 - domainwatch.me
-- Duolingo
 - Duolingo
 - Esquire
 - Eufy

@@ -14,7 +14,7 @@ Join the purge: audit, delete, repeat.
 - ~~About.me~~
 - ~~acreom~~
 - ~~Adguard~~
-- Adobe
+- ~~Adobe~~
 - Airbnb
 - ~~Airtable~~
 - Aklamio
@@ -31,7 +31,7 @@ Join the purge: audit, delete, repeat.
 - Aura Team
 - ~~Badoo~~
 - Bandsintown
-- Behance
+- ~~Behance~~
 - Blinkist
 - Boords
 - Buffer

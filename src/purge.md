@@ -17,9 +17,9 @@ Join the purge: audit, delete, repeat.
 - ~~Adobe~~
 - Airbnb
 - ~~Airtable~~
-- Aklamio
+- ~~Aklamio~~
 - aliexpress
-- Android Authority
+- ~~Android Authority~~
 - Anker
 - Anytype
 - AppSumo

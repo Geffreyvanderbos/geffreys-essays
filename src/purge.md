@@ -20,15 +20,15 @@ Join the purge: audit, delete, repeat.
 - ~~Aklamio~~
 - aliexpress
 - ~~Android Authority~~
-- Anker
+- ~~Anker~~
 - Anytype
 - AppSumo
-- Architonic
+- ~~Architonic~~
 - Attracta
 - Audible
-- AudioPen
-- Audius Team
-- Aura Team
+- ~~AudioPen~~
+- ~~Audius~~
+- Aura
 - ~~Badoo~~
 - Bandsintown
 - ~~Behance~~

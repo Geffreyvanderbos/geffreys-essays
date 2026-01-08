@@ -172,5 +172,3 @@ Join the purge: audit, delete, repeat.
 - XING
 - ~~Zeplin~~
 - Zettel
-- ~~Zeplin~~
-- Zettel

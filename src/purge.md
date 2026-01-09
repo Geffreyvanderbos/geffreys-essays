@@ -7,7 +7,6 @@ This is my /purge page.
 A list of services I signed-up for and the ones I deleted.
 Every struck-off account returns control to me.
 Join the purge: audit, delete, repeat.
-I found these searching for 'welcome' in my email inboxes. 
 
 - ~~21habit~~
 - ~~500px~~
@@ -15,36 +14,36 @@ I found these searching for 'welcome' in my email inboxes.
 - ~~About.me~~
 - ~~acreom~~
 - ~~Adguard~~
-- Adobe
+- ~~Adobe~~
 - Airbnb
 - ~~Airtable~~
-- Aklamio
+- ~~Aklamio~~
 - aliexpress
-- Android Authority
-- Anker
+- ~~Android Authority~~
+- ~~Anker~~
 - Anytype
 - AppSumo
-- Architonic
+- ~~Architonic~~
 - Attracta
 - Audible
-- AudioPen
-- Audius Team
-- Aura Team
+- ~~AudioPen~~
+- ~~Audius~~
+- Aura
 - ~~Badoo~~
 - Bandsintown
-- Behance
-- Blinkist
+- ~~Behance~~
+- ~~Blinkist~~
 - Boords
-- Buffer
+- ~~Buffer~~
 - Bunny.net
 - Buy Me a Coffee
-- Cactomain
+- ~~Cactomain~~
 - Cal.com
-- Camarilla
-- car2go
+- ~~Camarilla~~
+- ~~car2go~~
 - Chatfuel
 - cir.ca
-- Craft Docs
+- ~~Craft Docs~~
 - crazybaby
 - Creative Market
 - Deep Breath
@@ -53,7 +52,6 @@ I found these searching for 'welcome' in my email inboxes.
 - Digg
 - Disqus
 - domainwatch.me
-- Duolingo
 - Duolingo
 - Esquire
 - Eufy
@@ -102,6 +100,7 @@ I found these searching for 'welcome' in my email inboxes.
 - melia
 - Memrise
 - Meta for Business
+- ~~Micro.blog~~
 - Mifit (Huami)
 - Mindbloom
 - Mozilla
@@ -115,7 +114,7 @@ I found these searching for 'welcome' in my email inboxes.
 - Otter.ai
 - Paypal.de
 - Piano Marvel
-- Pinterest
+- ~~Pinterest~~
 - Polymail
 - polywork
 - Product Hunt

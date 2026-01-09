@@ -31,7 +31,7 @@ Are we okay with this?
 If I hear this effin’ cliché one more time, I'm going to write an essay about it!
 Oh.
 
-From these things, you've got nothing you rather kept to yourself?
+From these things in this huge list, you've got nothing you rather kept to yourself?
 
 <ul class="tree">
 <li class="tree-item">
@@ -43,7 +43,7 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">Google Pay, Apple Pay, PayPal, credit/debit cards</span>
+        <span class="tree-item-label">Digital wallets & processors (Google Pay, Apple Pay, PayPal)</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Transaction timestamp, merchant name and category, exact amount paid</span></div></li>
@@ -59,7 +59,7 @@ From these things, you've got nothing you rather kept to yourself?
         <span class="tree-item-label">Bank accounts, loan applications, mortgage statements</span>
         </div>
         <ul class="tree-item-children">
-        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full account balances, deposit/withdrawal history, ACH/wire transfers</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full account balances, deposit/withdrawal history, bank transfers</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Overdraft events, declined transactions, ATM withdrawal locations</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Credit-bureau pulls, credit scores, debt-to-income ratios</span></div></li>
         </ul>
@@ -75,10 +75,10 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">Grocery & big-box loyalty cards</span>
+        <span class="tree-item-label">Grocery & retail loyalty cards</span>
         </div>
         <ul class="tree-item-children">
-        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Every UPC-scanned item (brand, variant, price), purchase frequency</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Every scanned item (brand, variant, price), purchase frequency</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">In-store visit times, receipt-itemized preferences (organic, gluten-free…)</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Coupons clipped/redeemed, digital-offer click-streams</span></div></li>
         </ul>
@@ -109,7 +109,7 @@ From these things, you've got nothing you rather kept to yourself?
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full search queries, clicked results, time-on-page, scroll depth</span></div></li>
-        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">IP address, inferred interests, saved "My Activity" archives</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">IP address, inferred interests, saved activity archives</span></div></li>
         </ul>
     </li>
     <li class="tree-item">
@@ -126,7 +126,7 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">Social media platforms (Facebook, Instagram, TikTok…)</span>
+        <span class="tree-item-label">Social media (Facebook, Instagram, TikTok, etc.)</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Posts/photos/videos, likes/reactions, comments, shares, saved items</span></div></li>
@@ -146,12 +146,12 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">Email providers, messaging apps (WhatsApp, Signal, Slack)</span>
+        <span class="tree-item-label">Messaging apps (WhatsApp, Signal, Slack)</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full message contents (unless end-to-end encrypted), attachments, metadata</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Contact lists, group chats, read receipts, call/video-call logs</span></div></li>
-        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Device sync logs, backup archives, AI-driven "priority inbox" labels</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Device sync logs, backup archives, AI-driven priority labels</span></div></li>
         </ul>
     </li>
     <li class="tree-item">
@@ -176,7 +176,7 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">Wearables & fitness apps (Fitbit, Apple Health, Garmin)</span>
+        <span class="tree-item-label">Wearables & apps (Fitbit, Apple Health, Garmin)</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Heart rate, sleep stages, step counts, calorie burn, workout routes</span></div></li>
@@ -190,7 +190,7 @@ From these things, you've got nothing you rather kept to yourself?
         <span class="tree-item-label">Medical records & insurance claims</span>
         </div>
         <ul class="tree-item-children">
-        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Diagnoses (ICD-10 codes), doctor's notes, lab-test results, imaging scans</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Diagnoses (classification codes), doctor's notes, lab-test results, imaging scans</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Prescription history, pharmacy refill schedules, pill-count adherence</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Insurance pre-authorizations, claims approvals/denials, billing codes</span></div></li>
         </ul>
@@ -206,7 +206,7 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">Smart speakers, cameras (Amazon Echo, Nest)</span>
+        <span class="tree-item-label">Smart speakers, cameras (Alexa, Nest, etc.)</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Voice recordings, activation transcripts, ambient-noise snippets</span></div></li>
@@ -244,7 +244,7 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">DMV, passport/visa applications</span>
+        <span class="tree-item-label">Transport agency, passport/visa applications</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Full name, birth date, address history, eye color, height/weight</span></div></li>
@@ -257,7 +257,7 @@ From these things, you've got nothing you rather kept to yourself?
         <span class="tree-item-label">Tax authorities, voter registrations</span>
         </div>
         <ul class="tree-item-children">
-        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Income statements (W-2s, 1099s), deduction details, audits, liens</span></div></li>
+        <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Income statements, deduction details, audits, payment demands</span></div></li>
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Party affiliation (where recorded), voting history (where public)</span></div></li>
         </ul>
     </li>
@@ -282,7 +282,7 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">Data-broker aggregates (Experian, Acxiom, Oracle)</span>
+        <span class="tree-item-label">Data-broker aggregates (Experian, Acxiom, etc.)</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Psychographic profiles: personality traits, lifestyle segment, political leanings</span></div></li>
@@ -312,7 +312,7 @@ From these things, you've got nothing you rather kept to yourself?
     <li class="tree-item">
         <div class="tree-item-content">
         <span class="tree-item-toggle"></span>
-        <span class="tree-item-label">App-analytics SDKs (Crashlytics, Mixpanel)</span>
+        <span class="tree-item-label">App-analytics SDKs</span>
         </div>
         <ul class="tree-item-children">
         <li class="tree-item"><div class="tree-item-content"><span class="tree-item-toggle hidden"></span><span class="tree-item-label">Crash reports, stack traces, user-flow funnels, retention cohorts</span></div></li>
@@ -334,7 +334,6 @@ From these things, you've got nothing you rather kept to yourself?
 </li>
 </ul>
 
-You still here?
 Yeah. Scary.
 And we all act as if this is the most normal thing ever.
 Sure, you’ll have to trust some organisations.
@@ -418,15 +417,15 @@ How can you protect your freedom if you don’t protect your privacy?
       align-items: center;
       justify-content: center;
       padding: 0;
-      margin-right: 0.5rem;
+      margin-right: 0.1rem;
       flex-shrink: 0;
       transition: transform 0.264s ease-in;
       transform-origin: 12px 12px;
-    transform: translateY(6px);
+    transform: translateY(4px);
     }
 
     .tree-item-toggle::before {
-      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23E8E4E3' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-chevron-right-icon lucide-square-chevron-right'%3E%3Crect width='18' height='18' x='3' y='3' rx='2'/%3E%3Cpath d='m10 8 4 4-4 4'/%3E%3C/svg%3E");
+      content: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23E8E4E3%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m9%2018%206-6-6-6%22%2F%3E%3C%2Fsvg%3E");
       height: 24px;
       width: 24px;
       margin-right: 0;

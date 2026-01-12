@@ -3,17 +3,13 @@ title: Productivity with background music
 date: 2026-01-12
 ---
 
-> Everyone’s brain responds differently to background music—some swear by lo-fi beats, others need total silence. What does the science say, though?
-
-I had to pause the man screaming (🤘🏻) in my ear to read a wordy task description. I think I read each sentence twice until it clicked. And then I wondered: is music hurting my understanding of what I read?
+Had to pause the man screaming (🤘🏻) in my ear to read a wordy task description. I think I read each sentence twice until it clicked. And then I wondered: is music hurting my understanding of what I read?
 
 Being a curious boy, I decided to investigate. I pulled up my trusty research tools and went to theory town. "How does background music impact my brain?" I asked in science speech. Unsurprisingly, there's a lot of research papers on this.
 ## Mozart–Schmozart
 You might have vaguely heard about the Mozart Effect.
 
-Back in the 90s, it was a hypothesis that took the world by storm: listening to Mozart for just 10 minutes improved people's performance on spatial tasks!
-
-The conclusion was obvious. The snobs had won. Listening to classical music makes you smarter. Or so it seemed.
+Back in the 90s, it was a hypothesis that took the world by storm: listening to Mozart for just 10 minutes improved people's performance on spatial tasks! The conclusion was obvious. The snobs had won. Listening to classical music makes you smarter. Or so it seemed.
 
 While initial studies sometimes replicated the effect, many others failed. Eventually, several review papers outright debunked the direct link between Mozart and enhanced spatial reasoning.
 

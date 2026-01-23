@@ -8,7 +8,7 @@ Each tiny corner on the web is scraped.
 It's mental. 
 
 ## Everything
-If you ask me, ever since social media and the advertisement business model  the internet turned dystopian. 
+Ever since social media and the advertisement business model  the internet turned dystopian. 
 They've started tracking _everything_. 
 Even the stuff you didn't know they were.
 They'll register who you message.

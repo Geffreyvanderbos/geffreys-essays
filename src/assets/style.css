@@ -3,9 +3,11 @@
 }
 
 :root {
-    --color-darkgreen: 120, 18%, 10%;
-    --color-white: 8, 10%, 82%;
-
+    --color-darkgreen: 120, 18%, 8%;
+    --color-white: 8, 10%, 86%;
+    --color-yellow: 48, 94%, 68%;
+    --color-gray: 140, 3%, 75%;
+    --color-red: 11, 82%, 68%;
     --page-width: 700px;
 }
 
@@ -41,23 +43,64 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+em {
+    font-size: 109%;
+}
+
 video,
 img {
     max-width: 100%;
     height: auto;
 }
 
-body,
-a {
+body {
     color: hsla(var(--color-white));
 }
 
+.skip-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: clip;
+    clip: rect(0, 0, 0, 0);
+    background: hsla(var(--color-yellow));
+    color: hsla(var(--color-darkgreen));
+    font-weight: 700;
+}
+
+.skip-link:focus {
+    width: auto;
+    height: auto;
+    padding: 6px 12px;
+    clip: auto;
+    transform: translateX(-50%);
+    margin-left: 0;
+    top: 12px;
+    left: 50%;
+    border-radius: 4px;
+    z-index: 100;
+}
+
 a {
+    color: hsla(var(--color-white));
     text-underline-offset: .4em;
     text-decoration-thickness: 1px;
     text-decoration-thickness: .5px;
     text-decoration-skip-ink: none;
     text-decoration-color: hsla(var(--color-white), .4);
+}
+
+article a:not(.muted-text) {
+    color: hsla(var(--color-yellow));
+    text-decoration-color: hsla(var(--color-yellow), .4);
+}
+
+article a:hover:not(.muted-text) {
+    text-decoration-color: hsla(var(--color-yellow), 1);
 }
 
 a.no-decoration {
@@ -88,20 +131,31 @@ a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):
     mask-size: contain;
 }
 
-
-
 a:visited {
     text-decoration-color: hsla(var(--color-white), 1);
 }
 
+a:focus-visible {
+    outline: 2px solid hsl(var(--color-yellow));
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
 .muted-text {
-    color: hsla(var(--color-white), .6);
+    color: hsl(var(--color-gray));
 }
 
 .nav {
     display: flex;
+    align-items: center;
     list-style: none;
     padding: 0;
+}
+
+.home-link:hover {
+    outline: 1px dashed hsla(var(--color-gray), .5);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .nav li:not(:last-child) {
@@ -116,6 +170,19 @@ main {
     flex-grow: 1;
 }
 
+#main-content:focus-visible {
+    outline: 1px dashed hsl(var(--color-yellow));
+    outline-offset: 16px;
+    border-radius: 4px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: hsla(var(--color-gray), .2);
+    margin: 2rem 0;
+}
+
 article>p:first-of-type:first-letter {
     float: left;
     font-size: 3.75em;
@@ -127,7 +194,7 @@ footer {
     font-size: .8em;
     text-align: center;
     padding: 0 1em;
-    border-top: 1px solid hsla(var(--color-white), .2);
+    border-top: 1px solid hsla(var(--color-gray), .2);
 }
 
 footer div {
@@ -149,14 +216,17 @@ h1 {
 
 h2 {
     font-size: 1.3em;
+    color: hsla(var(--color-red));
 }
 
 h3 {
     font-size: 1.21em;
+    color: hsla(var(--color-red));
 }
 
 h4 {
     font-size: 1.14em;
+    color: hsla(var(--color-red));
 }
 
 h5 {
@@ -237,8 +307,8 @@ td {
     padding: 0.75em 1em;
     text-align: left;
     vertical-align: top;
-    border-bottom: 1px solid hsla(var(--color-white), .6);
-    border-right: 1px solid hsla(var(--color-white), .1);
+    border-bottom: 1px solid hsla(var(--color-gray), .6);
+    border-right: 1px solid hsla(var(--color-gray), .1);
     white-space: nowrap;
 }
 

@@ -6,7 +6,7 @@ I sat down on my comfy chair and put on Ne Obliviscaris their [Urn](https://albu
 
 The music stuck to the speakers. The double bass was overpowering the guitars. The vocals should stay the same volume, no matter the instrumentation underneath. Right?
 
-It wasn't the first time I noticed instruments getting quieter as more were introduced. It was distracting and took away the enjoyment. Then, I switched to their *[Exul](https://open.spotify.com/album/29p0sILcBTXJmhzqJPzcxB?si=2IFhzwnVTBinGqLpRRZ4fA)* album. It sounded better.
+It wasn't the first time I noticed instruments getting quieter as more were introduced. It was distracting and took away the enjoyment. Then, I switched to their [Exul](https://album.link/s/29p0sILcBTXJmhzqJPzcxB) album. It sounded better.
 
 The feeling of music lacking the *depth* it needed, led me to investigate the Loudness War. I was familiar, but now I was also actively experiencing the consequences.
 

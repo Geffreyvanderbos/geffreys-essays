@@ -12,7 +12,7 @@ I can't count the times I made something too complex and lost interest.
 I'm done experimenting with tired CMS and no-good frameworks that get in the way.
 
 ## Build on Plain Text and Eleventy
-I took the most minimal setup I could and build on that with one rule: Every time I add something, I have to take something out; it doesn’t need to be of the same complexity—it could be a complete feature or a CSS class name.”
+I took the most minimal setup I could and build on that with one rule: Every time I add something, I have to take something out; it doesn’t need to be of the same complexity—it could be a complete feature or a CSS class name.
 
 ## No webfonts
 I do not load any custom webfonts; not locally, not from one of our technology overlords.

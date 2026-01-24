@@ -19,9 +19,7 @@ I do not load any custom webfonts; not locally, not from one of our technology o
 Yes, I will lose some control over my typography.
 My defaults, however, should suffice and make the site look similar on every device.
 
-## No tracking
-What would I need to track you for?
-The numbers would end up in a database for me to stare at.
-It's not that I will be making decisions based on them.
-This is my little place on the internet.
-You're welcome and your [privacy](/privacy) is guaranteed here.
+## No privacy shenanigans, yes to analytics
+Analytics show me what I should optimize for and where my content goes.
+This isn't about tracking *you*, there's no personal information involved.
+I use Goatcounter and their [privacy policy](https://www.goatcounter.com/help/privacy) is excellent.

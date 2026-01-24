@@ -12,13 +12,13 @@
 }
 
 ::selection {
-    background-color: hsla(var(--color-white), .6);
-    color: hsla(var(--color-darkgreen), .6);
+    background-color: hsla(var(--color-yellow), .7);
+    color: hsla(var(--color-darkgreen), .9);
 }
 
 ::-moz-selection {
-    background-color: hsla(var(--color-white), .6);
-    color: #151e15;
+    background-color: hsla(var(--color-yellow), .7);
+    color: hsla(var(--color-darkgreen), .9);
 }
 
 html {
@@ -44,7 +44,7 @@ body {
 }
 
 em {
-    font-size: 109%;
+    font-size: 107%;
 }
 
 video,
@@ -94,12 +94,12 @@ a {
     text-decoration-color: hsla(var(--color-white), .4);
 }
 
-article a:not(.muted-text) {
+p a:not(.muted-text) {
     color: hsla(var(--color-yellow));
     text-decoration-color: hsla(var(--color-yellow), .4);
 }
 
-article a:hover:not(.muted-text) {
+p a:hover:not(.muted-text) {
     text-decoration-color: hsla(var(--color-yellow), 1);
 }
 
@@ -116,7 +116,6 @@ a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):
     display: inline-flex;
     align-items: center;
     gap: 0.2em;
-    flex-wrap: nowrap;
 }
 
 a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])::after {

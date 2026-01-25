@@ -9,7 +9,7 @@ This is a [now page](https://nownownow.com/about). It was last updated 24 Januar
 New year and same old me! I have not set any New Year's resolutions. Sure, I could lose a bit of body fat. Meditate more. Learn an instrument. Write more… But who has the will for all of that. Listening to music is much easier and donuts taste so good!
 
 ## Purchasing an apartment in Arnhem
-After tons of paperwork, we might have gotten the mortgage we need!  Everything was approved except for one document where a 1 should've been a 4. Yep. That strict. We'll likely be moving to [Arnhem](https://osm.org/go/0GFeU4ww-?relation=418700) in the end of February. That's about 30 days from now 😱!
+After tons of paperwork, we might have gotten the mortgage we need!  Everything was approved except for one document where a 1 should've been a 4. Yep. That strict. We'll likely be moving to [Arnhem](https://osm.org/go/0GFeU4ww-?relation=418700) in the end of February. That's about <span><script>document.currentScript.parentElement.innerHTML=Math.floor((new Date('2026-02-24')-new Date())/8.64e7)</script></span> days from now 😱!
 
 I've used [Sweet Home 3D](https://www.sweethome3d.com/) to plan out the new interior. The software is … fine. Because it'll be ours, Julia and I have exciting plans for the apartment: a smart, well-designed 'small' living space and office. If you are a wood-worker, furniture store, or sell anything for the home, contact Julia on [her Instagram](https://www.instagram.com/julia.vanderbos/) (29k, high engagement) for a collab. We have a few partnerships in the pipeline already.
 

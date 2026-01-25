@@ -1,0 +1,593 @@
+---
+title: Resume
+permalink: /cv/
+eleventyExcludeFromCollections: true
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume of Geffrey van der Bos</title>
+</head>
+<style>
+    body {
+        font-family: -apple-system, system-ui, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.428;
+        margin: 0;
+        padding: 0;
+        background-color: #F2F0EC;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, h3, h4 {
+        font-weight: 600;
+        margin-top: 0;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    a, a:hover, a:visited {
+        color: inherit
+    }
+
+    main {
+        padding: 0 8px;
+        margin-bottom: 120px;
+    }
+
+    .recommendations mark {
+        background: none;
+    }
+
+    .recommendations:hover mark {
+        background: linear-gradient(-100deg, hsla(48,92%,75%,.3), hsla(48,92%,75%,.5) 95%, hsla(48,92%,75%,.2));
+        border-radius: 2px 0;
+    }
+
+    .recommendations .low-emphasis mark {
+        color: rgb(0 0 0 / .7);
+    }
+
+    header {
+        background-color: #FFFFFF;
+        padding: 24px;
+        margin: 40px auto 8px auto;
+        border-radius: 10px;
+        border: 1px solid #DFDDDA;
+        max-width: 804px;
+        position: relative;
+    }
+
+    .header__banner {
+        position: absolute;
+        border-radius: 10px 10px 0 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        z-index: 1;
+    }
+
+    .header__image {
+        margin-top: 40px;
+        width: 100%;
+        min-width: 60px;
+        min-height: 60px;
+        max-width: 200px;
+        max-height: 200px;
+        position: relative;
+        z-index: 2;
+        border-radius: 100%;
+        border: 5px solid white;
+    }
+
+    .header__heading {
+        margin-bottom: 0;
+    }
+
+    .header__heading svg {
+        position: relative;
+        top: 2px;
+    }
+
+    .header__callout {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        margin: 16px 0;
+        padding: 16px;
+        background-color: hsla(210, 92%, 39%, .05);
+        border: 1px dashed hsla(210, 92%, 39%, .3);
+        color: hsl(210, 92%, 25%);
+    }
+
+    .header__callout svg {
+        min-width: 60px;
+        flex-shrink: 1;
+        margin-right: 16px;
+    }
+
+    .header__callout p {
+        margin: 0;
+    }
+
+    section {
+        background-color: #FFFFFF;
+        padding: 24px 48px 24px 24px;
+        margin: 8px auto;
+        border-radius: 10px;
+        border: 1px solid #DFDDDA;
+        max-width: 804px;
+    }
+
+    section ul {
+        padding-inline-start: 1em;
+    }
+
+    .section-item {
+        display: flex;
+    }
+
+    .recommendations .section-item p:first-of-type {
+        margin-top: 4px;
+    }
+
+    .section-item:not(:last-of-type), .language-item:not(:last-of-type) {
+        border-bottom: 1px solid #E8E8E8;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+
+    .section-item img {
+        margin-right: 8px;
+    }
+
+    .section-item h3, .language-item h3 {
+        margin-bottom: 0;
+    }
+
+    .profile-photo {
+        border-radius: 100%;
+        background-color: #F2F0EC;
+    }
+
+    .credential-link {
+        display: inline-block;
+        border: 0;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.75);
+        padding: 6px 16px;
+        margin: 4px 0;
+        line-height: 1.4rem;
+        font-weight: 600;
+        font-size: 16px;
+        color: rgba(0,0,0,.75);
+        text-decoration: none;
+        border-radius: 24px;
+        transition: box-shadow 167ms cubic-bezier(.4,0,.2,1);
+    }
+
+    .credential-link:hover {
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,.75);
+    }
+
+    .credential-link svg {
+        position: relative;
+        top: 2px;
+    }
+
+    .low-emphasis {
+        color: rgb(0 0 0 / .7);
+    }
+
+    .larger-text {
+        font-size: 16px;
+    }
+
+    .skill-cloud {
+        list-style: none;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 100%;
+    }
+
+    .skill-cloud li {
+        padding: 4px 8px;
+        margin: 2px;
+        border: 1px solid rgba(0,0,0,.25);
+        border-radius: 8px;
+    }
+
+    .more-content {
+        display: none;
+    }
+
+    .toggle {
+        float: right;
+        color: rgba(0,0,0,.75);
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .toggle:hover {
+        text-decoration: underline;
+    }
+
+    .monospace-type {
+        font-size: 95%;
+        font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background-color: #E8E8E8;
+        margin-bottom: 16px;
+        margin-bottom: 16px;
+    }
+
+    button {
+      background-color: #0077B5;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005A87;
+    }
+</style>
+<body>
+    <main>
+    <header class="profile">
+        <img class="header__banner" src="/assets/cv-img/banner.jpg">
+        <img class="header__image" src="/assets/cv-img/profile.jpg">
+        <h1 class="header__heading">Geffrey van der Bos <svg xmlns="http://www.w3.org/2000/svg" class="fake-verify" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check-icon lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></h1>
+        <span class="larger-text">Digital Product Design • Product Owner • "Full-stack product professional 🤔"</span><br>
+        <span class="low-emphasis">Arnhem, Gelderland, Netherlands</span>
+        <div class="header__callout">
+            <svg width="48" height="48" viewBox="0 0 78 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M74.4004 64.2002C74.4003 68.1765 71.1765 71.4003 67.2002 71.4004H18.9141L74.4004 15.9141V64.2002ZM67.2002 6.59961C68.6767 6.59965 70.049 7.04517 71.1914 7.80762L10.8076 68.1914C10.0452 67.049 9.59965 65.6767 9.59961 64.2002V13.7998C9.59972 9.82351 12.8235 6.59972 16.7998 6.59961H67.2002Z" fill="#0A66C2"/>
+                <path d="M44.6367 46.0215V62.4004H35.3701V54.9443L44.6416 45.6719C44.6387 45.7871 44.6367 45.9037 44.6367 46.0215ZM59.1064 31.207C62.9473 32.8539 65.4004 36.6329 65.4004 42.6465V62.4004H55.7842V46.0215C55.7841 41.8498 54.311 39.3898 51.252 39.0615L59.1064 31.207ZM29.1924 62.4004H27.9141L29.1924 61.1221V62.4004ZM29.1924 49.8076L19.5293 59.4707V31.2002H29.1924V49.8076ZM44.6367 34.3633L35.3701 43.6299V31.2002H44.6367V34.3633ZM24.3145 15.5996C27.471 15.5996 30.0273 18.1781 30.0273 21.3574C30.0273 24.5367 27.471 27.1142 24.3145 27.1143C21.1579 27.1143 18.5997 24.5368 18.5996 21.3574C18.5996 18.178 21.1579 15.5996 24.3145 15.5996Z" fill="white"/>
+                <line x1="73.7678" y1="1.76777" x2="1.76777" y2="73.7678" stroke="#0A66C2" stroke-width="5"/>
+                </svg>
+
+                <p>I have chosen not to use LinkedIn due to concerns about privacy and data control. Despite its benefits, the Microsoft-owned platform leverages dark patterns(<a href="https://www.deceptive.design/types" title="Read about Deceptive patterns.">?</a>) to maximize personal information extraction, creating a system of reliance that limits our agency and sovereignty. This fundamentally goes against my instincts. I trust you'll enjoy this familiar and improved experience.</p>
+        </div>
+        <div class="summary">
+            <span class="low-emphasis"><svg style="transform: translateY(2px); margin-right: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>Summary by LLM</span>
+            <p>Geffrey van der Bos is a product professional who bridges the gap between design and technology. He has built digital solutions in highly regulated industries like nuclear medicine as well as in fields like AI. His strength lies in connecting diverse teams, ensuring that engineers, designers, and stakeholders understand each other clearly. He leads by supporting others and fostering a collaborative environment, rather than relying on strict procedures. Geffrey is a hands-on problem solver who is always curious to learn new things and improve the way products are built.</p>
+        </div>
+        </header>
+        <section class="experience">
+            <h2>Experience</h2>
+            <div class="section-item">
+                <img width="48" height="48" src="/assets/cv-img/geldfitnederland_logo.jpg">
+                <div>
+                    <h3>Experience Designer</h3>
+                    <span>NSR (Nederlandse Schuldhulproute)</span><br>
+                    <span class="low-emphasis">May 2024 - Present (<span><script>let now=new Date(),y=now.getFullYear()-2024,m=now.getMonth()-4;if(m<0)y--,m+=12;document.currentScript.parentElement.innerHTML=y+' yr '+m+' mo'</script></span>)</span><br>
+                    <span class="low-emphasis">Zwolle, Overijssel, Netherlands</span>
+                    <p>The Nederlandse Schuldhulproute (NSR) is a national Dutch initiative that guides people with financial concerns through various online and offline channels to appropriate preventive and curative debt assistance. Geldfit.nl serves as its primary online starting point, offering anonymous tests, advice, and referrals to help users gain control over their finances and prevent small issues from escalating.</p>
+                    <p><strong>My contributions:</strong></p>
+                    <ul>
+                        <li>Leading the design of user-centered experiences for Geldfit/NSR their digital channels, focusing on accessibility and inclusivity for users.</li>
+                        <li>Conduct user research, including interviews, usability testing, and data analysis, to identify pain points and opportunities for improvement.</li>
+                        <li>Develop and maintain design systems, wireframes, prototypes, and high-fidelity mockups.</li>
+                        <li>Collaborate closely with stakeholders, and developers to ensure feasibility and alignment with organisational goals.</li>
+                        <li>Advocate for visitor's needs throughout the development process, ensuring a positive user experience.</li>
+                        <li>I have the opportunity to suggest innovatative ideas and turn them into reality, helping to improve the platform.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-item">
+                <img width="48" height="48" src="/assets/cv-img/comecergroup_logo.jpg">
+                <div>
+                    <h3>Product Owner</h3>
+                    <span>Comecer</span><br>
+                    <span class="low-emphasis">Nov 2022 - May 2024 (1 yr 6 mo)</span><br>
+                    <span class="low-emphasis">Journe, Friesland, Netherlands</span>
+                    <p>Comecer Italy is a global manufacturer of equipment and automation systems for radiopharmaceuticals (nuclear medicine). Its Netherlands branch focuses on high-tech production of medical devices and software tailored for these industries.</p>
+                    <p><strong>My contributions:</strong></p>
+                    <ul>
+                        <li>Defined and prioritized the product backlog for a new software platform for radiopharmacies, aligning with industry regulations (<em>MDR, ISO 45001 & 13485</em>) and customer needs.</li>
+                        <li>Managed the entire product lifecycle, from concept to launch, ensuring on-time and within-budget delivery of the software releases.</li>
+                        <li>Collaborated with a cross-functional team of developers, QA engineers, and hardware engineers to translate user stories into effective features.</li>
+                        <li>Facilitated sprint planning, daily stand-ups, sprint reviews, and retrospectives, fostering a collaborative and agile development environment.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-item">
+                <img width="48" height="48" src="/assets/cv-img/ai_infrasolutions_logo.jpeg">
+                <div>
+                    <h3>Product Owner</h3>
+                    <span>AI-Infra Solutions</span><br>
+                    <span class="low-emphasis">Sep 2021 - Nov 2022 (1 yr 2 mo)</span><br>
+                    <span class="low-emphasis">Groningen, Netherlands</span>
+                    <p>AI-InfraSolutions provides a mobile mapping solution using AI to create a global geospatial search engine, enabling professionals to improve outdoor spaces through large-scale reality data collection, AI enrichment, and innovative workflows for safer, more sustainable environments.</p>
+                    <p><strong>My contributions:</strong></p>
+                    <ul>
+                        <li>Led the product development of AI/ML models for infrastructure cataloging (roads, signs), focusing on scalability and user-friendliness.</li>
+                        <li>Gathered and analyzed customer requirements to define product roadmaps and prioritize features for optimal impact.</li>
+                        <li>Managed a product backlog, writing user stories, and acceptance criteria to guide the development team.</li>
+                        <li>Collaborated with data scientists and engineers to ensure the successful integration of AI/ML models into production systems.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-item">
+                <img width="48" height="48" src="/assets/cv-img/bitfactory_solutions_gmbh_logo.jpg">
+                <div>
+                    <h3>Lead Product Designer</h3>
+                    <span>Bitfactory GmbH</span><br>
+                    <span class="low-emphasis">Feb 2016 - Sep 2021 (5 yr 7 mo)</span><br>
+                    <span class="low-emphasis">Stuttgart, Germany</span>
+                    <p>Bitfactory GmbH is a software company that develops custom web and mobile applications and digitalizes business processes, guiding clients end-to-end from concept to release with agile, high-quality solutions tailored to their specific needs.
+                    </p>
+                    <p><strong>My contributions:</strong></p>
+                    <ul>
+                        <li>Led the design and user experience across diverse industries including manufacturing, wellness & fitness, education, automotive, and food & beverages.</li>
+                        <li>Worked together with a team of three designers and several engineers, providing mentorship and guidance on design best practices and methodologies.</li>
+                        <li>Conducted extensive user research and usability testing to gather insights and inform design decisions.</li>
+                        <li>Collaborated with clients and engineers to translate user needs into innovative and effective design solutions.</li>
+                    </ul>
+
+                    <p><strong>Worked with teams from:</strong></p>
+                    <ul style="
+                        list-style: none;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;">
+                        <li><img style="max-width: 54px;" src="/assets/cv-img/logos/sony.png"></li>
+                        <li><img style="max-width: 54px;" src="/assets/cv-img/logos/indeed.png"></li>
+                        <li><img style="max-width: 54px; max-height: 24px;" src="/assets/cv-img/logos/mercedes.png"></li>
+                        <li><img style="max-width: 54px;" src="/assets/cv-img/logos/lotto.png"></li>
+                        <li><img style="max-width: 54px;" src="/assets/cv-img/logos/recaro.png"></li>
+                        <li><img style="max-width: 54px;" src="/assets/cv-img/logos/shgr.png"></li>
+                        <li><img style="max-width: 54px;" src="/assets/cv-img/logos/karlstorz.png"></li>
+                        <li><img style="max-width: 54px;" src="/assets/cv-img/logos/viacom.png"></li>
+                        <li><img style="max-width: 54px; max-height: 24px;" src="/assets/cv-img/logos/zeiss.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-item">
+                <img width="48" height="48" src="/assets/cv-img/vanderbos_logo.jpg">
+                <div>
+                    <h3>Branding & Marketing</h3>
+                    <span>Van der Bos</span><br>
+                    <span class="low-emphasis">Aug 2017 - Feb 2019 (1 yr 6 mo)</span><br>
+                    <span class="low-emphasis">Leeuwarden en omgeving, Nederland</span>
+                    <p><strong>As sole proprietorship:</strong></p>
+                    <ul>
+                        <li>Developed and executed branding and marketing strategies to increase brand awareness and generate leads for startups.</li>
+                        <li>Created marketing materials, including website content, brochures, and social media posts, to promote the company's products and services.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    <section class="education">
+        <h2>Education</h2>
+        <div class="section-item">
+            <img width="48" height="48" src="/assets/cv-img/hanze_logo.jpg">
+            <div>
+                <h3>Hanze</h3>
+                <span>Bachelor of Arts (BA) International and Intercultural Communication</span><br>
+                <span class="low-emphasis">2012-2020</span><br>
+
+                <p><strong>Grade: 80 / 100</strong></p>
+                <p>Graduate:</p>
+                <ul>
+                  <li>Communicates clearly and effectively, both orally and in writing, tailoring messages to the target audience.</li>
+                  <li>Demonstrates cultural awareness and adapts professional behavior accordingly.</li>
+                  <li>Exhibits entrepreneurial skills, proactively generating and implementing innovative ideas both independently and collaboratively.</li>
+                  <li>Translates concepts into innovative communication products based on target group needs.</li>
+                  <li>Maintains an inquisitive and critical mindset, staying open to new trends, media, and perspectives.</li>
+                  <li>Conducts independent and methodical applied research, utilizing appropriate methodologies.</li>
+                  <li>Provides well-founded advice on communication policy and strategy, contributing effectively to organizational goals while considering budget and stakeholder expectations.</li>
+                  <li>Facilitates organizational change, building support for desired outcomes.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-item">
+            <img width="48" height="48" src="/assets/cv-img/hdm_logo.jpg">
+            <div>
+                <h3>Hochschule der Medien (HdM)</h3>
+                <span>Visual Communication</span><br>
+                <span class="low-emphasis">2015 - 2016</span><br>
+
+                <p>I have developed myself further as a visual communications specialist at the Universitat Der Medien in Stuttgart. In this semester I learned about the
+                <ul>
+                <li>graphic arts,</li>
+                <li>screendesign,</li>
+                <li>user interface design,</li>
+                <li>application design,</li>
+                <li>photography,</li>
+                <li>media technologies and</li>
+                <li>information psychology.</li></p>
+            </div>
+        </div>
+    </section>
+    <section class="courses">
+        <h2>Licenses & certifications</h2>
+        <div class="section-item">
+            <img width="48" height="48" src="/assets/cv-img/coursera_logo.jpg">
+            <div>
+                <h3>The Importance and Power of Music in our Society</h3>
+                <span>Coursera</span><br>
+                <span class="low-emphasis">Issued Jan 2024</span><br>
+                <span class="low-emphasis">Credential ID U3AWX9W8CR5K</span><br>
+                <a class="credential-link" href="https://www.coursera.org/account/accomplishments/verify/U3AWX9W8CR5K">Show credential
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>                </a></div>
+        </div>
+        <div class="section-item">
+            <img width="48" height="48" src="/assets/cv-img/edx_logo.jpg">
+            <div>
+                <h3>edX Verified Certificate for Introduction to the Music Business</h3>
+                <span>edX</span><br>
+                <span class="low-emphasis">Issued Jul 2023</span><br>
+                <span class="low-emphasis">Credential ID beecfd35fe2b4810bd0c413b2ad7f9f9</span><br>
+                <a class="credential-link" href="https://courses.edx.org/certificates/beecfd35fe2b4810bd0c413b2ad7f9f9">Show credential
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link-icon lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>                </a></div>
+        </div>
+    </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul class="skill-cloud">
+            <li>Product Strategy</li>
+            <li>Product Management</li>
+            <li><svg style="transform: translateY(2px); margin-right: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>Conversational AI / Dialogue Design</li>
+            <li><svg style="transform: translateY(2px); margin-right: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>Prompt Engineering</li>
+            <li>User Research</li>
+            <li>Design Thinking</li>
+            <li>User Experience</li>
+            <li>Usability Design</li>
+            <li>Accessibility</li>
+            <li>Corporate Communication</li>
+            <li>Cross-cultural Communication</li>
+            <li>Front-end Engineering</li>
+            <li>Music Technology</li>
+            <li>Music and Society</li>
+            <li>Landing Page Optimization</li>
+        </ul>
+    </section>
+    <section class="languages">
+        <h2>Languages</h2>
+        <div class="language-item">
+            <h3>Western Frisian</h3>
+            <span class="low-emphasis">Native or bilingual proficiency</span>
+        </div>
+        <div class="language-item">
+            <h3>Engels</h3>
+            <span class="low-emphasis">Full professional proficiency</span>
+        </div>
+        <div class="language-item">
+            <h3>Nederlands</h3>
+            <span class="low-emphasis">Native or bilingual proficiency</span>
+        </div>
+        <div class="language-item">
+            <h3>Duits</h3>
+            <span class="low-emphasis">Limited working proficiency</span>
+        </div>
+    </section>
+    <section class="recommendations">
+      <h2>Recommendations</h2>
+      <p style="margin-bottom: 32px; font-style: italic;">*Hover for highlights by me for your convience.</p>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Tjeerd-Menno D.</h3>
+          <p class="low-emphasis">I have had the pleasure of working with Geffrey for some time, and I am thoroughly impressed by his exceptional skills and dedication as a Product Owner and Software Product Designer. Geffrey's <mark>methodical approach</mark> and deep understanding of modern methodologies are evident in everything he does. He is not only committed to excellence but also continually seeks out new learning opportunities to enhance his skillset.</p>
+          <span class="more-content low-emphasis">
+            <p>What sets Geffrey apart is his innate ability to <mark>manage both local and remote teams</mark> with a unique blend of <mark>technical expertise</mark> and <mark>interpersonal skills</mark>. His collaborative working style and ability to engage team members promote a productive and positive environment that drives successful project outcomes.</p>
+            <p>Geffrey is an invaluable asset to any team, and I am confident that he will continue to excel and bring his <mark>innovative and thoughtful approach</mark> to every project he undertakes. I highly recommend him to any organization looking to elevate their product design and ownership to the next level.</p>
+          </span>
+          <span class="read-more"><a href="#" class="toggle">…read more</a></span>
+        </div>
+      </div>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Fabian H.</h3>
+          <p class="low-emphasis">I'm thrilled to provide a glowing testimonial for Geffrey and his outstanding design work. Geffrey's expertise in <mark>user-centered design</mark>, coupled with his keen <mark>product strategy insights</mark>, is truly remarkable. His ability to balance aesthetics and functionality is evident in every project he undertakes.</p>
+          <span class="more-content low-emphasis">
+            <p>Beyond his professional prowess, Geffrey's <mark>warm and witty personality</mark> makes collaborating with him an absolute joy. He's not only committed to enhancing his own skills, but he also actively uplifts those around him. Geffrey's dedication to self-improvement and his unwavering pursuit of excellence make him a standout in the field.</p>
+          </span>
+          <span class="read-more"><a href="#" class="toggle">…read more</a></span>
+        </div>
+      </div>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Varun S.</h3>
+          <p class="low-emphasis">Working with Geffrey was an was an excellent experience. The design work was always of great quality and with <mark>deep insight into the end-users' mind</mark>. Geffrey was always ready for an exchange of ideas and <mark>quick to prototype ideas</mark>. All done with humor and cheer.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Pranjal R.</h3>
+          <p class="low-emphasis">I worked alongside Geffrey in the same team at Kaios.ai. I really cherished the time when we worked together. He was one of the nicest guys on our team, who knew the right balance to have productivity and fun in the workplace at the same time. He is the go-to person, with whom you can freely share your professional as well as personal stuff. Besides this, he is a <mark>pragmatic</mark>, <mark>customer focussed</mark>, and <mark>result-driven</mark> individual.</p>
+          <span class="more-content low-emphasis">
+            <p>One thing that I like about him is his <mark>inquisitive nature</mark>, the way he keeps himself up-to-date with the latest industry trends, standards, and best practices, and also motivates his peers to do the same. His good <mark>communication skills</mark> and <mark>diverse experience in different IT domains</mark> make him a great asset to any organization. Without any doubt, Geffrey is one of the best colleagues I have ever worked with. I wish him the very best in his future endeavors.</p>
+          </span>
+          <span class="read-more"><a href="#" class="toggle">…read more</a></span>
+        </div>
+      </div>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Arkajit B.</h3>
+          <p class="low-emphasis">I have worked under Geffrey as a Software developer in AI-Infra Solutions for a period of 9 months. I thoroughly enjoyed working with him, and came to know him as a truly valuable asset to any organisation. During this period of 9 months, he constantly demonstrated his <mark>technical</mark> and <mark>communication skills</mark> as a <mark>Product owner</mark> and a <mark>scrum master</mark>. His down to earth personality helped us to approach him without any hesitation.</p>
+          <span class="more-content low-emphasis">
+            <p>He has this great quality to <mark>focus on resolving issues and impediments</mark> to the progress of the team, and to make sure that all the issues are resolved within the stipulated time. He is a <mark>strategic thinker</mark> with a <mark>strong focus on what the customer needs</mark>. He introduced the way of <mark>scrum</mark> to the company and how to efficiently use it. He is <mark>detail oriented</mark> and have the <mark>tendency to ask the right questions</mark> and to make sure we are building the right product.</p>
+            <p>He trusted his team and took care of all their needs in terms of time, resources and information. It is my absolute pleasure to recommend Geffrey for any lead position. I am confident that he will be a great addition to your organisation.</p>
+          </span>
+          <span class="read-more"><a href="#" class="toggle">…read more</a></span>
+        </div>
+      </div>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Henrik H.</h3>
+          <p class="low-emphasis">Geffrey is absolutely fun to work with. He knows his way around people, he is <mark>good with the clients</mark>, does whatever it takes to help colleagues and gets things done. I would describe him as a really inspiring colleague, that is always willing to share best practices. Geffrey has the ability to <mark>work on multiple tasks</mark> and still be <mark>focused</mark> and deliver quality work. I highly recommend Geffrey as a Product Designer and would love to work together for some more years.</p>
+        </div>
+      </div>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Sally A.</h3>
+          <p class="low-emphasis">I got the pleasure to work under Geffrey’s supervision for a year at Bitfactory. He has been of great influence to my learning experience as I get introduced to <mark>User Interface Design</mark>, and to the tech industry.</p>
+          <span class="more-content low-emphasis">
+            <p>Geffrey is a very <mark>eager learner</mark> himself and is always seeking knowledge - a way or another - which I find truly inspiring. For years he had worked hard on gaining all sorts of information and experience from all resources available to him when it comes to software engineering and technology, which in my opinion gives him a great edge as a Product Designer, and makes him a truly valuable asset to any cross-functional Scrum team. He is very knowledgable and committed to the best practices when it comes to <mark>UX design</mark> and makes sure only the best scenario is implemented. In other words, he brings the <mark>best of both worlds - Tech and Design.</mark></p>
+            <p>It should also be praised how he has got a <mark>hands on mentality</mark> that I've personally learned a lot from. When in need, Geffrey creates his own solution. Which sparks the sense of <mark>ownership</mark> in both work related and personal projects. As a leader, he watches closely and caters to his <mark>colleagues’ learning needs and experience</mark>, and is very happy to pass on all the knowledge he has. He is also very open to constructive feedback which makes working with him an enriching two-way experience. He is very loyal to his workplace and everyone he works with. He is a <mark>visionary</mark> at heart, and his <mark>high EQ</mark> allows him to find his voice with clients from all different backgrounds, which is a very crucial quality in a successful Designer.</p>
+            <p>In addition, being with Geffrey on a daily basis in the workplace is truly fun, as he always brings <mark>great humor and positive spirit</mark> to everyone around. I’m very grateful that Geffrey has chosen me to work with him and become a part of the Bitfactory family, and I definitely look forward to more learning and collaboration in the future.</p>
+          </span>
+          <span class="read-more"><a href="#" class="toggle">…read more</a></span>
+        </div>
+      </div>
+      <div class="section-item">
+        <img class="profile-photo" width="48" height="48" src="/assets/cv-img/anonymous.png">
+        <div>
+          <h3>Michal G.</h3>
+          <p class="low-emphasis">We worked together on few projects, I can truly say that Geffrey is one of the best professional I know. <mark>Customer success orientation</mark> is one of the key Geffrey mastered to perfection.</p>
+          <p class="low-emphasis"><mark>Responsible and personal approach</mark> to projects which he works on proves that this guy really enjoys what he’s doing. This makes him real professional and successful enhancements for every team. If I would establish my own company, Geffrey will be the first I want to have on board.</p>
+          <span class="more-content low-emphasis">
+            <p>Geffrey’s professionalism is not limited to own area but affects all aspects, not only tech, design and all related topic. He is a <mark>perfect listener as well as idea giver</mark>, with wide horizons on various topics, always open for suggestions. I see great success in his future career and I hope to work with him continuously or again in the future.</p>
+          </span>
+          <span class="read-more"><a href="#" class="toggle">…read more</a></span>
+        </div>
+      </div>
+    </section>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.toggle').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default anchor behavior
+            const moreContent = link.parentElement.previousElementSibling;
+            moreContent.style.display = 'block'; // Show the additional content
+            link.parentElement.style.display = 'none'; // Hide the "read more" link
+        });
+    });
+});
+
+</script>
+</body>
+</html>

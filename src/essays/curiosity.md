@@ -15,4 +15,4 @@ date: 2026-01-12
 - I am wary about narrowing, where technology and predictive models limit the scope to only the most probable answers.
 - I will not fall for the instant gratification loops: the reinforcement provided by immediate AI rewards, which conditions the brain to prefer quick answers over the slow.
 - The blank canvas is not something I fear. Starting a task from zero forces creative curiosity, whereas technology  tends to fill that gap immediately, stifling the initial spark of invention.
-- My mental models of the world are what makes me, me.
+- My mental models of the world are what makes me me.

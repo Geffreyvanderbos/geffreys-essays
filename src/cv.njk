@@ -106,7 +106,6 @@ eleventyExcludeFromCollections: true
 
     .header__callout {
         display: flex;
-        align-items: center;
         border-radius: 8px;
         margin: 16px 0;
         padding: 16px;
@@ -116,15 +115,20 @@ eleventyExcludeFromCollections: true
     }
 
     .header__callout svg {
-        min-width: 60px;
+        transform: translateY(8px);
+        min-width: 48px;
         flex-shrink: 1;
         margin-right: 16px;
     }
-/*
+
     .header__callout p {
         margin: 0;
     }
-*/
+
+    .header__callout p:not(:last-child) {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
     section {
         background-color: #FFFFFF;
         padding: 24px;

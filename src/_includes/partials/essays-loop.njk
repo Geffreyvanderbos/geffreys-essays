@@ -7,6 +7,6 @@
     <ul class="no-list-style">
     {% set currentYear = essayYear %}
   {% endif %}
-  <li><a href="{{ essay.url }}">{{ essay.data.title }}</a></li>
+  <li><a href="{{ essay.url }}" class="h-entry">{{ essay.data.title }}</a></li>
 {% endfor -%}
 </ul>

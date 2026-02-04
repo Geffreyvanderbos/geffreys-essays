@@ -3,6 +3,8 @@ title: Manifesto of curiosity
 date: 2026-01-12
 ---
 
+This manifesto is a declaration of my commitment to **curiosity** and the pursuit of knowledge.
+
 - Cognitive offloading is not an option. I refuse to rely on external tools to reduce mental effort or let them diminish the drive to seek answers.
 - I will avoid falling victim to digital amnesia. Technology is not used to simply store information; understanding is cultivated rather than knowing where to find it.
 - Knowledge is best built through active experience and reflection. Technology cannot be allowed to shortcut understanding by providing pre-packaged conclusions.

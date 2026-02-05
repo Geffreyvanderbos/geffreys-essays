@@ -5,7 +5,7 @@ date: 2025-09-10
 Music theory isn't as complicated as you thought.
 I'm unsure whether it is snobbery or I've just never been taught 'the right way'. Regardless, here's how I made sense of it.
 
-The fundamentals to music starts with the distance between notes (interval). 
+Melody and harmony in music starts with the distance between notes (interval). 
 I am going to outright skip meter and rhythm for this introduction. 
 But it is a fundamental aspect of music that I will cover in a future essay.
 

@@ -1,11 +1,13 @@
 ---
-title: Introduction to Music Theory
+title: Introduction to music theory
 date: 2025-09-10
 ---
 Music theory isn't as complicated as you thought.
 I'm unsure whether it is snobbery or I've just never been taught 'the right way'. Regardless, here's how I made sense of it.
 
-The fundamentals to music starts with the distance between notes (interval).
+Melody and harmony in music starts with the distance between notes (interval). 
+I am going to outright skip meter and rhythm for this introduction. 
+But it is a fundamental aspect of music that I will cover in a future essay.
 
 Find the ♠  note on the piano keys below.
 Now, locate the adjacent key (♥).
@@ -23,7 +25,7 @@ Two semitones make up a whole *tone* (♠ to ♦).
 | ♠ | ♦ |   |   |   |   |   | 
 |___|___|___|___|___|___|___|
 ```
-*Generate your own ascii piano at the end of this page.
+*Generate your own <a href="#ascii-piano-generator">ascii piano</a> at the end of this page.
 
 
 ## Notes and their names
@@ -125,7 +127,7 @@ Also, you can *invert chords* by putting the second or third note in the bass.
 A C is still a C wherever you play it.
 
 ## Harmony and progression
-Good sounding chords supporting that melody is called harmony.
+Good sounding chords supporting a melody (a sequence of notes) is called harmony.
 Composers sequence chords (chord progressions) from the scale to create interesting harmonies.
 
 We’re about to travel up and down the scale, so I’ll use Roman numerals to name the chords built on each scale 'note'.
@@ -203,7 +205,7 @@ That’s honestly all there is to it.
 
 There is so much more to learn about music.
 
-### A piano generator
+<h2 id="ascii-piano-generator">A plain text piano generator</h2>
 I adore plain text solutions.
 The longevity, ease of use, the ability to just jot it in my journal as I go.
 So, here's a ascii piano generator.

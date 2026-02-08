@@ -12,8 +12,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      GOTOSOCIAL_TOKEN: ${{ secrets.GOTOSOCIAL_TOKEN }}
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node.js
@@ -23,6 +21,8 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build
+        env:
+          GOTOSOCIAL_TOKEN: ${{ secrets.GOTOSOCIAL_TOKEN }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

@@ -13,6 +13,9 @@ Recent changes to this website.
 ## [/Colophon](/colophon)
 An overview on how this site was made.
 
+## [/Contact](/contact)
+How you can contact me.
+
 <!--## /Defaults
 Apps I use for various tasks.-->
 
@@ -21,6 +24,10 @@ What is going on at this point in my life.
 
 ## [/Purge](/purge)
 My progress to cleaning up my digital footprint.
+
+## [/CV](/cv)
+My resume and private LinkedIn alternative.
+
 
 ---
 

@@ -182,7 +182,8 @@ hr {
     margin: 2rem 0;
 }
 
-article>p:first-of-type:first-letter {
+article>div>p:first-of-type:first-letter,
+.drop-cap:first-letter {
     float: left;
     font-size: 3.75em;
     line-height: 100%;
@@ -488,4 +489,44 @@ th {
 
 li:has(s) {
     opacity: .3;
+}
+
+.profile-card {
+    overflow: hidden;
+}
+
+.profile-card p:first-child {
+    margin-top: 0;
+}
+
+.profile-card h1 {
+    margin-top: 0;
+    font-size: 1em;
+    color: inherit;
+    font-weight: normal;
+    color: hsl(var(--color-gray));
+}
+
+.profile-card img {
+    transform: translateY(8px);
+    float: left;
+    margin-right: 1em;
+    margin-bottom: .5em;
+    border-radius: .5rem;
+    width: 6rem;
+    height: 6rem;
+    border: 1px solid hsla(var(--color-gray), .2);
+}
+
+
+.profile-card .links {
+    display: none
+}
+
+.hidden {
+    display: none;
+}
+
+.select-all {
+    user-select: all;
 }

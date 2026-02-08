@@ -4,6 +4,11 @@ title: Changelog
 permalink: /changelog/
 ---
 
+## 2026-02-08
+I've added several Indieweb formats and a profile card to the homepage. It is automatically fetched from my Fediverse bio at [id.geff.re](https://id.geff.re/@geffrey).
+
+I've also added a [contact](/contact) page, in case people are interested.
+
 ## 2026-01-23
 - Moved logo from footer to header.
 - Updated color palette and typography styles (headings, links, emphasis).

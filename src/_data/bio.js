@@ -1,5 +1,10 @@
 import 'dotenv/config';
 
+// TEMPORARY DEBUG
+console.log("Available env vars containing 'TOKEN':",
+  Object.keys(process.env).filter(k => k.includes('TOKEN'))
+);
+
 const fallback = {
   html: "<p>Designer helping people navigate financial stress at Stichting NSR. Privacy-conscious, plain-text advocate and allergic to vendor lock-in. Husband to Illustrator Julia; guardian of Loki the Shiba Inu. Obsessed with extreme music and music science.</p>",
   displayName: "Geffrey van der Bos",

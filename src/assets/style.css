@@ -12,13 +12,13 @@
 }
 
 ::selection {
-    background-color: hsla(var(--color-yellow), .7);
-    color: hsla(var(--color-darkgreen), .9);
+    background-color: hsla(var(--color-yellow), 0.7);
+    color: hsla(var(--color-darkgreen), 0.9);
 }
 
 ::-moz-selection {
-    background-color: hsla(var(--color-yellow), .7);
-    color: hsla(var(--color-darkgreen), .9);
+    background-color: hsla(var(--color-yellow), 0.7);
+    color: hsla(var(--color-darkgreen), 0.9);
 }
 
 html {
@@ -35,8 +35,13 @@ body {
     padding: 1em;
     line-height: 1.9;
     font-family:
-        "Iowan Old Style", "IowanOldStyle-Roman", "Palatino Linotype", "Book Antiqua", Palatino, "TeX Gyre Pagella", "URW Palladio L", P052, serif;
-    font-feature-settings: "liga" 1, "clig" 1, "kern" 1;
+        "Iowan Old Style", "IowanOldStyle-Roman", "Palatino Linotype",
+        "Book Antiqua", Palatino, "TeX Gyre Pagella", "URW Palladio L", P052,
+        serif;
+    font-feature-settings:
+        "liga" 1,
+        "clig" 1,
+        "kern" 1;
     font-kerning: normal;
     font-optical-sizing: auto;
     text-rendering: optimizeLegibility;
@@ -87,16 +92,16 @@ body {
 
 a {
     color: hsla(var(--color-white));
-    text-underline-offset: .4em;
+    text-underline-offset: 0.4em;
     text-decoration-thickness: 1px;
-    text-decoration-thickness: .5px;
+    text-decoration-thickness: 0.5px;
     text-decoration-skip-ink: none;
-    text-decoration-color: hsla(var(--color-white), .4);
+    text-decoration-color: hsla(var(--color-white), 0.4);
 }
 
 p a:not(.muted-text) {
     color: hsla(var(--color-yellow));
-    text-decoration-color: hsla(var(--color-yellow), .4);
+    text-decoration-color: hsla(var(--color-yellow), 0.4);
 }
 
 p a:hover:not(.muted-text) {
@@ -112,17 +117,19 @@ a.no-decoration:hover {
     text-decoration-color: hsla(var(--color-white), 1);
 }
 
-a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"]) {
+a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])
+{
     display: inline-flex;
     align-items: center;
     gap: 0.2em;
 }
 
-a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])::after {
+a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])::after
+{
     content: "";
     flex-shrink: 0;
-    width: .75em;
-    height: .75em;
+    width: 0.75em;
+    height: 0.75em;
     background-color: currentColor;
     -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.75%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%203h6v6m-11%205L21%203m-3%2010v6a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2V8a2%202%200%200%201%202-2h6%22%2F%3E%3C%2Fsvg%3E");
     mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.75%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M15%203h6v6m-11%205L21%203m-3%2010v6a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2V8a2%202%200%200%201%202-2h6%22%2F%3E%3C%2Fsvg%3E");
@@ -152,7 +159,7 @@ a:focus-visible {
 }
 
 .home-link:hover {
-    outline: 1px dashed hsla(var(--color-gray), .5);
+    outline: 1px dashed hsla(var(--color-gray), 0.5);
     outline-offset: 4px;
     border-radius: 4px;
 }
@@ -178,11 +185,11 @@ main {
 hr {
     border: none;
     height: 1px;
-    background-color: hsla(var(--color-gray), .2);
+    background-color: hsla(var(--color-gray), 0.2);
     margin: 2rem 0;
 }
 
-article>div>p:first-of-type:first-letter,
+article > div > p:first-of-type:first-letter,
 .drop-cap:first-letter {
     float: left;
     font-size: 3.75em;
@@ -191,10 +198,10 @@ article>div>p:first-of-type:first-letter,
 }
 
 footer {
-    font-size: .8em;
+    font-size: 0.8em;
     text-align: center;
     padding: 0 1em;
-    border-top: 1px solid hsla(var(--color-gray), .2);
+    border-top: 1px solid hsla(var(--color-gray), 0.2);
 }
 
 footer div {
@@ -248,8 +255,8 @@ li {
     margin-bottom: 0.5em;
 }
 
-li>ul,
-li>ol {
+li > ul,
+li > ol {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -269,7 +276,7 @@ pre {
         "DejaVu Sans Mono", monospace;
     tab-size: 3;
     -moz-tab-size: 3;
-    border: 1px solid hsla(var(--color-white), .1);
+    border: 1px solid hsla(var(--color-white), 0.1);
     max-height: 600px;
 }
 
@@ -280,7 +287,7 @@ pre code {
     line-height: inherit;
 }
 
-:not(pre)>code {
+:not(pre) > code {
     font-size: 0.9em;
     white-space: normal;
     word-wrap: break-word;
@@ -288,9 +295,33 @@ pre code {
 }
 
 blockquote {
-    border-left: 1px solid hsla(var(--color-white), .6);
+    border-left: 1px solid hsla(var(--color-white), 0.6);
     margin-inline-start: 0;
     padding-inline-start: 1.5em;
+}
+
+pre::-webkit-scrollbar,
+.codeblock::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: hsla(140, 3%, 75%, 0);
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: hsla(140, 3%, 25%, 1);
+    border-radius: 5px;
+    border: 2px solid hsla(140, 3%, 75%, 0);
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+    background: hsla(140, 6%, 35%, 1);
+}
+
+pre::-webkit-scrollbar-corner {
+    background: transparent;
 }
 
 table {
@@ -307,8 +338,8 @@ td {
     padding: 0.75em 1em;
     text-align: left;
     vertical-align: top;
-    border-bottom: 1px solid hsla(var(--color-gray), .6);
-    border-right: 1px solid hsla(var(--color-gray), .1);
+    border-bottom: 1px solid hsla(var(--color-gray), 0.6);
+    border-right: 1px solid hsla(var(--color-gray), 0.1);
     white-space: nowrap;
 }
 
@@ -323,7 +354,6 @@ th {
 }
 
 @media (min-width: 600px) {
-
     th,
     td {
         white-space: normal;
@@ -488,7 +518,7 @@ th {
 }
 
 li:has(s) {
-    opacity: .3;
+    opacity: 0.3;
 }
 
 .profile-card {
@@ -511,16 +541,15 @@ li:has(s) {
     transform: translateY(8px);
     float: left;
     margin-right: 1em;
-    margin-bottom: .5em;
-    border-radius: .5rem;
+    margin-bottom: 0.5em;
+    border-radius: 0.5rem;
     width: 6rem;
     height: 6rem;
-    border: 1px solid hsla(var(--color-gray), .2);
+    border: 1px solid hsla(var(--color-gray), 0.2);
 }
 
-
 .profile-card .links {
-    display: none
+    display: none;
 }
 
 .hidden {

@@ -4,6 +4,9 @@ title: Slash Pages
 permalink: /slashes/
 ---
 
+## [/About](/about)
+Read about my personal life and interests.
+
 ## [/Blogroll](/blogroll)
 Personal websites and blogs I follow and appreciate.
 

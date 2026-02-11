@@ -19,6 +19,8 @@ An overview on how this site was made.
 ## [/Contact](/contact)
 How you can contact me.
 
+## [/Ideas](/ideas)
+A list of things to make and concepts to explore.
 <!--## /Defaults
 Apps I use for various tasks.-->
 

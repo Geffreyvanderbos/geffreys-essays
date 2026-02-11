@@ -2,7 +2,7 @@
 title: Defining music is surprisingly hard
 date: 2024-08-01
 ---
-Everyone intuitively knows ‘what music’ is. Well, as it turns out, it is really hard to pin down one definitive answer. Philosophers and scientists have been racking their brains on this for ages.
+Everyone intuitively knows ‘what music’ is. But when you ask them to define it… well, it is really hard to pin down one definitive answer. Philosophers and scientists have been racking their brains on this for ages.
 
 Some have tried to boil it down to mere physics: organized sound. Other thinkers have been questioning the whole idea of a definition for music itself.
 

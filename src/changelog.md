@@ -4,6 +4,10 @@ title: Changelog
 permalink: /changelog/
 ---
 
+## 2026-02-11
+- Added both [/about](/about/) and [/ideas](/ideas/) pages. 
+- Also added a automated 'last updated' date based on Git log to [/now](/now/) and /ideas.
+
 ## 2026-02-08
 I've added several Indieweb formats and a profile card to the homepage. It is automatically fetched from my Fediverse bio at [id.geff.re](https://id.geff.re/@geffrey).
 

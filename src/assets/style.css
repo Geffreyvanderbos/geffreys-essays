@@ -99,12 +99,14 @@ a {
     text-decoration-color: hsla(var(--color-white), 0.4);
 }
 
-p a:not(.muted-text) {
+p a:not(.muted-text),
+#main-content li a {
     color: hsla(var(--color-yellow));
     text-decoration-color: hsla(var(--color-yellow), 0.4);
 }
 
-p a:hover:not(.muted-text) {
+p a:hover:not(.muted-text),
+#main-content li a:hover {
     text-decoration-color: hsla(var(--color-yellow), 1);
 }
 

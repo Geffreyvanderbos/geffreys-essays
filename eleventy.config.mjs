@@ -1,5 +1,7 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 // import siteData from './src/_data/site.json' with { type: 'json' };
+import { execSync } from "node:child_process";
+import { DateTime } from "luxon";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
@@ -35,25 +37,50 @@ export default function (eleventyConfig) {
       html = html.replace(/<div\b[^>]*class[^>]*>[\s\S]*?<\/div>/gim, "");
     }
 
-    const allowedTags = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'ul', 'ol', 'li',
-      'code', 'pre', 'blockquote', 'em', 'strong', 'b', 'i', 'a', 'br'];
+    const allowedTags = [
+      "p",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "ul",
+      "ol",
+      "li",
+      "code",
+      "pre",
+      "blockquote",
+      "em",
+      "strong",
+      "b",
+      "i",
+      "a",
+      "br",
+    ];
 
-    html = html.replace(/<(\w+)(\s+[^>]*)?>/gi, function (match, tag, attributes) {
-      const tagLower = tag.toLowerCase();
-      if (allowedTags.includes(tagLower)) {
-        // For links, preserve href attribute only
-        if (tagLower === 'a' && attributes) {
-          const hrefMatch = attributes.match(/href=["']([^"']*)["']/i);
-          if (hrefMatch) {
-            return '<' + tag + ' href="' + hrefMatch[1] + '">';
+    html = html.replace(
+      /<(\w+)(\s+[^>]*)?>/gi,
+      function (match, tag, attributes) {
+        const tagLower = tag.toLowerCase();
+        if (allowedTags.includes(tagLower)) {
+          // For links, preserve href attribute only
+          if (tagLower === "a" && attributes) {
+            const hrefMatch = attributes.match(/href=["']([^"']*)["']/i);
+            if (hrefMatch) {
+              return "<" + tag + ' href="' + hrefMatch[1] + '">';
+            }
           }
+          return "<" + tag + ">";
         }
-        return '<' + tag + '>';
-      }
-      return '';
-    });
+        return "";
+      },
+    );
 
-    html = html.replace(/<\/(div|span|section|article|header|footer|nav|aside|main|label)>/gi, '');
+    html = html.replace(
+      /<\/(div|span|section|article|header|footer|nav|aside|main|label)>/gi,
+      "",
+    );
 
     return html.trim();
   });
@@ -63,6 +90,25 @@ export default function (eleventyConfig) {
     const interactivePattern =
       /<script[\s>]|<style[\s>]|<button[\s>]|<input[\s>]|<select[\s>]|<form[\s>]|<textarea[\s>]|<iframe[\s>]|on\w+\s*=/i;
     return interactivePattern.test(content);
+  });
+
+  eleventyConfig.addFilter("lastUpdated", (inputPath) => {
+    try {
+      const result = execSync(`git log -1 --format=%cI "${inputPath}"`, {
+        encoding: "utf-8",
+      });
+      return new Date(result.trim());
+    } catch (e) {
+      // Fallback if file not tracked by git or error
+      return new Date();
+    }
+  });
+
+  // Helper to format nicely (e.g., "24 January 2026")
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "d MMMM yyyy",
+    );
   });
 
   eleventyConfig.addPlugin(pluginRss);

@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-title: Slash Pages
+title: Menu (slash pages)
 permalink: /slashes/
 ---
 

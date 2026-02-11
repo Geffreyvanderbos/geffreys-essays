@@ -18,6 +18,7 @@ Here you'll find unfiltered, raw ideas. Some to pursue, some to let go.
 - Use OpenCode or some other Claude Code alternative to communicate and do things with the new [Obsidian CLI](https://help.obsidian.md/cli).
 - Make a LLM Chatbot for my resume. Use RAG to enhance the chat my resume. Allow people to ask questions about my professional experience. 
   - Edit: Actually made a functional PoC! 🚀
+- Automate “top 5 albums listened to last week” with … database/airtable-like and Listenbrainz API?
 
 ## Ideas for life
 - Screaming vocals in metal are just natural distortion, like you put distortion on guitar–it's just not a good idea to [ram a pencil](https://en.wikipedia.org/wiki/Rumble_(instrumental)) through your vocal chords.

@@ -11,6 +11,7 @@ Here you'll find unfiltered, raw ideas. Some to pursue, some to let go.
 ## Ideas for this site
   - [x] Introduce a Eleventy filter to automatically update the 'last updated' date based on `Git log`. 
     - Holy shit it works! 😆
+- Add a fully automated human readable sitemap
 - Automate the [changelog](/changelog/) based on Git commit messages? 
   - Commit messages are 'ugly'. What if I could get an LLM to rewrite them into a more readable format?
 

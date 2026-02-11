@@ -104,6 +104,10 @@ export default function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addFilter("htmlDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toISODate(); // yields 2026-01-24
+  });
+
   // Helper to format nicely (e.g., "24 January 2026")
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(

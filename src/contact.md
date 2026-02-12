@@ -13,9 +13,23 @@ The Fediverse is a collection of connected social networks, such as [Mastodon](h
 
 To follow me, simply copy my handle open your [Fediverse app](https://joinmastodon.org/apps), paste it into the search bar, and press the follow button.
 
-<code class="select-all">@geffrey@id.geff.re</code> <button onclick="navigator.clipboard.writeText('geffrey@id.geff.re'); const btn=this; btn.innerHTML='(copied!)'; setTimeout(()=>btn.innerHTML='(click to copy)',2000);" style="background: transparent; color: hsl(48, 94%, 68%); border: none; padding: 4px; border-radius: 4px; cursor: pointer; font-size: 100%; font-family: inherit; font-weight: 400">(click to copy)</button>
+<code class="select-all">@geffrey@id.geff.re</code> <button onclick="navigator.clipboard.writeText('geffrey@id.geff.re'); const btn=this; btn.innerHTML='(copied!)'; setTimeout(()=>btn.innerHTML='(copy)',2000);" style="background: transparent; color: hsl(48, 94%, 68%); border: none; padding: 4px; border-radius: 4px; cursor: pointer; font-size: 100%; font-family: inherit; font-weight: 400">(copy)</button>
 
 ## Signal
 [Signal](https://signal.org/) is a messaging app that focuses on keeping our conversations private and secure. The service does not show advertisements, track our activity, or collect personal information, and it lets us use a username instead of a phone number to stay more anonymous.
 
 **Message me on Signal: [@geffrey.01](https://signal.me/#eu/d0xsyTaUj-fOp_ycZ0tJmy3mHSljfhIZjTSie9jKsmn_fEGEEM1KAKMmw3jFqzuz)**
+
+## Email
+Although not my preferred method, you can also reach me by email on the following address: 
+
+<code id="email" style="user-select: all; font-family: monospace; display: none;"></code>
+<noscript>
+  <code class="select-all">
+    hey<span style="display:none;">honeypot</span>@<span style="display:none;">honeypot</span>notevenmydomain</span>geff.re
+  </code>
+</noscript>
+<script>
+  document.getElementById('email').textContent = ['hey','@','geff.re'].join('');
+  document.getElementById('email').style.display = 'inline';
+</script>

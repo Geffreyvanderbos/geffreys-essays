@@ -33,3 +33,18 @@ Although not my preferred method, you can also reach me by email on the followin
   document.getElementById('email').textContent = ['hey','@','geff.re'].join('');
   document.getElementById('email').style.display = 'inline';
 </script>
+
+***
+
+## Verification through GPG  
+GPG keys (an open-source version of PGP) are like digital locks in pairs: a private key (just for me) and a public key (share with anyone).  
+
+My private key creates a digital signature to prove “this is from me,” and the public key securely checks it.  
+
+[Keyoxide](https://keyoxide.org) uses these keys to link and verify my online accounts, like my domain, Fediverse, or Codeberg.
+
+I sign each one with my private key and add proofs to Keyoxide; others see the matches and know those accounts are really mine.
+
+As far as I know, I don’t have any impersonators. But this peace of mind is worth something, too.
+
+**Find my profiles on [Keyoxide](https://keyoxide.org/hkp/F297CC9A280F234EF528B04CAB685C4F0FF2E5C2)**

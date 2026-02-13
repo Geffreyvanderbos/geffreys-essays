@@ -587,7 +587,7 @@ li:has(s) {
     position: absolute;
     z-index: 0;
     top: -12px;
-    left: 16px;
+    left: 18px;
     height: 12px;
     width: 20px;
     background: hsla(var(--color-gray), .075);
@@ -600,7 +600,7 @@ li:has(s) {
     position: absolute;
     z-index: 1;
     top: -18px;
-    left: 25px;
+    left: 27px;
     width: 14px;
     height: 18px;
     background: hsl(var(--color-darkgreen));

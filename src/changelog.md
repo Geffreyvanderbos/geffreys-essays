@@ -4,6 +4,9 @@ title: Changelog
 permalink: /changelog/
 ---
 
+## 2026-02-13
+- Added latest post from GoToSocial to the homepage.
+
 ## 2026-02-11
 - Added both [/about](/about/) and [/ideas](/ideas/) pages. 
 - Also added a automated 'last updated' date based on Git log to [/now](/now/) and /ideas.

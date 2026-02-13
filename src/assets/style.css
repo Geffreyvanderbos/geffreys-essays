@@ -117,15 +117,13 @@ a.no-decoration:hover {
     text-decoration-color: hsla(var(--color-white), 1);
 }
 
-a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])
-{
+a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"]) {
     display: inline-flex;
     align-items: center;
     gap: 0.2em;
 }
 
-a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])::after
-{
+a:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])::after {
     content: "";
     flex-shrink: 0;
     width: 0.75em;
@@ -189,7 +187,7 @@ hr {
     margin: 2rem 0;
 }
 
-article > div > p:first-of-type:first-letter,
+article>div>p:first-of-type:first-letter,
 .drop-cap:first-letter {
     float: left;
     font-size: 3.75em;
@@ -255,8 +253,8 @@ li {
     margin-bottom: 0.5em;
 }
 
-li > ul,
-li > ol {
+li>ul,
+li>ol {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
@@ -287,7 +285,7 @@ pre code {
     line-height: inherit;
 }
 
-:not(pre) > code {
+:not(pre)>code {
     font-size: 0.9em;
     white-space: normal;
     word-wrap: break-word;
@@ -354,6 +352,7 @@ th {
 }
 
 @media (min-width: 600px) {
+
     th,
     td {
         white-space: normal;
@@ -558,4 +557,65 @@ li:has(s) {
 
 .select-all {
     user-select: all;
+}
+
+.recent-post {
+    display: block;
+    position: relative;
+    background: hsla(var(--color-gray), .075);
+    color: hsla(var(--color-gray), .95);
+    padding: 24px;
+    margin-top: 1rem;
+    border-radius: 20px;
+    line-height: 1.6;
+}
+
+.recent-post p:first-of-type {
+    margin-top: 0;
+}
+
+.recent-post p {
+    margin-bottom: 1rem;
+}
+
+.recent-post p:last-of-type {
+    margin-bottom: 0;
+}
+
+.recent-post:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: -12px;
+    left: 16px;
+    height: 12px;
+    width: 20px;
+    background: hsla(var(--color-gray), .075);
+    background-attachment: fixed;
+    border-top-left-radius: 18px;
+}
+
+.recent-post:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -18px;
+    left: 25px;
+    width: 14px;
+    height: 18px;
+    background: hsl(var(--color-darkgreen));
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 8px;
+}
+
+.recent-post .metadata {
+    padding-top: .5rem;
+    display: flex;
+    justify-content: space-between
+}
+
+.recent-post .image-placeholder {
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 0.5em;
 }

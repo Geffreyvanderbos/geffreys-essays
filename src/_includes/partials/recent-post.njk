@@ -1,16 +1,15 @@
 <div class="recent-post">
-    {% if latestPost.hasImage %}
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="image-placeholder"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
-    {% elif latestPost.hasVideo %}
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="image-placeholder"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
-    {% endif %}
+    <a class="image-video-indicator" href="{{ latestPost.url }}" title="Visit the post on the Fediverse">
+        {% if latestPost.hasImage %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="image-placeholder"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        {% elif latestPost.hasVideo %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="image-placeholder"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
+        {% endif %}
+    </a>
     <div>
         {{ latestPost.content | safe }}
     </div>
     <div class="metadata">
-        <time class="muted-text small">{{ latestPost.date | readableDate }}</time>
-
-        <a class="small" href="{{ latestPost.url }}" title="Visit the post of Fediverse">View post</a>
+        <a href="{{ latestPost.url }}" class="muted-text small" title="Visit the post on the Fediverse"><time>{{ latestPost.date | readableDate }}</time></a>
     </div>
 </div>
-

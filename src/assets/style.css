@@ -99,12 +99,14 @@ a {
     text-decoration-color: hsla(var(--color-white), 0.4);
 }
 
-p a:not(.muted-text) {
+p a:not(.muted-text),
+.yellow {
     color: hsla(var(--color-yellow));
     text-decoration-color: hsla(var(--color-yellow), 0.4);
 }
 
-p a:hover:not(.muted-text) {
+p a:hover:not(.muted-text),
+.yellow {
     text-decoration-color: hsla(var(--color-yellow), 1);
 }
 
@@ -563,11 +565,12 @@ li:has(s) {
     display: block;
     position: relative;
     background: hsla(var(--color-gray), .075);
-    color: hsla(var(--color-gray), .95);
-    padding: 24px 24px 16px 24px;
+    color: hsla(var(--color-white), .9);
+    padding: 20px;
     margin-top: 1rem;
     border-radius: 20px;
     line-height: 1.6;
+    font-size: .95em;
 }
 
 .recent-post p:first-of-type {
@@ -611,11 +614,19 @@ li:has(s) {
 .recent-post .metadata {
     padding-top: .5rem;
     display: flex;
-    gap: 1rem;
 }
 
-.recent-post .image-placeholder {
+.recent-post .image-video-indicator {
     float: right;
     margin-left: 1em;
     margin-bottom: 1em;
+    opacity: 0.8;
+}
+
+.recent-post .image-video-indicator:hover {
+    opacity: 1;
+}
+
+.recent-post .image-video-indicator::after {
+    display: none;
 }

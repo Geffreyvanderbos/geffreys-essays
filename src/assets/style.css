@@ -564,7 +564,7 @@ li:has(s) {
     position: relative;
     background: hsla(var(--color-gray), .075);
     color: hsla(var(--color-gray), .95);
-    padding: 24px;
+    padding: 24px 24px 16px 24px;
     margin-top: 1rem;
     border-radius: 20px;
     line-height: 1.6;
@@ -611,11 +611,11 @@ li:has(s) {
 .recent-post .metadata {
     padding-top: .5rem;
     display: flex;
-    justify-content: space-between
+    gap: 1rem;
 }
 
 .recent-post .image-placeholder {
     float: right;
     margin-left: 1em;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
 }

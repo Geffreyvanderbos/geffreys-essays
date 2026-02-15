@@ -612,7 +612,7 @@ li:has(s) {
 }
 
 .recent-post .metadata {
-    padding-top: .5rem;
+    padding-top: .75rem;
     display: flex;
 }
 

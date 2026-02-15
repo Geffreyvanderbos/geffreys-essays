@@ -10,6 +10,6 @@
         {{ latestPost.content | safe }}
     </div>
     <div class="metadata">
-        <a href="{{ latestPost.url }}" class="muted-text small" title="Visit the post on the Fediverse"><time>{{ latestPost.date | readableDate }}</time></a>
+        <span class="muted-text small">Fediverse update from&nbsp;</span><a href="{{ latestPost.url }}" class="muted-text small" title="Visit the post on the Fediverse"><time>{{ latestPost.date | readableDate }}</time></a>
     </div>
 </div>

@@ -97,10 +97,11 @@ export default function (eleventyConfig) {
       const result = execSync(`git log -1 --format=%cI "${inputPath}"`, {
         encoding: "utf-8",
       });
+      if (!result) return null;
       return new Date(result.trim());
     } catch (e) {
       // Fallback if file not tracked by git or error
-      return new Date();
+      return null;
     }
   });
 

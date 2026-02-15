@@ -4,7 +4,7 @@ title: Ideas
 permalink: /ideas/
 ---
 
-This is an [ideas page](https://aboutideasnow.com/about). It was last updated {{ page.inputPath | lastUpdated | readableDate }}. 
+This is an [ideas page](https://aboutideasnow.com/about). {% set lastUpdatedDate = page.inputPath | lastUpdated %}{% if lastUpdatedDate %}It was last updated {{ lastUpdatedDate | readableDate }}.{% endif %} 
 
 Here you'll find unfiltered, raw ideas. Some to pursue, some to let go.
 

@@ -4,6 +4,20 @@ title: Changelog
 permalink: /changelog/
 ---
 
+## 2026-02-15
+- Fixed the "Last Updated" date logic to reflect actual content changes instead of updating on every push.
+- Added defensive styling to hide the "Last Updated" line if date info is missing.
+- Updated homepage status labels to clearly indicate they are fetched from the Fediverse.
+
+## 2026-02-14
+- Added a manual build trigger button to the site's deployment workflow.
+- Rewrote the GPG/security description on the contact page.
+
+## 2026-02-13
+- Added latest Fediverse posts to the homepage via RSS.
+- Improved page layout with better visual separation (horizontal lines).
+- Added Keyoxide verification explanation to the contact page.
+
 ## 2026-02-13
 - Added latest post from GoToSocial to the homepage.
 

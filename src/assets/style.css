@@ -1,9 +1,9 @@
 :root {
-    --color-darkgreen: 120 18% 8%;
-    --color-white: 8 10% 86%;
-    --color-yellow: 48 94% 68%;
-    --color-gray: 140 3% 75%;
-    --color-red: 11 82% 68%;
+    --color-darkgreen: oklch(0.199 0.018 144.9);
+    --color-white: oklch(0.889 0.007 28.0);
+    --color-yellow: oklch(0.896 0.144 95.3);
+    --color-gray: oklch(0.808 0.006 157.1);
+    --color-red: oklch(0.725 0.139 33.7);
 
     --page-width: 700px;
     --font-serif: "Iowan Old Style", "IowanOldStyle-Roman", "Palatino Linotype", "Book Antiqua", Palatino, "TeX Gyre Pagella", "URW Palladio L", P052, serif;
@@ -15,12 +15,12 @@
 }
 
 html {
-    background-color: hsl(var(--color-darkgreen));
+    background-color: var(--color-darkgreen);
     hanging-punctuation: first last;
 }
 
 body {
-    color: hsl(var(--color-white));
+    color: var(--color-white);
     font-family: var(--font-serif);
     font-size: clamp(0.9375rem, 0.871rem + 0.2128vw, 1.0625rem);
     line-height: 1.9;
@@ -42,8 +42,8 @@ body {
 
 /* Selection */
 ::selection {
-    background-color: hsl(var(--color-yellow) / 0.7);
-    color: hsl(var(--color-darkgreen) / 0.9);
+    background-color: oklch(from var(--color-yellow) l c h / 0.7);
+    color: oklch(from var(--color-darkgreen) l c h / 0.9);
 }
 
 /* Typography */
@@ -66,17 +66,17 @@ h1 {
 
 h2 {
     font-size: 1.3em;
-    color: hsl(var(--color-red));
+    color: var(--color-red);
 }
 
 h3 {
     font-size: 1.21em;
-    color: hsl(var(--color-red));
+    color: var(--color-red);
 }
 
 h4 {
     font-size: 1.14em;
-    color: hsl(var(--color-red));
+    color: var(--color-red);
 }
 
 h5 {
@@ -112,34 +112,34 @@ li:has(s) {
 }
 
 blockquote {
-    border-inline-start: 1px solid hsl(var(--color-white) / 0.6);
+    border-inline-start: 1px solid oklch(from var(--color-white) calc(l - 0.2) c h);
     margin-inline-start: 0;
     padding-inline-start: 1.5em;
 }
 
 /* Links */
 a {
-    color: hsl(var(--color-white));
+    color: var(--color-white);
     text-underline-offset: 0.4em;
     text-decoration-thickness: 1px;
     text-decoration-skip-ink: none;
-    text-decoration-color: hsl(var(--color-white) / 0.4);
+    text-decoration-color: oklch(from var(--color-white) calc(l - 0.45) c h);
 
     &:hover,
     &.no-decoration:hover {
-        text-decoration-color: hsl(var(--color-white));
+        text-decoration-color: var(--color-white);
     }
 
     &.no-decoration {
         text-decoration: none;
     }
 
-    &:visited {
-        text-decoration-color: hsl(var(--color-white));
-    }
+    /* &:visited {
+        text-decoration-color: oklch(from var(--color-white) calc(l - 0.85) c h);
+    } */
 
     &:focus-visible {
-        outline: 2px solid hsl(var(--color-yellow));
+        outline: 2px solid var(--color-yellow);
         outline-offset: 2px;
         border-radius: 2px;
     }
@@ -167,13 +167,13 @@ a {
 /* Highlight Colors */
 p a:not(.muted-text),
 .yellow {
-    color: hsl(var(--color-yellow));
-    text-decoration-color: hsl(var(--color-yellow) / 0.4);
+    color: var(--color-yellow);
+    text-decoration-color: oklch(from var(--color-yellow) calc(l - 0.4) calc(c - 0.05) h);
 }
 
 p a:hover:not(.muted-text),
 .yellow:hover {
-    text-decoration-color: hsl(var(--color-yellow));
+    text-decoration-color: var(--color-yellow);
 }
 
 main {
@@ -181,7 +181,7 @@ main {
 }
 
 #main-content:focus-visible {
-    outline: 1px dashed hsl(var(--color-yellow));
+    outline: 1px dashed var(--color-yellow);
     outline-offset: 16px;
     border-radius: 4px;
 }
@@ -189,7 +189,7 @@ main {
 hr {
     border: none;
     height: 1px;
-    background-color: hsl(var(--color-gray) / 0.2);
+    background-color: oklch(from var(--color-gray) calc(l - 0.5) c h);
     margin-block: 2rem;
 }
 
@@ -214,7 +214,7 @@ img {
 }
 
 .home-link:hover {
-    outline: 1px dashed hsl(var(--color-gray) / 0.5);
+    outline: 1px dashed oklch(from var(--color-gray) calc(l - 0.3) c h);
     outline-offset: 4px;
     border-radius: 4px;
 }
@@ -241,7 +241,7 @@ article>div>p:first-of-type:first-letter,
     grid-area: title;
     margin-top: 0;
     font-size: 1em;
-    color: hsl(var(--color-gray));
+    color: var(--color-gray);
     font-weight: normal;
 }
 
@@ -252,7 +252,7 @@ article>div>p:first-of-type:first-letter,
     border-radius: 0.5rem;
     width: 6rem;
     height: 6rem;
-    border: 1px solid hsl(var(--color-gray) / 0.2);
+    border: 1px solid oklch(from var(--color-gray) calc(l - 0.5) c h);
 }
 
 .profile-card>div {
@@ -270,8 +270,8 @@ article>div>p:first-of-type:first-letter,
 .recent-post {
     display: block;
     position: relative;
-    background: hsl(var(--color-gray) / 0.075);
-    color: hsl(var(--color-white) / 0.9);
+    background: oklch(from var(--color-darkgreen) calc(l + 0.06) calc(c - 0.003) h);
+    color: oklch(from var(--color-white) calc(l - 0.05) c h);
     padding: 20px;
     margin-block-start: 1rem;
     border-radius: 20px;
@@ -286,7 +286,7 @@ article>div>p:first-of-type:first-letter,
         left: 18px;
         height: 12px;
         width: 20px;
-        background: hsl(var(--color-gray) / 0.075);
+        background: oklch(from var(--color-darkgreen) calc(l + 0.06) calc(c - 0.003) h);
         background-attachment: fixed;
         border-top-left-radius: 18px;
     }
@@ -299,7 +299,7 @@ article>div>p:first-of-type:first-letter,
         left: 27px;
         width: 14px;
         height: 18px;
-        background: hsl(var(--color-darkgreen));
+        background: var(--color-darkgreen);
         border-top-left-radius: 12px;
         border-bottom-left-radius: 8px;
     }
@@ -341,7 +341,7 @@ footer {
     font-size: 0.8em;
     text-align: center;
     padding-inline: 1em;
-    border-top: 1px solid hsl(var(--color-gray) / 0.2);
+    border-top: 1px solid oklch(from var(--color-gray) calc(l - 0.5) c h);
 
     & div {
         max-inline-size: 80ch;
@@ -357,7 +357,7 @@ pre {
     font-family: var(--font-mono);
     tab-size: 3;
     -moz-tab-size: 3;
-    border: 1px solid hsl(var(--color-white) / 0.1);
+    border: 1px solid oklch(from var(--color-white) calc(l - 0.7) c h);
     max-height: 600px;
 
     &::-webkit-scrollbar,
@@ -367,16 +367,16 @@ pre {
     }
 
     &::-webkit-scrollbar-track {
-        background: hsl(140 3% 75% / 0);
+        background: transparent;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: hsl(140 3% 25%);
+        background: oklch(from var(--color-gray) calc(l - 0.4) c h);
         border-radius: 5px;
-        border: 2px solid hsl(140 3% 75% / 0);
+        border: 2px solid transparent;
 
         &:hover {
-            background: hsl(140 6% 35%);
+            background: oklch(from var(--color-gray) calc(l - 0.3) c h);
         }
     }
 
@@ -397,7 +397,7 @@ pre code {
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    color: rgba(255, 251, 255, 0.7);
+    color: oklch(from var(--color-white) calc(l - 0.15) c h);
 }
 
 table {
@@ -414,8 +414,8 @@ td {
     padding: 0.75em 1em;
     text-align: left;
     vertical-align: top;
-    border-bottom: 1px solid hsl(var(--color-gray) / 0.6);
-    border-right: 1px solid hsl(var(--color-gray) / 0.1);
+    border-bottom: 1px solid oklch(from var(--color-gray) calc(l - 0.1) c h);
+    border-right: 1px solid oklch(from var(--color-gray) calc(l - 0.6) c h);
     white-space: nowrap;
 }
 
@@ -447,7 +447,7 @@ th {
 }
 
 .muted-text {
-    color: hsl(var(--color-gray));
+    color: var(--color-gray);
 }
 
 .small {
@@ -616,8 +616,8 @@ th {
     margin: -1px;
     overflow: clip;
     clip: rect(0, 0, 0, 0);
-    background: hsl(var(--color-yellow));
-    color: hsl(var(--color-darkgreen));
+    background: var(--color-yellow);
+    color: var(--color-darkgreen);
     font-weight: 700;
 
     &:focus {

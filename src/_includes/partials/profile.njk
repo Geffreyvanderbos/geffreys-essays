@@ -1,12 +1,12 @@
 <div class="profile-card h-card">
-    <h1>About <span class="p-name">{{ bio.displayName }}</span></h1>
-    <img width="96" height="96" class="u-photo" src="{{ bio.avatar }}" alt="{{ bio.avatarDescription }}" />
+    <h1 class="profile-card__title">About <span class="p-name">{{ bio.displayName }}</span></h1>
+    <img width="96" height="96" class="profile-card__avatar u-photo" src="{{ bio.avatar }}" alt="{{ bio.avatarDescription }}" />
     <div>
-    <div class="p-note bio">
+    <div class="profile-card__bio p-note bio">
     {{ bio.html | safe }}
     </div>
     <a class="u-url hidden" href="https://geff.re" rel="me"></a>
-    <div class="links">
+    <div class="profile-card__links links">
       <a href="https://github.com/Geffreyvanderbos" rel="me">GitHub</a>
       <a href="https://id.geff.re/@geffrey" rel="me">@geffrey@id.geff.re</a>
     </div>

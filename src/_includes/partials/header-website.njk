@@ -1,12 +1,12 @@
 <header class="mt-12 pb-12 mb-24">
   <nav aria-label="Main">
-        <ul class="nav">
-            <li>
+        <ul class="site-nav__list">
+            <li class="site-nav__item">
                 <a href="/" class="home-link"><img src="/assets/black-metal-logo-geffrey.svg" alt="Black metal inspired logo of my name: Geffrey" /></a>
             </li>
             {%- for item in nav %}
-            <li>
-                <a href="{{ item.url }}" {%- if item.url == page.url %}class="no-decoration"{% endif %} {%- if item.target %}target="{{ item.target}}"{% endif %}>{{ item.text }}</a>
+            <li class="site-nav__item">
+                <a href="{{ item.url }}" class="site-nav__link {%- if item.url == page.url %} no-decoration{% endif %}" {%- if item.target %}target="{{ item.target}}"{% endif %}>{{ item.text }}</a>
             </li>
             {% endfor %}
         </ul>

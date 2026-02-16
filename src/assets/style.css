@@ -191,10 +191,8 @@ hr {
 
 article>div>p:first-of-type:first-letter,
 .drop-cap:first-letter {
-    float: left;
-    font-size: 3.75em;
-    line-height: 100%;
-    margin: 0 0.1em 0 1px;
+    initial-letter: 2;
+    margin-right: 0.5em;
 }
 
 footer {

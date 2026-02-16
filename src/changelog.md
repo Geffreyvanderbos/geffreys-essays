@@ -4,6 +4,11 @@ title: Changelog
 permalink: /changelog/
 ---
 
+## 2026-02-16
+- Refactored the CSS of this site to be more future proof and maintainable.
+- Played around with coloring the site using `oklch` instead of `hsl`. It's pretty cool.
+- Added a [/uses](/uses/) page, because I think it is actually useful.
+
 ## 2026-02-15
 - Fixed the "Last Updated" date logic to reflect actual content changes instead of updating on every push.
 - Added defensive styling to hide the "Last Updated" line if date info is missing.

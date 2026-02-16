@@ -1,13 +1,18 @@
 :root {
     --color-darkgreen: oklch(0.199 0.018 144.9);
-    --color-white: oklch(0.889 0.007 28.0);
+    --color-white: oklch(0.889 0.007 28);
     --color-yellow: oklch(0.896 0.144 95.3);
     --color-gray: oklch(0.808 0.006 157.1);
     --color-red: oklch(0.725 0.139 33.7);
 
     --page-width: 700px;
-    --font-serif: "Iowan Old Style", "IowanOldStyle-Roman", "Palatino Linotype", "Book Antiqua", Palatino, "TeX Gyre Pagella", "URW Palladio L", P052, serif;
-    --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    --font-serif:
+        "Iowan Old Style", "IowanOldStyle-Roman", "Palatino Linotype",
+        "Book Antiqua", Palatino, "TeX Gyre Pagella", "URW Palladio L", P052,
+        serif;
+    --font-mono:
+        ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+        "DejaVu Sans Mono", monospace;
 }
 
 * {
@@ -33,7 +38,10 @@ body {
     margin-inline: auto;
     padding: 1em;
 
-    font-feature-settings: "liga" 1, "clig" 1, "kern" 1;
+    font-feature-settings:
+        "liga" 1,
+        "clig" 1,
+        "kern" 1;
     font-kerning: normal;
     font-optical-sizing: auto;
     text-rendering: optimizeLegibility;
@@ -53,7 +61,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.2;
     margin-block-start: 2em;
     margin-block-end: 0.8em;
@@ -62,16 +70,18 @@ h6 {
 
 h1 {
     font-size: 1.38em;
+    font-weight: 700;
 }
 
 h2 {
     font-size: 1.3em;
+    font-weight: 700;
     color: var(--color-red);
 }
 
 h3 {
     font-size: 1.21em;
-    color: var(--color-red);
+    color: var(--color-white);
 }
 
 h4 {
@@ -102,8 +112,8 @@ li {
     margin-block-end: 0.5em;
 }
 
-li>ul,
-li>ol {
+li > ul,
+li > ol {
     margin-block: 0.5em;
 }
 
@@ -112,7 +122,8 @@ li:has(s) {
 }
 
 blockquote {
-    border-inline-start: 1px solid oklch(from var(--color-white) calc(l - 0.2) c h);
+    border-inline-start: 1px solid
+        oklch(from var(--color-white) calc(l - 0.2) c h);
     margin-inline-start: 0;
     padding-inline-start: 1.5em;
 }
@@ -145,7 +156,8 @@ a {
     }
 
     /* External link icon */
-    &:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"]) {
+    &:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])
+    {
         display: inline-flex;
         align-items: center;
         gap: 0.2em;
@@ -168,7 +180,9 @@ a {
 p a:not(.muted-text),
 .yellow {
     color: var(--color-yellow);
-    text-decoration-color: oklch(from var(--color-yellow) calc(l - 0.4) calc(c - 0.05) h);
+    text-decoration-color: oklch(
+        from var(--color-yellow) calc(l - 0.4) calc(c - 0.05) h
+    );
 }
 
 p a:hover:not(.muted-text),
@@ -220,7 +234,7 @@ img {
 }
 
 /* Article & Content */
-article>div>p:first-of-type:first-letter,
+article > div > p:first-of-type:first-letter,
 .drop-cap:first-letter {
     initial-letter: 2;
     margin-inline-end: 0.5em;
@@ -255,7 +269,7 @@ article>div>p:first-of-type:first-letter,
     border: 1px solid oklch(from var(--color-gray) calc(l - 0.5) c h);
 }
 
-.profile-card>div {
+.profile-card > div {
     grid-area: content;
 }
 
@@ -270,7 +284,9 @@ article>div>p:first-of-type:first-letter,
 .recent-post {
     display: block;
     position: relative;
-    background: oklch(from var(--color-darkgreen) calc(l + 0.06) calc(c - 0.003) h);
+    background: oklch(
+        from var(--color-darkgreen) calc(l + 0.06) calc(c - 0.003) h
+    );
     color: oklch(from var(--color-white) calc(l - 0.05) c h);
     padding: 20px;
     margin-block-start: 1rem;
@@ -286,7 +302,9 @@ article>div>p:first-of-type:first-letter,
         left: 18px;
         height: 12px;
         width: 20px;
-        background: oklch(from var(--color-darkgreen) calc(l + 0.06) calc(c - 0.003) h);
+        background: oklch(
+            from var(--color-darkgreen) calc(l + 0.06) calc(c - 0.003) h
+        );
         background-attachment: fixed;
         border-top-left-radius: 18px;
     }
@@ -392,7 +410,7 @@ pre code {
     line-height: inherit;
 }
 
-:not(pre)>code {
+:not(pre) > code {
     font-size: 0.9em;
     white-space: normal;
     word-wrap: break-word;
@@ -430,7 +448,6 @@ th {
 }
 
 @media (width >=600px) {
-
     th,
     td {
         white-space: normal;

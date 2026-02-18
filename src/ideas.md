@@ -14,6 +14,7 @@ Here you'll find unfiltered, raw ideas. Some to pursue, some to let go.
 - Add a fully automated human readable sitemap
 - Automate the [changelog](/changelog/) based on Git commit messages? 
   - Commit messages are 'ugly'. What if I could get an LLM to rewrite them into a more readable format?
+  - A ‘now reading’ Eleventy partial that automatically fetches book metadata from isbn. 
 
 ## Ideas for technology
 - Use OpenCode or some other Claude Code alternative to communicate and do things with the new [Obsidian CLI](https://help.obsidian.md/cli).
@@ -21,6 +22,7 @@ Here you'll find unfiltered, raw ideas. Some to pursue, some to let go.
   - Edit: Actually made a functional PoC! 🚀
 - Automate “top 5 albums listened to last week” with … database/airtable-like and Listenbrainz API?
 - Why not show the latest “Toot”/post from id.geff.re (GoToSocial) on the site?
+- make a fediverse human music curation platform. Instead of posts you recommend recordings/records. Some mechanic allows you to tag “you might like”. No tags, but “for fans of” that people can follow.
 
 ## Ideas for life
 - Screaming vocals in metal are just natural distortion, like you put distortion on guitar–it's just not a good idea to [ram a pencil](https://en.wikipedia.org/wiki/Rumble_(instrumental)) through your vocal chords.

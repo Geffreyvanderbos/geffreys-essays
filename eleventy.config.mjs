@@ -1,7 +1,7 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
-// import siteData from './src/_data/site.json' with { type: 'json' };
 import { execSync } from "node:child_process";
 import { DateTime } from "luxon";
+import fetchBookData from "./src/_utils/fetchBookData.js";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
@@ -117,6 +117,36 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addShortcode("book", async function (input, customCoverUrl) {
+    const isbn =
+      typeof input === "string"
+        ? input.replace(/-/g, "")
+        : String(input).replace(/-/g, "");
+
+    try {
+      const bookData = await fetchBookData(isbn, customCoverUrl);
+      return `
+        <div class="book">
+        <div class="book__introduction">Geffrey is currently reading:</div>
+          <div class="book__cover">
+            <img src="${bookData.coverImagePath}" alt="Book Cover" ${customCoverUrl ? 'class="book__cover--custom"' : ""}>
+          </div>
+          <ul class="book__details no-list-style">
+            <li class="book__title"><strong>Title:</strong> ${bookData.title}</li>
+            <li class="book__author"><strong>Author:</strong> ${bookData.author}</li>
+            <li class="book__published"><strong>Published:</strong> ${bookData.publishedDate}</li>
+            <li class="book__isbn"><strong>ISBN:</strong> ${bookData.isbn}</li>
+            <li class="book__description">
+                <p>${bookData.description}</p>
+            </li>
+          </ul>
+        </div>
+      `;
+    } catch (error) {
+      return `<p style="display: none;">Ignore me. There's supposed to be a book here. But it errored with the following: ${error.message}</p>`;
+    }
+  });
 
   return {
     dir: {

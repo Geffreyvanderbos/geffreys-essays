@@ -240,7 +240,6 @@ article > div > p:first-of-type:first-letter,
     margin-inline-end: 0.5em;
 }
 
-/* Profile Card (BEM) */
 .profile-card {
     overflow: hidden;
     display: grid;
@@ -649,4 +648,128 @@ th {
         border-radius: 4px;
         z-index: 100;
     }
+}
+
+.book {
+    display: grid;
+    grid-template-areas:
+        "introduction introduction"
+        "cover data";
+    grid-template-columns: min-content 1fr;
+    gap: 1em 2em;
+    font-size: 0.8em;
+    line-height: 1.5;
+    padding: 1em;
+    perspective: 600px;
+}
+
+.book__introduction {
+    grid-area: introduction;
+    grid-column: 1 / span 2;
+}
+
+.book__cover {
+    grid-area: cover;
+    width: 150px;
+    height: auto;
+    max-width: 150px;
+    margin-left: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(10deg);
+    transition: transform 0.3s ease;
+}
+
+.book__cover:hover {
+    transform: rotateY(15deg);
+}
+
+.book__cover img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 2px 2px 0;
+    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.book__cover::before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    right: 0;
+    width: 26px;
+    height: 98%;
+    background: linear-gradient(
+        to right,
+        #c4b596,
+        #e8dcc8 3px,
+        #d6cbb0 4px,
+        #f0e8d8 6px,
+        #d0c4a8 8px,
+        #ede4d2 10px,
+        #d6cbb0 12px,
+        #f0e8d8 15px,
+        #c8bc9e 18px,
+        #e0d5c0 21px,
+        #bfb393
+    );
+    transform-origin: left center;
+    transform: rotateY(90deg);
+    border-radius: 0 1px 1px 0;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.book__cover::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            130deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.08) 20%,
+            rgba(255, 255, 255, 0.22) 42%,
+            rgba(255, 255, 255, 0.28) 48%,
+            rgba(255, 255, 255, 0.22) 54%,
+            rgba(255, 255, 255, 0.06) 70%,
+            rgba(255, 255, 255, 0) 100%
+        ),
+        repeating-linear-gradient(
+            135deg,
+            transparent,
+            transparent 1px,
+            rgba(255, 255, 255, 0.04) 1px,
+            rgba(255, 255, 255, 0.04) 2px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.02) 2px,
+            rgba(0, 0, 0, 0.02) 3px
+        );
+    pointer-events: none;
+    border-radius: 0 2px 2px 0;
+}
+
+.book__details {
+    margin: 0;
+    grid-area: data;
+}
+
+.book__title {
+}
+
+.book__author {
+}
+
+.book__isbn {
+}
+
+.book__published {
+}
+
+.book__description {
+    font-style: italic;
 }

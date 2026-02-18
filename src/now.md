@@ -5,6 +5,8 @@ permalink: /now/
 ---
 This is a [now page](https://nownownow.com/about). {% set lastUpdatedDate = page.inputPath | lastUpdated %}{% if lastUpdatedDate %}It was last updated {{ lastUpdatedDate | readableDate }}.{% endif %}
 
+{% book "0-14-018585-2", "./assets/book-covers/0140185852.jpg" %}
+
 ## Happy new year
 New year and same old me! I have not set any New Year's resolutions. Sure, I could lose a bit of body fat. Meditate more. Learn an instrument. Write more… But who has the will for all of that. Listening to music is much easier and donuts taste so good!
 

@@ -21,7 +21,7 @@ To follow me, simply copy my handle open your [Fediverse app](https://joinmastod
 **Message me on Signal: [@geffrey.01](https://signal.me/#eu/d0xsyTaUj-fOp_ycZ0tJmy3mHSljfhIZjTSie9jKsmn_fEGEEM1KAKMmw3jFqzuz)**
 
 ## Email
-Although not my preferred method, you can also reach me by email on the following address: 
+Although not my preferred method, you can also reach me by email on the following address. This is NOT encrypted email.
 
 <code id="email" style="user-select: all; font-family: monospace; display: none;"></code>
 <noscript>
@@ -36,15 +36,17 @@ Although not my preferred method, you can also reach me by email on the followin
 
 ***
 
-## Verification through GPG  
-GPG keys (an open-source version of PGP) are like digital locks in pairs: a private key (just for me) and a public key (share with anyone).  
+## Verification and Encryption
+<p style="margin-bottom: 0;">GPG is an open‑source version of PGP. It uses a pair of encryption keys that work together:</p>
 
-My private key creates a digital signature to prove “this is from me,” and the public key securely checks it.  
+- Private key – only I keep it. I use it to create a digital signature that says “this message comes from me.” and to decrypt anything that is sent to me with my public key.
+- Public key – I share it with everyone. Anyone can use it to check that the signature is real or to send me encrypted files/messages.
 
-[Keyoxide](https://keyoxide.org) uses these keys to link and verify my online accounts, like my domain, Fediverse, or Codeberg.
+My [Public Key](https://keys.openpgp.org/vks/v1/by-fingerprint/F297CC9A280F234EF528B04CAB685C4F0FF2E5C2): <code class="select-all">https://keys.openpgp.org/vks/v1/by-fingerprint/F297CC9A280F234EF528B04CAB685C4F0FF2E5C2</code>
 
-I sign each one with my private key and add proofs to Keyoxide; others see the matches and know those accounts are really mine.
+### Keyoxide
+Keyoxide shows which online accounts belong to the same person. I sign each of my accounts (my domain, my Fediverse profile, Codeberg, etc.) with my private key and add these signed proofs to Keyoxide. When others view my Keyoxide page, they can see that those accounts are truly mine.
 
-As far as I know, I don’t have any impersonators. But this peace of mind is worth something, too.
+I don’t think anyone is impersonating me, but this extra proof gives me peace of mind.
 
 **Find my profiles on [Keyoxide](https://keyoxide.org/hkp/F297CC9A280F234EF528B04CAB685C4F0FF2E5C2)**

@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: Now
 permalink: /now/
 ---
-This is a [now page](https://nownownow.com/about). It was last updated {{ page.inputPath | lastUpdated | readableDate }}.
+This is a [now page](https://nownownow.com/about). {% set lastUpdatedDate = page.inputPath | lastUpdated %}{% if lastUpdatedDate %}It was last updated {{ lastUpdatedDate | readableDate }}.{% endif %}
 
 ## Happy new year
 New year and same old me! I have not set any New Year's resolutions. Sure, I could lose a bit of body fat. Meditate more. Learn an instrument. Write more… But who has the will for all of that. Listening to music is much easier and donuts taste so good!

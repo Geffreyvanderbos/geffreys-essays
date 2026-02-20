@@ -652,36 +652,35 @@ th {
 
 .book {
     display: grid;
-    grid-template-areas:
-        "introduction introduction"
-        "cover data";
+    grid-template-areas: "cover data";
     grid-template-columns: min-content 1fr;
     gap: 1em 2em;
-    font-size: 0.8em;
+    align-items: center;
+    /*font-size: 0.8em;*/
     line-height: 1.5;
-    padding: 1em;
     perspective: 600px;
 }
 
-.book__introduction {
-    grid-area: introduction;
-    grid-column: 1 / span 2;
-}
-
 .book__cover {
+    --book-color: var(--color-white);
+    --book-width: clamp(40px, 20vw, 90px);
+    --page-thickness: clamp(15px, 5vw, 24px);
+    --book-transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    --book-corners: 1px 2px 2px 1px;
     grid-area: cover;
-    width: 150px;
+    align-self: start;
+    width: var(--book-width);
     height: auto;
-    max-width: 150px;
+    max-width: var(--book-width);
     margin-left: auto;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(10deg);
-    transition: transform 0.3s ease;
+    transform: rotateY(-15deg);
+    transition: transform var(--book-transition);
 }
 
 .book__cover:hover {
-    transform: rotateY(15deg);
+    transform: rotateY(-5deg);
 }
 
 .book__cover img {
@@ -689,35 +688,40 @@ th {
     height: auto;
     object-fit: cover;
     display: block;
-    border-radius: 0 2px 2px 0;
-    box-shadow: 6px 6px 18px rgba(0, 0, 0, 0.35);
+    position: relative;
+    border-radius: var(--book-corners);
+    box-shadow:
+        5px 5px 8px rgba(0, 0, 0, 0.2),
+        2px 12px 20px rgba(0, 0, 0, 0.25);
 }
 
 .book__cover::before {
     content: "";
     position: absolute;
-    top: 1%;
-    right: 0;
-    width: 26px;
-    height: 98%;
+    right: calc(var(--page-thickness) * -1 + 1px);
+    width: var(--page-thickness);
+    height: 99.5%;
+    top: 0.25%;
     background: linear-gradient(
         to right,
-        #c4b596,
-        #e8dcc8 3px,
-        #d6cbb0 4px,
-        #f0e8d8 6px,
-        #d0c4a8 8px,
-        #ede4d2 10px,
-        #d6cbb0 12px,
-        #f0e8d8 15px,
-        #c8bc9e 18px,
-        #e0d5c0 21px,
-        #bfb393
+        oklch(from var(--book-color) calc(l - 0.22) calc(c + 0.005) h),
+        oklch(from var(--book-color) calc(l - 0.06) c h) 8%,
+        oklch(from var(--book-color) calc(l - 0.16) c h) 13%,
+        oklch(from var(--book-color) calc(l - 0.04) c h) 20%,
+        oklch(from var(--book-color) calc(l - 0.18) calc(c + 0.003) h) 28%,
+        oklch(from var(--book-color) calc(l - 0.05) c h) 35%,
+        oklch(from var(--book-color) calc(l - 0.14) c h) 45%,
+        oklch(from var(--book-color) calc(l - 0.03) c h) 55%,
+        oklch(from var(--book-color) calc(l - 0.19) calc(c + 0.005) h) 68%,
+        oklch(from var(--book-color) calc(l - 0.07) c h) 83%,
+        oklch(from var(--book-color) calc(l - 0.25) calc(c + 0.008) h)
     );
     transform-origin: left center;
     transform: rotateY(90deg);
-    border-radius: 0 1px 1px 0;
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15);
+    border-radius: 0 2px 2px 0;
+    box-shadow:
+        inset 0 0 8px rgba(0, 0, 0, 0.2),
+        0 4px 6px -2px rgba(0, 0, 0, 0.25);
 }
 
 .book__cover::after {
@@ -727,49 +731,49 @@ th {
     background:
         linear-gradient(
             130deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.08) 20%,
-            rgba(255, 255, 255, 0.22) 42%,
-            rgba(255, 255, 255, 0.28) 48%,
-            rgba(255, 255, 255, 0.22) 54%,
-            rgba(255, 255, 255, 0.06) 70%,
-            rgba(255, 255, 255, 0) 100%
+            transparent 0%,
+            rgba(255, 255, 255, 0.08) 15%,
+            rgba(255, 255, 255, 0.2) 40%,
+            rgba(255, 255, 255, 0.3) 47%,
+            rgba(255, 255, 255, 0.2) 54%,
+            rgba(255, 255, 255, 0.06) 72%,
+            transparent 100%
         ),
         repeating-linear-gradient(
             135deg,
             transparent,
             transparent 1px,
-            rgba(255, 255, 255, 0.04) 1px,
-            rgba(255, 255, 255, 0.04) 2px
+            rgba(255, 255, 255, 0.05) 1px,
+            rgba(255, 255, 255, 0.05) 2px
         ),
         repeating-linear-gradient(
             90deg,
             transparent,
             transparent 2px,
-            rgba(0, 0, 0, 0.02) 2px,
-            rgba(0, 0, 0, 0.02) 3px
+            rgba(0, 0, 0, 0.03) 2px,
+            rgba(0, 0, 0, 0.03) 3px
         );
+    background-size:
+        200% 200%,
+        auto,
+        auto;
+    background-position:
+        55% 55%,
+        0 0,
+        0 0;
+    transition: background-position var(--book-transition);
     pointer-events: none;
-    border-radius: 0 2px 2px 0;
+    border-radius: var(--book-corners);
+}
+
+.book__cover:hover::after {
+    background-position:
+        35% 35%,
+        0 0,
+        0 0;
 }
 
 .book__details {
     margin: 0;
     grid-area: data;
-}
-
-.book__title {
-}
-
-.book__author {
-}
-
-.book__isbn {
-}
-
-.book__published {
-}
-
-.book__description {
-    font-style: italic;
 }

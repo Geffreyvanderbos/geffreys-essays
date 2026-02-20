@@ -128,18 +128,12 @@ export default function (eleventyConfig) {
       const bookData = await fetchBookData(isbn, customCoverUrl);
       return `
         <div class="book">
-        <div class="book__introduction">Geffrey is currently reading:</div>
           <div class="book__cover">
             <img src="${bookData.coverImagePath}" alt="Book Cover" ${customCoverUrl ? 'class="book__cover--custom"' : ""}>
           </div>
           <ul class="book__details no-list-style">
-            <li class="book__title"><strong>Title:</strong> ${bookData.title}</li>
-            <li class="book__author"><strong>Author:</strong> ${bookData.author}</li>
-            <li class="book__published"><strong>Published:</strong> ${bookData.publishedDate}</li>
-            <li class="book__isbn"><strong>ISBN:</strong> ${bookData.isbn}</li>
-            <li class="book__description">
-                <p>${bookData.description}</p>
-            </li>
+            <li class="book__title">${bookData.title}</li>
+            <li class="book__author small muted-text">by ${bookData.author}</li>
           </ul>
         </div>
       `;

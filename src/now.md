@@ -5,19 +5,19 @@ permalink: /now/
 ---
 This is a [now page](https://nownownow.com/about). {% set lastUpdatedDate = page.inputPath | lastUpdated %}{% if lastUpdatedDate %}It was last updated {{ lastUpdatedDate | readableDate }}.{% endif %}
 
-## Happy new year
-New year and same old me! I have not set any New Year's resolutions. Sure, I could lose a bit of body fat. Meditate more. Learn an instrument. Write more… But who has the will for all of that. Listening to music is much easier and donuts taste so good!
+## the new chapter
+It has been only a few days since we moved into Arnhem, yet I’m already convinced we made the right choice. There is a sense of purpose to the streets. We’re city-people through and through. And we should’ve moved much sooner. 
 
-## Purchasing an apartment in Arnhem
-After tons of paperwork, we might have gotten the mortgage we need!  Everything was approved except for one document where a 1 should've been a 4. Yep. That strict. We'll likely be moving to [Arnhem](https://osm.org/go/0GFeU4ww-?relation=418700) in the end of February. That's about <span><script>document.currentScript.parentElement.innerHTML=Math.floor((new Date('2026-02-24')-new Date())/8.64e7)</script></span> days from now 😱!
+Of course, finding your bearings in the midst of utter chaos is a challenge; our lives are currently a sea of boxes, and we are still navigating the puzzle of where everything belongs. All while running back to the old place to grab the final remnants.
 
-I've used [Sweet Home 3D](https://www.sweethome3d.com/) to plan out the new interior. The software is … fine. Because it'll be ours, Julia and I have exciting plans for the apartment: a smart, well-designed 'small' living space and office. If you are a wood-worker, furniture store, or sell anything for the home, contact Julia on [her Instagram](https://www.instagram.com/julia.vanderbos/) (29k, high engagement) for a collab. We have a few partnerships in the pipeline already.
+The transition hasn’t been without its “welcome gifts”, either. We’ve been busy with small-scale troubleshooting, like a leaking sink and a clogged drain. I had to install a new drainage line for the dishwasher after a minor flood—who could have guessed the previous tenant would stuff the pipe full of kitchen paper?
 
-## Hackathon and experiments
-I've made a LLM based chatbot prototype for work. It taught me how LLMs 'think' (they don't!) and how to write quality system prompts. Coincidentially, a few days later the team and I were invited to participate in a [hackathon](https://www.koninklijkhuis.nl/actueel/nieuws/2026/01/21/koningin-maxima-bij-hackathon-schuldhulp-voor-iedereen) in Rotterdam on the same topic. The result will be presented to [Queen Máxima](https://en.wikipedia.org/wiki/Queen_Máxima_of_the_Netherlands)👑. So, that's something. Glad to be able to be a part of it.
+It isn’t just us adjusting, either. Loki is completely overwhelmed by the new impulses and the constant parade of noises and scents. He’s exhausted, so we moved his bed into the bedroom. Hopefully, that gives him the quiet sanctuary he needs, also during the day when we are moving about. 
 
-## Listening
-Aside from my obsession on finding the next best [Symphony of Enchanted Lands](https://album.link/s/346aOAWcE17Sz9pqeENw4I), I've been on an 'art/progressive rock' trip. We've got the greats like Peter Gabriel and Electric Light Orchestra ([Time](https://album.link/s/4k1GJg2poyo6hwWLqJn9C2) is a masterpiece), but a more contemporary, one lesser-known Norwegian band has been on repeat: Major Parkinson. Excited for their Valesa: [Chapter II](https://majorparkinson.bandcamp.com/album/valesa-chapter-ii-viva-the-apocalypse). Ulver their instrumental [Neverland](https://album.link/s/1vOLtrJxMEZi9vkCX3O0Yw) has been playing non-stop in the background, as well.
+One of the biggest shifts is that we are getting rid of the car. It adds a layer of difficulty to the move itself, but the idea of being “care-less” is incredibly attractive. I’m looking forward to the freedom of not worrying about breakdowns, high costs, or whether I parked it safely. I’m even—dare I say it—looking forward to the train commute. To be able to read or write instead of focusing on the road feels like regaining stolen time.
 
-## Thinking about and reading
-Been spending a lot of my time thinking and reading about AI and its effect on art and music. Next to that, I've started [*Crime and Punishment*](https://openlibrary.org/works/OL166894W/Преступление_и_наказание?edition=key%3A/books/OL37044740M) by Dostoyevsky and  Zamyatin's [*We*](https://openlibrary.org/works/OL10215W/Мы?edition=key:/books/OL55960330M). The latter is less known, but it's essentially the precursor to *1984*, *Animal Farm*, and Ayn Rand's _Anthem_. All novels I've enjoyed, so I am curious about what *We* can bring me.
+The move wouldn’t be possible without the help of my younger brother, my and her partner, and my father. I’m unbelievably grateful with all the help they give me. I just thought that that should be mentioned. Family is important.
+
+Now that we are here, we are starting the process of integrating into the community. Our first steps are to just checking out events on the community bulletin board that caught our eye. 
+
+It is a strange, wonderful, and slightly crazy thought to realize that, amidst all this change, we actually own this place.

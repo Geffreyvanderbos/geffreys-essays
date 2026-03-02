@@ -1,6 +1,7 @@
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import { execSync } from "node:child_process";
 import { DateTime } from "luxon";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import fetchBookData from "./src/_utils/fetchBookData.js";
 
 export default function (eleventyConfig) {
@@ -117,6 +118,7 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   eleventyConfig.addShortcode("book", async function (input, customCoverUrl) {
     const isbn =
@@ -129,7 +131,7 @@ export default function (eleventyConfig) {
       return `
         <div class="book">
           <div class="book__cover">
-            <img src="${bookData.coverImagePath}" alt="Book Cover" ${customCoverUrl ? 'class="book__cover--custom"' : ""}>
+            <img width="120" src="${bookData.coverImagePath}" alt="Book Cover" ${customCoverUrl ? 'class="book__cover--custom"' : ""}>
           </div>
           <ul class="book__details no-list-style">
             <li class="book__title">${bookData.title}</li>

@@ -656,21 +656,19 @@ th {
     grid-template-columns: min-content 1fr;
     gap: 1em 2em;
     align-items: center;
-    /*font-size: 0.8em;*/
     line-height: 1.5;
     perspective: 600px;
 }
 
 .book__cover {
     --book-color: var(--color-white);
-    --book-width: clamp(40px, 20vw, 90px);
-    --page-thickness: clamp(15px, 5vw, 24px);
+    --book-width: clamp(40px, 20vw, 80px);
+    --page-thickness: clamp(15px, 5vw, 20px);
     --book-transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --book-corners: 1px 2px 2px 1px;
     grid-area: cover;
     align-self: start;
     width: var(--book-width);
-    height: auto;
     max-width: var(--book-width);
     margin-left: auto;
     position: relative;
@@ -685,10 +683,8 @@ th {
 
 .book__cover img {
     width: 100%;
-    height: auto;
     object-fit: cover;
     display: block;
-    position: relative;
     border-radius: var(--book-corners);
     box-shadow:
         5px 5px 8px rgba(0, 0, 0, 0.2),

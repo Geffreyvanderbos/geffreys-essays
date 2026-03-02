@@ -133,7 +133,7 @@ export default function (eleventyConfig) {
           </div>
           <ul class="book__details no-list-style">
             <li class="book__title">${bookData.title}</li>
-            <li class="book__author small muted-text">by ${bookData.author}</li>
+            <li class="book__author muted-text">by ${bookData.author}</li>
           </ul>
         </div>
       `;

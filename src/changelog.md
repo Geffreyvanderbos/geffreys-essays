@@ -4,6 +4,9 @@ title: Changelog
 permalink: /changelog/
 ---
 
+## 2026-03-02
+- I've added a book shortcode, so I can display books wherever I like. It finds the metadata and cover via ISBN. I'll do a similar thing with music records.
+
 ## 2026-02-16
 - Refactored the CSS of this site to be more future proof and maintainable.
 - Played around with coloring the site using `oklch` instead of `hsl`. It's pretty cool.

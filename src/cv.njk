@@ -244,6 +244,55 @@ permalink: /cv/
         margin-bottom: 16px;
         margin-bottom: 16px;
     }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 24px;
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+
+    .project-card {
+        border: 1px solid #E8E8E8;
+        border-radius: 8px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .project-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-bottom: 12px;
+    }
+
+    .project-card h4 {
+        margin: 0 0 8px 0;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .project-card p {
+        margin: 0 0 12px 0;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #555;
+    }
+
+    .project-card .project-title {
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+
+    .project-card .project-description {
+        font-size: 13px;
+        line-height: 1.4;
+        color: #666;
+    }
 </style>
 <body>
     <main>
@@ -260,7 +309,7 @@ permalink: /cv/
                 <line x1="73.7678" y1="1.76777" x2="1.76777" y2="73.7678" stroke="#0A66C2" stroke-width="5"/>
                 </svg>
 
-               <div><p>I have chosen not to use LinkedIn due to concerns about privacy and data control. Despite its benefits, the Microsoft-owned platform uses dark patterns(<a href="https://www.deceptive.design/types" title="Read about Deceptive patterns.">?</a>) to maximize personal information collection.</p><p>They created a system of reliance that limits our agency and sovereignty. This fundamentally goes against my instincts.</p><p>I trust you'll enjoy this familiar and improved experience.</p></div>
+               <div><p>I have chosen not to use LinkedIn due to concerns about privacy and data control. Despite its benefits, the Microsoft-owned platform uses dark patterns(<a href="https://www.deceptive.design/types" title="Read about Deceptive patterns.">?</a>) to maximize personal information collection. This fundamentally goes against my instincts.</p></div>
         </div>
         <div class="summary">
             <span class="low-emphasis"><svg style="transform: translateY(2px); margin-right: 2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>Summary by LLM</span>
@@ -286,6 +335,23 @@ permalink: /cv/
                         <li>Collaborate closely with stakeholders, and developers to ensure feasibility and alignment with organisational goals.</li>
             <li>I have the opportunity to suggest innovatative ideas and turn them into reality, helping to improve the platform.</li>
                     </ul>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="/assets/cv-img/projects/case-study-geldfit-homepage.png" alt="Geldfit.nl Platform">
+                            <h4 class="project-title">Geldfit.nl</h4>
+                            <p class="project-description">Public-facing website integrated with NSR providing financial health information and interactive tools.</p>
+                        </div>
+                        <div class="project-card">
+                            <img src="/assets/cv-img/projects/case-study-postjescheck.png" alt="Potjes-check Revamp">
+                            <h4 class="project-title">Potjes-check Revamp</h4>
+                            <p class="project-description">Free and anonymous tool to help residents identify unclaimed government benefits and subsidies.</p>
+                        </div>
+                        <div class="project-card">
+                            <img src="/assets/cv-img/projects/case-study-portaal.png" alt="Sociale Kaart Search Tool">
+                            <h4 class="project-title">Sociale Kaart Search Tool</h4>
+                            <p class="project-description">Internal tool for partners to search the comprehensive social map directory.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section-item">
@@ -303,6 +369,13 @@ permalink: /cv/
                         <li>Collaborated with a cross-functional team of developers, QA engineers, and hardware engineers to translate user stories into effective features.</li>
                         <li>Facilitated sprint planning, daily stand-ups, sprint reviews, and retrospectives, fostering a collaborative and agile development environment.</li>
                     </ul>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="/assets/cv-img/projects/case-study-smartlab.jpg" alt="Nuclear Medicine Workflow Application">
+                            <h4 class="project-title">Nuclear Medicine Workflow Application</h4>
+                            <p class="project-description">Software platform for radio-pharmaceutical management in nuclear medicine with hardware integration.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section-item">
@@ -320,6 +393,13 @@ permalink: /cv/
                         <li>Managed a product backlog, writing user stories, and acceptance criteria to guide the development team.</li>
                         <li>Collaborated with data scientists and engineers to ensure the successful integration of AI/ML models into production systems.</li>
                     </ul>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="/assets/cv-img/projects/case-study-infradetection.jpg" alt="Image of infrastructure being detected with boundingboxes">
+                            <h4 class="project-title">Road signs and road quality detection</h4>
+                            <p class="project-description">Software and deep learning models that automatically detect signs, markings, and other infrastructure assets.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section-item">
@@ -338,6 +418,18 @@ permalink: /cv/
                         <li>Conducted extensive user research and usability testing to gather insights and inform design decisions.</li>
                         <li>Collaborated with clients and engineers to translate user needs into innovative and effective design solutions.</li>
                     </ul>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <img src="/assets/cv-img/projects/case-study-construction.jpg" alt="Construction Corporation Application">
+                            <h4 class="project-title">Construction Corporation Application</h4>
+                            <p class="project-description">iPad and web application for measuring and producing frames, doors, and gates for large construction projects.</p>
+                        </div>
+                        <div class="project-card">
+                            <img src="/assets/cv-img/projects/case-study-hotel.jpg" alt="Smart Hotel Room">
+                            <h4 class="project-title">Smart Hotel Room</h4>
+                            <p class="project-description">IoT platform for guest check-in and room management in smart hotels.</p>
+                        </div>
+                    </div>
 
                     <p><strong>Worked with teams from:</strong></p>
                     <ul style="

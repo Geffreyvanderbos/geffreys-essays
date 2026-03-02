@@ -7,10 +7,6 @@ import fetchBookData from "./src/_utils/fetchBookData.js";
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
 
-  eleventyConfig.addCollection("allContent", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/*.md");
-  });
-
   eleventyConfig.addFilter("formatDate", function (date) {
     const d = new Date(date);
     const options = { year: "numeric", month: "long" };

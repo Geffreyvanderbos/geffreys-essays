@@ -177,16 +177,14 @@ a {
 }
 
 /* Highlight Colors */
-p a:not(.muted-text),
-.yellow {
+p a:not(.muted-text) {
     color: var(--color-yellow);
     text-decoration-color: oklch(
         from var(--color-yellow) calc(l - 0.4) calc(c - 0.05) h
     );
 }
 
-p a:hover:not(.muted-text),
-.yellow:hover {
+p a:hover:not(.muted-text) {
     text-decoration-color: var(--color-yellow);
 }
 
@@ -234,8 +232,7 @@ img {
 }
 
 /* Article & Content */
-article > div > p:first-of-type:first-letter,
-.drop-cap:first-letter {
+article > div > p:first-of-type:first-letter {
     initial-letter: 2;
     margin-inline-end: 0.5em;
 }
@@ -478,68 +475,16 @@ th {
     user-select: all;
 }
 
-.m-0 {
-    margin: 0;
-}
-
-.p-0 {
-    padding: 0;
-}
-
-.m-4 {
-    margin: 0.25rem;
-}
-
-.m-8 {
-    margin: 0.5rem;
-}
-
-.m-12 {
-    margin: 0.75rem;
-}
-
-.m-16 {
-    margin: 1rem;
-}
-
 .mt-0 {
     margin-block-start: 0;
-}
-
-.mt-4 {
-    margin-block-start: 0.25rem;
-}
-
-.mt-8 {
-    margin-block-start: 0.5rem;
 }
 
 .mt-12 {
     margin-block-start: 0.75rem;
 }
 
-.mt-16 {
-    margin-block-start: 1rem;
-}
-
-.mt-24 {
-    margin-block-start: 1.5rem;
-}
-
-.mt-32 {
-    margin-block-start: 2rem;
-}
-
-.mt-48 {
-    margin-block-start: 3rem;
-}
-
 .mt-64 {
     margin-block-start: 4rem;
-}
-
-.mb-0 {
-    margin-block-end: 0;
 }
 
 .mb-4 {
@@ -550,76 +495,16 @@ th {
     margin-block-end: 0.5rem;
 }
 
-.mb-12 {
-    margin-block-end: 0.75rem;
-}
-
-.mb-16 {
-    margin-block-end: 1rem;
-}
-
 .mb-24 {
     margin-block-end: 1.5rem;
-}
-
-.mb-32 {
-    margin-block-end: 2rem;
-}
-
-.mb-48 {
-    margin-block-end: 3rem;
 }
 
 .mb-64 {
     margin-block-end: 4rem;
 }
 
-.p-4 {
-    padding: 0.25rem;
-}
-
-.p-8 {
-    padding: 0.5rem;
-}
-
-.p-12 {
-    padding: 0.75rem;
-}
-
-.p-16 {
-    padding: 1rem;
-}
-
-.pt-4 {
-    padding-block-start: 0.25rem;
-}
-
-.pt-8 {
-    padding-block-start: 0.5rem;
-}
-
-.pt-12 {
-    padding-block-start: 0.75rem;
-}
-
 .pt-16 {
     padding-block-start: 1rem;
-}
-
-.pb-4 {
-    padding-block-end: 0.25rem;
-}
-
-.pb-8 {
-    padding-block-end: 0.5rem;
-}
-
-.pb-12 {
-    padding-block-end: 0.75rem;
-}
-
-.pb-16 {
-    padding-block-end: 1rem;
 }
 
 .skip-link {

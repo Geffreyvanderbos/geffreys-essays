@@ -1,6 +1,7 @@
 ---
 title: All you need is 3 plain text files
 date: 2025-10-04
+popular: true
 ---
 It's been years since you bought Things 3. You used it a lot. Then a bit less. Now, it's decoration on your Home Screen. You watched YouTubers glorify Notion. _Databases_, _slash commands_, and _workflows_ galore! You were hooked, yet still got nothing done.
 

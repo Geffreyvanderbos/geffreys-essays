@@ -1,6 +1,7 @@
 ---
 title: Productivity with background music
 date: 2026-01-12
+popular: true
 ---
 
 I read each sentence twice until the wordy task description clicked. Then I wondered: is music hurting my understanding of what I read? Being a curious boy, I decided to investigate. I pulled up my trusty research tools and went to theory town. "How does background music impact my brain?" I asked in science speech. Unsurprisingly, there's a lot of research papers on this.

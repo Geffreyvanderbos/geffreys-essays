@@ -319,7 +319,8 @@ article > div > p:first-of-type:first-letter,
     }
 }
 
-.recent-post__content p:first-of-type {
+.recent-post__content p:first-of-type,
+.recent-post__content blockquote:first-of-type {
     margin-block-start: 0;
 }
 
@@ -657,4 +658,15 @@ th {
 .book__details {
     margin: 0;
     grid-area: data;
+}
+
+.chip {
+    display: inline-block;
+    color: var(--color-yellow);
+    padding: 1px;
+    font-size: 0.6em;
+    line-height: 1;
+    border-radius: 4px;
+    font-family: sans-serif;
+    transform: translateY(3px);
 }

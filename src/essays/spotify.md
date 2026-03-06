@@ -1,6 +1,7 @@
 ---
 title: Convert Spotify library to markdown
 date: 2024-07-12
+popular: true
 ---
 
 When my Spotify account glitched and my libary showed up empty, I became very aware of the fact my 'music collection' was vendor locked. To lose the 1200 (!) albums I've saved over the years, was frightening to say the least.

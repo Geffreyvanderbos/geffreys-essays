@@ -244,7 +244,7 @@ article > div > p:first-of-type:first-letter,
     .drop-cap:first-letter {
         -webkit-initial-letter: 2;
         initial-letter: 2;
-        margin-inline-end: 0.5em;
+        margin-inline-end: 0.05em;
     }
 }
 

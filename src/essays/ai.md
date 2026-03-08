@@ -5,9 +5,9 @@ date: 2026-03-07
 
 AI-generated music is here to stay, whether we like it or not. If you are anything like me, you'd have a negative reaction to the concept of music made by a machine. However, let's keep an open-mind and explore what lies ahead.
 
-I will not cover copyright or AI ethics or AI-assisted music production. Nor the outright criminal acts that are necessary to create the technology.  The music discussed here is 'Western contemporary music', which includes lyrics.
+I will not cover copyright or AI ethics or AI-assisted music production. Nor the outright criminal acts that are necessary to create the technology.  The music discussed here is Western contemporary music, which includes lyrics.
 
-Before we dive deeper, I want to make the distinction between *making music* and generating audio files from a prompt. They might both end up as ‘audio files’, but these are two different processes.
+Before we dive deeper, I want to make the distinction between *making music* and generating audio files from a prompt. They might both end up as audio files, but these are two different processes.
 
 Additionally, it is an [ethnocentric view](/defining/) (and arguably capitalist) that a recorded song is the only expression of music. There are many other cultures that combine dance, poetry and other social aspects into the word 'music'. We have not yet muddied the water there and that gives me comfort.
 ## machine music is not all bad

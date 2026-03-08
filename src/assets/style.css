@@ -233,8 +233,19 @@ img {
 
 article > div > p:first-of-type:first-letter,
 .drop-cap:first-letter {
-    initial-letter: 2;
-    margin-inline-end: 0.5em;
+    float: left;
+    font-size: 3.75em;
+    line-height: 100%;
+    margin: 0 0.1em 0 1px;
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+    article > div > p:first-of-type:first-letter,
+    .drop-cap:first-letter {
+        -webkit-initial-letter: 2;
+        initial-letter: 2;
+        margin-inline-end: 0.5em;
+    }
 }
 
 .profile-card {

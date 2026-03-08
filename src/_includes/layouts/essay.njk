@@ -12,5 +12,37 @@ layout: layouts/base.njk
     · <a class="u-url" href="{{ page.url }}">permalink</a></span>
     <div class="e-content">
     {{ content | safe }}
+
+    {% if mastodon_id %}
+    <section id="comment-section">
+      <h2>Comments</h2>
+      <div class="comment-ingress">
+        Comment by replying to <a href="https://id.geff.re/@geffrey/{{ mastodon_id }}">this post in the fediverse</a>.
+      </div>
+      <div id="comments" data-id="{{ mastodon_id }}">
+        <p>Loading comments...</p>
+      </div>
+      <div class="continue-discussion">
+        <p>Continue discussion in <a href="https://id.geff.re/@geffrey/{{ mastodon_id }}">the fediverse</a> »</p>
+      </div>
+    </section>
+    {% endif %}
     </div>
 </article>
+
+<template id="comment-template">
+  <article class="blog-comment">
+    <div class="comment-meta">
+      <div>
+        <img/>
+      </div>
+      <div class="comment-meta-text">
+        <div class="author"></div>
+        <div class="publish-date"></div>
+      </div>
+    </div>
+    <div class="comment-content">
+      <div class="comment"></div>
+    </div>
+  </article>
+</template>

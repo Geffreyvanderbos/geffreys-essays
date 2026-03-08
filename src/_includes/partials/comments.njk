@@ -1,0 +1,25 @@
+{% if mastodon_id %}
+<section id="comment-section">
+  <div id="comments" data-id="{{ mastodon_id }}">
+    <p>Loading comments...</p>
+  </div>
+  <div class="comment-ingress">
+    Comment by replying to <a href="https://id.geff.re/@geffrey/statuses/{{ mastodon_id }}">this post</a> in the fediverse.
+  </div>
+</section>
+
+<template id="comment__template">
+  <article class="comment">
+    <img class="comment__profile-picture" />
+    <div>
+        <div class="comment-meta">
+            <div class="author"></div>
+            <div class="publish-date small"></div>
+        </div>
+        <div class="comment__content">
+        <div class="content"></div>
+        </div>
+    </div>
+  </article>
+</template>
+{% endif %}

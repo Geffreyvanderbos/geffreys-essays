@@ -1,7 +1,6 @@
 ---
 title: What we lose to AI music
 date: 2026-03-07
-mastodon_id: "01KJWYF23WP2GFFAGC0KN513CX"
 ---
 
 AI-generated music is here to stay, whether we like it or not. If you are anything like me, you'd have a negative reaction to the concept of music made by a machine. However, let's keep an open-mind and explore what lies ahead.

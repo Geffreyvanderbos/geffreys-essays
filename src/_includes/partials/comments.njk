@@ -1,10 +1,10 @@
 {% if mastodon_id %}
 <section id="comment-section">
+    <div class="comment-ingress">
+        Comment by replying to <a href="https://id.geff.re/@geffrey/statuses/{{ mastodon_id }}">this post</a> in the fediverse.
+    </div>
   <div id="comments" data-id="{{ mastodon_id }}">
     <p>Loading comments...</p>
-  </div>
-  <div class="comment-ingress">
-    Comment by replying to <a href="https://id.geff.re/@geffrey/statuses/{{ mastodon_id }}">this post</a> in the fediverse.
   </div>
 </section>
 

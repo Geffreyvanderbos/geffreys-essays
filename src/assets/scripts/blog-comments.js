@@ -1,26 +1,29 @@
-// Blog comments script for fediverse
-
 function renderComment(comment, target, parentId) {
   const node = document
-    .querySelector("template#comment-template")
+    .querySelector("template#comment__template")
     .content.cloneNode(true);
 
   const author = node.querySelector(".author");
-  author.textContent = `${comment.account.display_name} (@${comment.account.acct})`;
+  author.innerHTML = `<a href="${comment.account.url}" title="Visit person on the Fediverse" class="no-ext-icon">${comment.account.display_name}</a>`;
 
-  const commentContainer = node.querySelector(".blog-comment");
+  const commentContainer = node.querySelector(".comment");
   if (comment.in_reply_to_id !== parentId) {
     commentContainer.classList.add("indent");
   }
 
   const publishDate = node.querySelector(".publish-date");
   const dateObj = new Date(comment.created_at);
-  publishDate.textContent = `${dateObj.getDate()}.${dateObj.getMonth() + 1}.${dateObj.getFullYear()} ${dateObj.getHours()}:${dateObj.getMinutes()}`;
+  const year = dateObj.getFullYear();
+  const month = String(dateObj.getMonth() + 1).padStart(2, "0");
+  const day = String(dateObj.getDate()).padStart(2, "0");
+  const hours = String(dateObj.getHours()).padStart(2, "0");
+  const minutes = String(dateObj.getMinutes()).padStart(2, "0");
+  publishDate.textContent = `${year}/${month}/${day} ${hours}:${minutes}`;
 
-  const userComment = node.querySelector(".comment");
+  const userComment = node.querySelector(".content");
   userComment.innerHTML = comment.content;
 
-  const avatar = node.querySelector("img");
+  const avatar = node.querySelector(".comment__profile-picture");
   avatar.src = comment.account.avatar_static;
 
   target.appendChild(node);

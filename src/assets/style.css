@@ -156,7 +156,7 @@ a {
     }
 
     /* External link icon */
-    &:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"])
+    &:not([href^="https://geff.re"]):not([href^="http://geff.re"]):not([href^="/"]):not([href^="#"]):not(.no-ext-icon)
     {
         display: inline-flex;
         align-items: center;
@@ -673,15 +673,13 @@ th {
 
 /* Blog comments styling */
 #comment-section {
-    margin-block-start: 3em;
     padding-block-start: 2em;
     border-block-start: 1px solid
         oklch(from var(--color-gray) calc(l - 0.5) c h);
 }
 
 .comment-ingress {
-    margin-block-end: 1.5em;
-    font-size: 0.9em;
+    margin-block-start: 1.5em;
     color: var(--color-gray);
 }
 
@@ -692,76 +690,43 @@ th {
     );
 }
 
-.continue-discussion {
-    margin-block-start: 1.5em;
-    font-size: 0.9em;
-    color: var(--color-gray);
-}
-
-.continue-discussion a {
-    color: var(--color-yellow);
-    text-decoration-color: oklch(
-        from var(--color-yellow) calc(l - 0.4) calc(c - 0.05) h
-    );
-}
-
-.blog-comment {
+.comment {
+    display: flex;
+    gap: 1em;
     margin-block-end: 2em;
-    padding-block: 1em;
-    padding-inline: 1.5em;
-    border-radius: 0.5em;
-    background-color: oklch(
-        from var(--color-darkgreen) calc(l + 0.03) calc(c - 0.005) h
-    );
 }
 
-.blog-comment.indent {
+.comment.indent {
     margin-inline-start: 2em;
 }
 
-.comment-meta {
-    display: flex;
-    gap: 1em;
-    margin-block-end: 1em;
-}
-
-.comment-meta img {
+.comment__profile-picture {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.comment-meta-text {
-    flex: 1;
+.comment-meta {
+    display: flex;
+    align-items: flex-end;
 }
 
-.comment-meta-text .author {
+.comment-meta .author {
     font-weight: 600;
-    font-size: 1.05em;
 }
 
-.comment-meta-text .publish-date {
-    font-size: 0.8em;
+.comment-meta .publish-date {
     color: var(--color-gray);
-    margin-block-start: 0.2em;
+    margin-left: 0.5em;
 }
 
-.comment-content {
-    padding-inline-start: 1em;
-    border-inline-start: 1px solid
-        oklch(from var(--color-gray) calc(l - 0.3) c h);
+.content p {
+    margin-block-start: 0;
+    margin-block-end: 1em !important;
 }
 
-.comment-content .comment {
-    line-height: 1.7;
-}
-
-.comment-content .comment p {
-    margin-block: 0.5em 0;
-}
-
-.comment-content .comment a {
+.content a {
     color: var(--color-yellow);
     text-decoration-color: oklch(
         from var(--color-yellow) calc(l - 0.4) calc(c - 0.05) h

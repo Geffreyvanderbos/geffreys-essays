@@ -18,19 +18,14 @@ async function fetchBookData(isbn, customCoverUrl) {
     throw new Error(`ISBN is required. Received: ${isbn}`);
   }
 
-  const cacheDir = path.join(process.cwd(), ".cache", "books");
-  const bookCoversDir = path.join(
-    process.cwd(),
-    "src",
-    "assets",
-    "book-covers",
-  );
+  const metadataDir = path.join(process.cwd(), "src", "assets", "books", "metadata");
+  const bookCoversDir = path.join(process.cwd(), "src", "assets", "books", "covers");
 
-  [cacheDir, bookCoversDir].forEach((dir) => {
+  [metadataDir, bookCoversDir].forEach((dir) => {
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   });
 
-  const cachePath = path.join(cacheDir, `${isbn}.json`);
+  const cachePath = path.join(metadataDir, `${isbn}.json`);
   const coverImagePath = path.join(bookCoversDir, `${isbn}.jpg`);
 
   // ── 1. Return from cache if available ─────────────────────────────────────
@@ -68,7 +63,7 @@ async function fetchBookData(isbn, customCoverUrl) {
   const result = {
     title,
     author,
-    coverImagePath: customCoverUrl || `/assets/book-covers/${isbn}.jpg`,
+    coverImagePath: customCoverUrl || `/assets/books/covers/${isbn}.jpg`,
   };
 
   // ── 4. Cache metadata ──────────────────────────────────────────────────────

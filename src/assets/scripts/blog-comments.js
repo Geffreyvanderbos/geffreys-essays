@@ -105,7 +105,7 @@ async function renderComments() {
   } catch (error) {
     console.error("Error fetching comments:", error);
     commentsNode.innerHTML =
-      "<p>Failed to load comments. Please try again later.</p>";
+      `<p>Comments unavailable. <a href="${baseUrl}/@geffrey/statuses/${postId}">View the discussion on the Fediverse</a>.</p>`;
   }
 }
 

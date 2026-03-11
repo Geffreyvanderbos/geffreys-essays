@@ -6,7 +6,7 @@ permalink: /now/
 This is a [now page](https://nownownow.com/about). {% set lastUpdatedDate = page.inputPath | lastUpdated %}{% if lastUpdatedDate %}It was last updated {{ lastUpdatedDate | readableDate }}.{% endif %}
 
 ## currently reading
-{% book "0-14-018585-2", "/assets/book-covers/0140185852.jpg" %}
+{% book "0-14-018585-2", "/assets/books/covers/0140185852.jpg" %}
 
 ## the new chapter
 It has been only a few days since we moved into Arnhem, yet I’m already convinced we made the right choice. We’re city-people through and through. And we should’ve moved much sooner.

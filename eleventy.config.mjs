@@ -30,9 +30,11 @@ export default function (eleventyConfig) {
     html = html.replace(/<textarea\b[^>]*>[\s\S]*?<\/textarea>/gim, "");
     html = html.replace(/<label\b[^>]*>[\s\S]*?<\/label>/gim, "");
 
-    for (let i = 0; i < 5; i++) {
+    let prev;
+    do {
+      prev = html;
       html = html.replace(/<div\b[^>]*class[^>]*>[\s\S]*?<\/div>/gim, "");
-    }
+    } while (html !== prev);
 
     const allowedTags = [
       "p",

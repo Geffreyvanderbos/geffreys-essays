@@ -1,7 +1,7 @@
 <footer class="mt-64 mb-8 pt-16 muted-text">
 <div>{% set lastUpdatedDate = page.inputPath | lastUpdated %}{% if lastUpdatedDate %}This specific page was last updated <time datetime="{{ lastUpdatedDate | htmlDate }}">{{ lastUpdatedDate | readableDate }}</time>. {% endif %}
-    <a href="/">Geff.re</a> is 100% human-authored. <a href="/colophon">Hand-coded</a> with HTML/CSS. Built with <a href="https://www.11ty.dev" title="Eleventy is a simpler static site generator">Eleventy</a>. Privacy-focused with limited <a href="https://www.goatcounter.com/help/privacy">analytics</a>. Follow <a href="https://geff.re/feed.xml" title="RSS Feed for Geff.re">RSS feed</a> and look at the human-readable <a href="/sitemap/">sitemap</a>.
+    <a href="/">Geff.re</a> is 100% human-authored. <a href="/colophon">Hand-coded</a> with HTML/CSS. Built with <a href="https://www.11ty.dev" title="Eleventy is a simpler static site generator">Eleventy</a>. Privacy-focused with limited <a href="https://www.goatcounter.com/help/privacy">analytics</a>. Follow <a href="{{ site.url }}/feed.xml" title="RSS Feed for Geff.re">RSS feed</a> and look at the human-readable <a href="/sitemap/">sitemap</a>.
 </div>
 <script src="/assets/scripts/blog-comments.js"></script>
-<script data-goatcounter="https://st.geff.re/count" async src="//st.geff.re/count.js"></script>
+<script data-goatcounter="{{ site.analytics }}/count" async src="{{ site.analytics | replace('https:', '') }}/count.js"></script>
 </footer>

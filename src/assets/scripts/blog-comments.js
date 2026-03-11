@@ -1,5 +1,4 @@
 function filterContent(content) {
-  console.log("filterContent input:", content);
   // Remove @geffrey mentions from content (including Mastodon h-card format)
   let filtered = content
     .replace(
@@ -13,8 +12,6 @@ function filterContent(content) {
     .replace(/<span class="h-card">@geffrey(@geff\.re)?<\/span>/gi, "")
     .replace(/@geffrey(@geff\.re)?/gi, "");
 
-  console.log("filterContent after regex:", filtered);
-
   // Clean up extra whitespace left behind after removing mentions
   // First remove whitespace between HTML tags, then normalize remaining whitespace
   filtered = filtered
@@ -27,7 +24,6 @@ function filterContent(content) {
   // Remove empty p tags left after filtering
   filtered = filtered.replace(/<p>\s*<\/p>/gi, "");
 
-  console.log("filterContent output:", filtered);
   return filtered;
 }
 

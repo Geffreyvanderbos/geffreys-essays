@@ -1,4 +1,7 @@
 import 'dotenv/config';
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const site = require("./site.json");
 
 const fallback = {
   html: "<p>Designer helping people navigate financial stress at Stichting NSR. Privacy-conscious, plain-text advocate and allergic to vendor lock-in. Husband to Illustrator Julia; guardian of Loki the Shiba Inu. Obsessed with extreme music and music science.</p>",
@@ -17,7 +20,7 @@ export default async function () {
 
   try {
     const res = await fetch(
-      "https://id.geff.re/api/v1/accounts/lookup?acct=geffrey",
+      `${site.fediverse.instance}/api/v1/accounts/lookup?acct=geffrey`,
       {
         headers: { "Authorization": `Bearer ${token}` }
       }

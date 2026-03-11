@@ -5,10 +5,10 @@
     <div class="profile-card__bio p-note bio">
     {{ bio.html | safe }}
     </div>
-    <a class="u-url hidden" href="https://geff.re" rel="me"></a>
+    <a class="u-url hidden" href="{{ site.url }}" rel="me"></a>
     <div class="profile-card__links links">
-      <a href="https://github.com/Geffreyvanderbos" rel="me">GitHub</a>
-      <a href="https://id.geff.re/@geffrey" rel="me">@geffrey@id.geff.re</a>
+      <a href="{{ site.contact.github }}" rel="me">GitHub</a>
+      <a href="{{ site.fediverse.instance }}/{{ site.fediverse.handle }}" rel="me">{{ site.fediverse.handle }}@{{ site.fediverse.instance | replace("https://", "") }}</a>
     </div>
   </div>
 </div>

@@ -1,8 +1,11 @@
 import Parser from "rss-parser";
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const site = require("./site.json");
 
 export default async function () {
   const parser = new Parser();
-  const url = "https://id.geff.re/@geffrey/feed.rss";
+  const url = `${site.fediverse.instance}${site.fediverse.feedPath}`;
 
   try {
     const feed = await parser.parseURL(url);
@@ -68,7 +71,7 @@ function fallbackData() {
   return {
     content: "Check out my latest updates on the Fediverse!",
     date: new Date().toISOString(),
-    url: "https://id.geff.re/@geffrey",
+    url: `${site.fediverse.instance}/${site.fediverse.handle}`,
     hasImage: false,
   };
 }

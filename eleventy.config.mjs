@@ -3,8 +3,11 @@ import { execSync } from "node:child_process";
 import { DateTime } from "luxon";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import fetchBookData from "./src/_utils/fetchBookData.js";
+import yaml from "js-yaml";
 
 export default function (eleventyConfig) {
+  eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
+
   eleventyConfig.addPassthroughCopy("src/assets");
 
   eleventyConfig.addFilter("formatDate", function (date) {

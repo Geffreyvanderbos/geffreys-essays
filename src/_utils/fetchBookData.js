@@ -7,10 +7,30 @@ const HEADERS = { "User-Agent": "Geff.re (api@geff.re)" };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+const STOPWORDS = new Set(["a", "an", "the", "and", "but", "or", "nor", "for", "so", "yet", "at", "by", "in", "of", "on", "to", "up", "as"]);
+
+function cleanTitle(str) {
+  return str
+    .replace(/\[.*?\]/g, "")   // strip [bracketed]
+    .replace(/\(.*?\)/g, "")   // strip (parenthesised)
+    .replace(/\s*[:\-–—]\s.*$/, "") // strip subtitle after : or dash
+    .trim();
+}
+
+function toTitleCase(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word, i, arr) =>
+      i === 0 || i === arr.length - 1 || !STOPWORDS.has(word)
+        ? word.charAt(0).toUpperCase() + word.slice(1)
+        : word
+    )
+    .join(" ");
+}
+
 function pickAuthorName(doc) {
-  const alternatives = doc.author_alternative_name ?? [];
-  const ascii = alternatives.find((n) => /^[ -~]+$/.test(n));
-  return ascii ?? doc.author_name?.[0] ?? "Unknown author";
+  return doc.author_name?.[0] ?? "Unknown author";
 }
 
 async function fetchBookData(isbn, customCoverUrl) {
@@ -57,36 +77,37 @@ async function fetchBookData(isbn, customCoverUrl) {
     throw new Error(`📚 Book not found for ISBN: ${isbn}`);
   }
 
-  const title = edition?.title ?? doc?.title ?? "Unknown title";
-  const author = pickAuthorName(doc ?? {});
+  const title = toTitleCase(cleanTitle(edition?.title ?? doc?.title ?? "Unknown title"));
+  const author = toTitleCase(pickAuthorName(doc ?? {}));
 
-  const result = {
-    title,
-    author,
-    coverImagePath: customCoverUrl || `/assets/books/covers/${isbn}.jpg`,
-  };
+  // ── 4. Cache cover image ───────────────────────────────────────────────────
+  let resolvedCoverPath = customCoverUrl || `/assets/books/covers/${isbn}.jpg`;
 
-  // ── 4. Cache metadata ──────────────────────────────────────────────────────
-  fs.writeFileSync(cachePath, JSON.stringify(result, null, 2));
-
-  // ── 5. Cache cover image ───────────────────────────────────────────────────
   if (!customCoverUrl && !fs.existsSync(coverImagePath)) {
     const coverId = doc?.cover_i ?? edition?.covers?.find((c) => c > 0);
-    const coverUrl = coverId
+    const remoteUrl = coverId
       ? `https://covers.openlibrary.org/b/id/${coverId}-M.jpg`
       : null;
 
-    if (coverUrl) {
+    if (remoteUrl) {
       try {
-        const coverRes = await axios.get(coverUrl, {
+        const coverRes = await axios.get(remoteUrl, {
           responseType: "arraybuffer",
         });
         fs.writeFileSync(coverImagePath, coverRes.data);
       } catch (e) {
         console.warn(`Could not cache cover for ${isbn}: ${e.message}`);
+        resolvedCoverPath = remoteUrl; // fall back to remote URL
       }
+    } else {
+      resolvedCoverPath = null; // no cover available
     }
   }
+
+  const result = { title, author, coverImagePath: resolvedCoverPath };
+
+  // ── 5. Cache metadata ──────────────────────────────────────────────────────
+  fs.writeFileSync(cachePath, JSON.stringify(result, null, 2));
 
   return result;
 }

@@ -1,11 +1,31 @@
 shelves:
   - name: Currently reading
     books:
-      - "0140185852"  # We — Yevgeni Zamyatin
+      - "0140185852" # We — Yevgeni Zamyatin
+      - "0140449132" # Crime and Punishment
 
   - name: Anti-library
-    description: Books I want to read but haven't yet.
-    books: []
+    description: Books I started or want to read.
+    books:
+      - "1857988825" # The Dispossed
+      - "0553382578" # Foundation
+      - "0441013597" # Dune
+      - "1250788455" # The Brothers Karamazov
 
   - name: Read
-    books: []
+    books:
+      - "0679420398" # Animal Farm
+      - "6257287405" # 1984
+      - "0451191137" # Anthem
+      - "1101218916" # Your Brain on Music
+      - "054792822X" # The Hobbit
+      - "0544273443" # The Lord of the Rings
+      - "1771642483" # Hidden Life of Trees
+
+  - name: Book Purgatory
+    description: Books I refuse to read or regret reading
+    books:
+      - "0735211299" # Atomic Habits
+      - "0063228254" # Subtle Art of Not Giving a F*ck
+      - "1982137274" # The 7 Habits of Highly Effective People
+      - "0141988517" # 12 Rules for Life

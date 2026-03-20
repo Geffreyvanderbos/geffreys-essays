@@ -7,6 +7,9 @@ permalink: /slashes/
 ## [/About](/about)
 Read about my personal life and interests.
 
+## [/Books](/books)
+My library where I track my reading. 
+
 ## [/Blogroll](/blogroll)
 Personal websites and blogs I follow and appreciate.
 

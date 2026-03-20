@@ -132,8 +132,9 @@ export default function (eleventyConfig) {
       const coverHtml = bookData.coverImagePath
         ? `<img width="120" src="${bookData.coverImagePath}" alt="Book Cover"${customCoverUrl ? ' class="book__cover--custom"' : ""}>`
         : "";
+      const thickness = !bookData.pages ? "" : bookData.pages < 200 ? " book--thin" : bookData.pages > 450 ? " book--thick" : "";
       return `
-        <div class="book">
+        <div class="book${thickness}">
           <div class="book__cover">${coverHtml}</div>
           <ul class="book__details no-list-style">
             <li class="book__title">${bookData.title}</li>
@@ -142,7 +143,7 @@ export default function (eleventyConfig) {
         </div>
       `;
     } catch (error) {
-      return `<p style="display: none;">Ignore me. There's supposed to be a book here. But it errored with the following: ${error.message}</p>`;
+      return "";
     }
   });
 

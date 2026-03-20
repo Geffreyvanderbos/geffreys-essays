@@ -548,10 +548,13 @@ th {
     perspective: 600px;
 }
 
+.book--thin .book__cover  { --page-thickness: clamp(12px, 4vw, 18px); }
+.book--thick .book__cover { --page-thickness: clamp(44px, 14vw, 60px); }
+
 .book__cover {
     --book-color: var(--color-white);
     --book-width: clamp(40px, 20vw, 80px);
-    --page-thickness: clamp(15px, 5vw, 20px);
+    --page-thickness: clamp(30px, 10vw, 40px);
     --book-transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     --book-corners: 1px 2px 2px 1px;
     grid-area: cover;
@@ -617,19 +620,12 @@ th {
         linear-gradient(
             130deg,
             transparent 0%,
-            rgba(255, 255, 255, 0.08) 15%,
-            rgba(255, 255, 255, 0.2) 40%,
-            rgba(255, 255, 255, 0.3) 47%,
-            rgba(255, 255, 255, 0.2) 54%,
-            rgba(255, 255, 255, 0.06) 72%,
+            rgba(255, 255, 255, 0.06) 15%,
+            rgba(255, 255, 255, 0.08) 40%,
+            rgba(255, 255, 255, 0.2) 47%,
+            rgba(255, 255, 255, 0.18) 54%,
+            rgba(255, 255, 255, 0.04) 72%,
             transparent 100%
-        ),
-        repeating-linear-gradient(
-            135deg,
-            transparent,
-            transparent 1px,
-            rgba(255, 255, 255, 0.05) 1px,
-            rgba(255, 255, 255, 0.05) 2px
         ),
         repeating-linear-gradient(
             90deg,
@@ -663,7 +659,6 @@ th {
     grid-area: data;
 }
 
-/* Bookshelf grid — overrides the default horizontal .book layout */
 .bookshelf {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
@@ -683,7 +678,10 @@ th {
 .bookshelf .book__cover {
     --book-width: clamp(70px, 15vw, 100px);
     margin-inline: auto;
-    margin-left: 0;
+}
+
+.book__title {
+    font-weight: 600;
 }
 
 .bookshelf .book__details {
@@ -702,7 +700,6 @@ th {
     transform: translateY(3px);
 }
 
-/* Blog comments styling */
 #comment-section {
     border-block-start: 1px solid
         oklch(from var(--color-gray) calc(l - 0.5) c h);

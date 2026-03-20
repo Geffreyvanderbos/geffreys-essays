@@ -3,6 +3,7 @@ shelves:
     books:
       - "0140185852" # We — Yevgeni Zamyatin
       - "0140449132" # Crime and Punishment
+      - "1509551700" # Non-things
 
   - name: Anti-library
     description: Books I started or want to read.

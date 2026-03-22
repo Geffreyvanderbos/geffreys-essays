@@ -13,18 +13,8 @@ shelves:
       - "0441013597" # Dune
       - "1250788455" # The Brothers Karamazov
 
-  - name: Read
-    books:
-      - "0679420398" # Animal Farm
-      - "6257287405" # 1984
-      - "0451191137" # Anthem
-      - "1101218916" # Your Brain on Music
-      - "054792822X" # The Hobbit
-      - "0544273443" # The Lord of the Rings
-      - "1771642483" # Hidden Life of Trees
-
-  - name: Book Purgatory
-    description: Books I refuse to read or regret reading
+  - name: 🚫 Purgatory
+    description: Books I refuse to read or regret reading. Treat this shelf as a warning.
     books:
       - "0735211299" # Atomic Habits
       - "0063228254" # Subtle Art of Not Giving a F*ck

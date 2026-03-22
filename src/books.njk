@@ -3,7 +3,7 @@ layout: layouts/base.njk
 title: Books
 permalink: /books/
 ---
-<p>What I'm reading, what I've read, and what I intend to read.</p>
+<p>What I'm reading and what I intend to read. I have decided not to put up a 'read' shelf. I made this page not as a résumé of taste, but as a snapshot of my current interests.</p>
 
 {% for shelf in books.shelves %}
 <h2>{{ shelf.name }}</h2>
@@ -17,3 +17,22 @@ permalink: /books/
 {% endif %}
 
 {% endfor %}
+<script>
+document.querySelectorAll('.book__cover').forEach(el => {
+  el.addEventListener('mousemove', e => {
+    const { top, height, left, width } = el.getBoundingClientRect();
+    const x = (e.clientX - left) / width - 0.5;
+    const y = (e.clientY - top) / height - 0.5;
+    el.style.setProperty('--tilt-y', `${(x * 20 - 10).toFixed(1)}deg`);
+    el.style.setProperty('--tilt-x', `${(-y * 10).toFixed(1)}deg`);
+    el.style.setProperty('--highlight-x', `${(55 - x * 40).toFixed(1)}%`);
+    el.style.setProperty('--highlight-y', `${(55 - y * 40).toFixed(1)}%`);
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.removeProperty('--tilt-y');
+    el.style.removeProperty('--tilt-x');
+    el.style.removeProperty('--highlight-x');
+    el.style.removeProperty('--highlight-y');
+  });
+});
+</script>

@@ -4,9 +4,31 @@ import { DateTime } from "luxon";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import fetchBookData from "./src/_utils/fetchBookData.js";
 import yaml from "js-yaml";
+import fs from "node:fs";
+import path from "node:path";
 
 export default function (eleventyConfig) {
   eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
+
+  eleventyConfig.on("eleventy.before", () => {
+    const booksYaml = fs.readFileSync(path.join(process.cwd(), "src/_data/books.yaml"), "utf-8");
+    const booksData = yaml.load(booksYaml);
+    const activeIsbns = new Set(
+      booksData.shelves.flatMap((shelf) => shelf.books ?? [])
+    );
+
+    for (const subdir of ["covers", "metadata"]) {
+      const dir = path.join(process.cwd(), "src/assets/books", subdir);
+      if (!fs.existsSync(dir)) continue;
+      for (const file of fs.readdirSync(dir)) {
+        const isbn = path.parse(file).name;
+        if (!activeIsbns.has(isbn)) {
+          fs.rmSync(path.join(dir, file));
+          console.log(`[books] Removed orphaned ${subdir}/${file}`);
+        }
+      }
+    }
+  });
 
   eleventyConfig.addPassthroughCopy("src/assets");
 

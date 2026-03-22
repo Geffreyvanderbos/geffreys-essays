@@ -548,8 +548,12 @@ th {
     perspective: 600px;
 }
 
-.book--thin .book__cover  { --page-thickness: clamp(12px, 4vw, 18px); }
-.book--thick .book__cover { --page-thickness: clamp(44px, 14vw, 60px); }
+.book--thin .book__cover {
+    --page-thickness: clamp(12px, 4vw, 18px);
+}
+.book--thick .book__cover {
+    --page-thickness: clamp(44px, 14vw, 60px);
+}
 
 .book__cover {
     --book-color: var(--color-white);
@@ -564,12 +568,8 @@ th {
     margin-left: auto;
     position: relative;
     transform-style: preserve-3d;
-    transform: rotateY(-15deg);
+    transform: rotateY(var(--tilt-y, -15deg)) rotateX(var(--tilt-x, 0deg));
     transition: transform var(--book-transition);
-}
-
-.book__cover:hover {
-    transform: rotateY(-5deg);
 }
 
 .book__cover img {
@@ -639,19 +639,12 @@ th {
         auto,
         auto;
     background-position:
-        55% 55%,
+        var(--highlight-x, 55%) var(--highlight-y, 55%),
         0 0,
         0 0;
     transition: background-position var(--book-transition);
     pointer-events: none;
     border-radius: var(--book-corners);
-}
-
-.book__cover:hover::after {
-    background-position:
-        35% 35%,
-        0 0,
-        0 0;
 }
 
 .book__details {
@@ -662,7 +655,7 @@ th {
 .bookshelf {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 3em 1.5em;
+    gap: 2em 1.5em;
     margin-block: 1em 2em;
 }
 
@@ -676,7 +669,7 @@ th {
 }
 
 .bookshelf .book__cover {
-    --book-width: clamp(70px, 15vw, 100px);
+    --book-width: clamp(70px, 15vw, 90px);
     margin-inline: auto;
 }
 

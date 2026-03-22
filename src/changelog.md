@@ -4,6 +4,9 @@ title: Changelog
 permalink: /changelog/
 ---
 
+## 2026-03-22
+- Added a book library at [/books](/books) 📚. I manage this library with a yaml file. Adding a ISBN to the list will fetch and cache the metadata and cover.
+
 ## 2026-03-02
 - I've added a book shortcode, so I can display books wherever I like. It finds the metadata and cover via ISBN. I'll do a similar thing with music records.
 

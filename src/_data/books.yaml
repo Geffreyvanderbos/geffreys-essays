@@ -12,6 +12,16 @@ shelves:
       - "0553382578" # Foundation
       - "0441013597" # Dune
       - "1250788455" # The Brothers Karamazov
+      - "0141183292" # A Room With a View
+      - "8418938331" # Alice in Wonderland
+      - "1571313567" # Braiding Sweetgrass
+      - "0486278077" # Dorian Gray
+      - "0143131842" # Frankenstein
+      - "0345418913" # Hitchhikers
+      - "0486432157" # Moby Dick
+      - "0141439513" # Pride and Prejudice
+      - "0141439556" # Wuthering Heights
+      - "0231551592" # You and Your Profile
 
   - name: 🚫 Purgatory
     description: Books I refuse to read or regret reading. Treat this shelf as a warning.

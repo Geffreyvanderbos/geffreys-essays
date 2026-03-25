@@ -5,11 +5,14 @@ layout: layouts/base.njk
     <h1 class="mb-4 mt-0 p-name">{{ title }}</h1>
     <div class="h-card p-author" style="display:none;">
       <a class="u-url p-name" href="{{ site.url }}">Geffrey van der Bos</a>
+      <img class="u-photo" src="{{ bio.avatar }}" alt="{{ bio.avatarDescription }}" />
     </div>
     <span class="block mb-64 muted-text small">
     <time class="dt-published" datetime="{{ date | formatDate('iso') }}">{{ date | formatDate }}</time>
     · I reply to every <a class="muted-text" href="{{ site.contact.signal }}" alt="Signal user @geffrey.01">message on Signal</a>
     · <a class="u-url" href="{{ page.url }}">permalink</a></span>
+    {% if fediverse_id %}<a class="u-syndication" href="{{ site.fediverse.instance }}/{{ site.fediverse.handle }}/statuses/{{ fediverse_id }}" rel="syndication" style="display:none;">Fediverse</a>{% endif %}
+    {% for tag in tags %}<a class="p-category" style="display:none;">{{ tag }}</a>{% endfor %}
     <div class="e-content">
     {{ content | safe }}
     {% include "partials/comments.njk" %}

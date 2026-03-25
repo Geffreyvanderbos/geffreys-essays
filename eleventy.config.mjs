@@ -129,6 +129,17 @@ export default function (eleventyConfig) {
     }
   });
 
+  eleventyConfig.addFilter("excerpt", function (content) {
+    if (!content) return "";
+    const pMatch = content.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+    const raw = pMatch
+      ? pMatch[1].replace(/<[^>]+>/g, " ")
+      : content.replace(/<[^>]+>/g, " ");
+    const text = raw.replace(/\s+/g, " ").trim();
+    if (text.length <= 160) return text;
+    return text.substring(0, 157).replace(/\s+\S*$/, "") + "...";
+  });
+
   eleventyConfig.addFilter("htmlDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toISODate(); // yields 2026-01-24
   });

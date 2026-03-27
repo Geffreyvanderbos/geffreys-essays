@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} – Geffrey van der Bos</title>
-
   {%- set pageDescription = description or (content | excerpt) or site.description %}
   <meta name="description" content="{{ pageDescription }}">
   <meta name="author" content="{{ site.author }}">
-
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
   <link rel="icon" href="/assets/favicon.png">
   <link rel="stylesheet" href="/assets/style.css">
-
-  {% if tags and ("essays" in tags) %}
+  {%- if tags and ("essays" in tags) %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -54,7 +51,10 @@
     }
   }
   </script>
-  {% endif %}
+  {% endif -%}
+  {%- if robots == "noindex" %}
+    <meta name="robots" content="noindex">
+  {% endif -%}
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>

@@ -8,13 +8,18 @@ import fs from "node:fs";
 import path from "node:path";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addDataExtension("yaml,yml", (contents) => yaml.load(contents));
+  eleventyConfig.addDataExtension("yaml,yml", (contents) =>
+    yaml.load(contents),
+  );
 
   eleventyConfig.on("eleventy.before", () => {
-    const booksYaml = fs.readFileSync(path.join(process.cwd(), "src/_data/books.yaml"), "utf-8");
+    const booksYaml = fs.readFileSync(
+      path.join(process.cwd(), "src/_data/books.yaml"),
+      "utf-8",
+    );
     const booksData = yaml.load(booksYaml);
     const activeIsbns = new Set(
-      booksData.shelves.flatMap((shelf) => shelf.books ?? [])
+      booksData.shelves.flatMap((shelf) => shelf.books ?? []),
     );
 
     for (const subdir of ["covers", "metadata"]) {
@@ -124,7 +129,18 @@ export default function (eleventyConfig) {
       if (!result) return null;
       return new Date(result.trim());
     } catch (e) {
-      // Fallback if file not tracked by git or error
+      return null;
+    }
+  });
+
+  eleventyConfig.addFilter("lastCommitDate", () => {
+    try {
+      const result = execSync("git log -1 --format=%cI", {
+        encoding: "utf-8",
+      });
+      if (!result) return null;
+      return new Date(result.trim());
+    } catch (e) {
       return null;
     }
   });
@@ -165,7 +181,13 @@ export default function (eleventyConfig) {
       const coverHtml = bookData.coverImagePath
         ? `<img width="120" src="${bookData.coverImagePath}" alt="Book Cover"${customCoverUrl ? ' class="book__cover--custom"' : ""}>`
         : "";
-      const thickness = !bookData.pages ? "" : bookData.pages < 200 ? " book--thin" : bookData.pages > 450 ? " book--thick" : "";
+      const thickness = !bookData.pages
+        ? ""
+        : bookData.pages < 200
+          ? " book--thin"
+          : bookData.pages > 450
+            ? " book--thick"
+            : "";
       return `
         <div class="book${thickness}">
           <div class="book__cover">${coverHtml}</div>
